@@ -68,11 +68,41 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2025
     
     <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
 
-### Static IP 
+### Static IP Configuration
 
+Domain Controller cần IP tĩnh để đảm bảo DNS và authentication hoạt động ổn đinh. 
 
-    
+- Bước 1: Vào Control Panel → Network and Sharing Center
+- Bước 2: Chọn Change adapter settings
+- Bước 3: Chuột phải vào Ethernet → Properties
+- Bước 4: Chọn IPv4 → Properties
 
+Cấu hình:
+
+- IP Address: 192.168.10.10
+- Subnet Mask: 255.255.255.0
+- Default Gateway: 192.168.10.2
+- Preferred DNS: 192.168.10.10 (self DNS DC)    
+
+### Hostname Change
+
+Tại đây ta sẽ đổi hostname sang DC01. 
+
+- Bước 1: Ta chuyển Local Server
+
+<img width="958" height="481" alt="image" src="https://github.com/user-attachments/assets/eb61c9ba-8dba-46f4-9367-36b4810d0c55" />
+
+- Bước 2: Tiếp đó ta ấn vào Computer Name. Và sau đó ấn vào change.
+
+<img width="1028" height="722" alt="image" src="https://github.com/user-attachments/assets/c4e530a8-3dde-4a85-b5d1-e734eff81812" />
+
+- Bước 3: Khi này tôi sẽ muốn đổi sang DC01 và nhấn okey. Máy sẽ yêu cầu ta khởi động lại để áp dụng hostname mới.
+
+<img width="537" height="571" alt="image" src="https://github.com/user-attachments/assets/ec7c708e-68ba-4ab1-951b-2be6a7fd54eb" />
+
+- Bước 4: Tiến hành kiểm tra lại và thấy rằng hostname đã được thay đổi.
+
+<img width="1247" height="427" alt="image" src="https://github.com/user-attachments/assets/b915d18b-bb52-4cbe-9558-2b68b0fa1b49" />
 
 
 
