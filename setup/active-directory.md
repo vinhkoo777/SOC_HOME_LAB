@@ -6,4 +6,6 @@ Trong lab này, tôi triển khai 1 Domain Controller sử dụng Windows Server
 - Chuẩn bị môi trường trước khi cài AD
 
 ### Install Windows Server
+Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022 
 
+- Bước 1: Tải file IOS của [Window Server](https://www.microsoft.com/en-us/windows-server) trên web chính chủ  
