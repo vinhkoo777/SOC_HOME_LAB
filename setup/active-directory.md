@@ -60,6 +60,19 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022
  
     <img width="1274" height="820" alt="image" src="https://github.com/user-attachments/assets/5dd01ba5-29af-4ca0-9409-e8d5fb31ad1d" />
 
+  - Sau khi cài một lúc thì nó sẽ hiện giao diện giống như hình dưới và ta sẽ cần nhập mật khẩu mà ta muốn tạo. Sau đó ấn Next.
+    
+    <img width="1261" height="879" alt="image" src="https://github.com/user-attachments/assets/68648a44-871c-4889-951e-48e3e4040658" />
+
+  - Sau khi cài xong ta sẽ được giao diện giống như vậy. (Sau khi cài xong nên tạo 1 snapshot để phòng chuyện gì xảy ra)
+    
+    <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
+
+- Bước 4: Ta sẽ đặt Static IP và Hostname 
+
+
+    
+
 
 
 
