@@ -23,8 +23,8 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022
     <img width="488" height="530" alt="image" src="https://github.com/user-attachments/assets/51f1442f-647e-476e-b3d1-af858d1c52bf" />
 
   - Chọn vào mục thứ 3.
-  - 
-    <img width="847" height="752" alt="image" src="https://github.com/user-attachments/assets/673a531a-ba30-4888-9156-dcabd63f8925" />
+    
+    Ảnh
 
   - Tiếp đó để config giống như trong hình.
     
@@ -50,8 +50,7 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022
 
     <img width="886" height="376" alt="image" src="https://github.com/user-attachments/assets/7155dc78-8b8b-45d6-bb2a-41692ada6655" />
 
-
-
+- Bước 3
  
   
 
