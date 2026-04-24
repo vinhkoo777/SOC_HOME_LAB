@@ -8,6 +8,7 @@ Trong lab này, tôi triển khai 1 Domain Controller sử dụng Windows Server
 ### Install Windows Server
 Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022 
 
-- Bước 1: Tải file IOS của [Window Server](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025) trên web chính chủ
+- Bước 1: Tải file IOS của [Window Server](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025) trên web chính chủ. Ta chọn phiên bản theo đánh dấu trong hình
 
-- Bước 2: 
+
+
