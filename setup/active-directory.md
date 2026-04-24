@@ -50,8 +50,22 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022
 
     <img width="886" height="376" alt="image" src="https://github.com/user-attachments/assets/7155dc78-8b8b-45d6-bb2a-41692ada6655" />
 
-- Bước 3
+- Bước 3: Tiến hành vào máy ảo.
+
+  - Mấy bước đầu cứ next next next :). Tại mục Select Image ta chọn phiên bản thứ 4. Sau đó nhấn next. Và sau đó accecpt các điều kiện.
+    
+    <img width="1222" height="852" alt="image" src="https://github.com/user-attachments/assets/9a220331-f4c3-49d8-bc28-e2e916a49303" />
+
+  - Khi đó ta tiến hành create partition và tiến hành nhấn next để cài đặt. 
  
+    <img width="1274" height="820" alt="image" src="https://github.com/user-attachments/assets/5dd01ba5-29af-4ca0-9409-e8d5fb31ad1d" />
+
+
+
+
+
+
+
   
 
     
