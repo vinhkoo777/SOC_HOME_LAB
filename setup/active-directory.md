@@ -68,7 +68,7 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2022
     
     <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
 
-- Bước 4: Ta sẽ đặt Static IP và Hostname 
+### Static IP 
 
 
     
