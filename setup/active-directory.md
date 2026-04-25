@@ -128,10 +128,21 @@ Tại đây ta sẽ đổi hostname sang DC01.
 
 <img width="1100" height="744" alt="image" src="https://github.com/user-attachments/assets/224597be-9127-407e-b190-91ff47824e7f" />
 
+
 <img width="1075" height="722" alt="image" src="https://github.com/user-attachments/assets/f3dc246b-9311-48e2-94df-1eef35fc65ab" />
 
+- Bước 7: Sau khi cài xong ta sẽ nhấn vào cái cờ. Tiếp đó nhấn vào Promote this server to a domain controller.
 
+<img width="1286" height="561" alt="image" src="https://github.com/user-attachments/assets/5dd63c59-d56e-4665-8aac-b1ace2cbc226" />
+
+- Bước 8: Ta chọn option 3 Add a new forest. Tiếp đó nhập root domain name ở đây tôi sẽ nhập là siem.lab sau đó nhấn next.
+
+<img width="940" height="527" alt="image" src="https://github.com/user-attachments/assets/a93231d6-6c2f-42d7-90f7-aec361febeaa" />
+
+- Bước 9: Ở đây mật khẩu đặt là gì cũng được tại đây tui sẽ đặt là conmeo@1234. Sau đó nhấn next và các bước về sau điều để mặc định. Và nhấn install để tải.
     
+<img width="990" height="713" alt="image" src="https://github.com/user-attachments/assets/a72d1a9b-b5f1-4bd0-9bc4-5c07882e8293" />
+
 
 
 
