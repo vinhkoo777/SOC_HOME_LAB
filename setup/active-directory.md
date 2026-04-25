@@ -116,8 +116,20 @@ Tại đây ta sẽ đổi hostname sang DC01.
 
 <img width="1198" height="757" alt="image" src="https://github.com/user-attachments/assets/9d631928-406b-49fe-bd5e-406e97915711" />
 
+- Bước 4: Tiếp đó nhấn Next.
 
-  
+<img width="1142" height="786" alt="image" src="https://github.com/user-attachments/assets/0893c5c0-9d02-4d16-a6a5-fe793b0a4915" />
+
+- Bước 5: khi này ta sẽ tick vào Active Directory Domain Service. Sau đó nhấn vào Add featues. Cuối cùng là nhấn Next cho tới bước confirm luôn.
+
+<img width="1190" height="788" alt="image" src="https://github.com/user-attachments/assets/4283f171-90d5-4fea-859e-1751770412e0" />
+
+- Bước 6: Ta check cấu hình lại khi đã thấy okey ta sẽ nhấn install.
+
+<img width="1100" height="744" alt="image" src="https://github.com/user-attachments/assets/224597be-9127-407e-b190-91ff47824e7f" />
+
+<img width="1075" height="722" alt="image" src="https://github.com/user-attachments/assets/f3dc246b-9311-48e2-94df-1eef35fc65ab" />
+
 
     
 
