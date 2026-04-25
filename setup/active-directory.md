@@ -143,10 +143,19 @@ Tại đây ta sẽ đổi hostname sang DC01.
     
 <img width="990" height="713" alt="image" src="https://github.com/user-attachments/assets/a72d1a9b-b5f1-4bd0-9bc4-5c07882e8293" />
 
+## Phase 3: TIến hành cài đặt BadBlood
 
+#### Trước khi cài đặt BadBlood nên snapshot trạng thái hiện tại lại nếu lỡ có gì xảy ra có thể quay về được.
 
+- Bước 1: Ta lên trang github chính chủ của [BadBlood](https://github.com/davidprowe/badblood) để tải. Ta nhấn vào Code. Xong rồi nhấn Download Zip
 
+<img width="1918" height="752" alt="image" src="https://github.com/user-attachments/assets/0887d3d0-3512-4b1a-93cc-3f476f80c3be" />
 
+- Bước 2: Sau khi giải nén file. Khi đó ta sẽ dùng powershell và duy chuyển vào thư mục chứa file cài đặt.
+
+<img width="950" height="606" alt="image" src="https://github.com/user-attachments/assets/530f36d5-5098-4759-8956-09feaefc7f7e" />
+
+- Bước 3: Ta sẽ chạy lệnh Set-ExecutionPolicy Unrestricted -Force Để có thể có quyền thực thi script. Sau khi chạy xong tiến hành chạy ./invoke-badblood.ps1
 
     
 
