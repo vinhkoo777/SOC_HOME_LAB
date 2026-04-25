@@ -79,10 +79,8 @@ Domain Controller cần IP tĩnh để đảm bảo DNS và authentication hoạ
 
 Cấu hình:
 
-- IP Address: 192.168.10.10
-- Subnet Mask: 255.255.255.0
-- Default Gateway: 192.168.10.2
-- Preferred DNS: 192.168.10.10 (self DNS DC)    
+<img width="472" height="547" alt="image" src="https://github.com/user-attachments/assets/4eaa10c5-6aac-462d-900c-a9810b57e72c" />
+ 
 
 ### Hostname Change
 
