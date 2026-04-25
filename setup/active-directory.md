@@ -112,8 +112,9 @@ Tại đây ta sẽ đổi hostname sang DC01.
   
 <img width="950" height="606" alt="image" src="https://github.com/user-attachments/assets/1a5e8070-42be-4f60-8dd4-c63640bc3a9a" />
 
-- Bước 3: 
+- Bước 3: Chọn Role-Based or feature-based installation.
 
+<img width="1198" height="757" alt="image" src="https://github.com/user-attachments/assets/9d631928-406b-49fe-bd5e-406e97915711" />
 
 
   
