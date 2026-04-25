@@ -42,7 +42,7 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2025
     
     <img width="718" height="617" alt="image" src="https://github.com/user-attachments/assets/3f87722a-7964-46bc-a049-0f0067ebe6cc" />
 
-  - Tôi sẽ cấu hình memory là 4.9GB và Processors là 2
+  - Tôi sẽ cấu hình memory là 4.9GB và Processors là 2.
    
     <img width="317" height="280" alt="image" src="https://github.com/user-attachments/assets/5c5d3183-96f8-47ae-83d2-b938101f9fd1" />
 
@@ -104,6 +104,15 @@ Tại đây ta sẽ đổi hostname sang DC01.
 
 ## Phase 2: Cài đặt Domain Controller
 
+- Bước 1: Ở màn hình chính ta chọn Add roles and features.
+  
+<img width="1670" height="448" alt="image" src="https://github.com/user-attachments/assets/c279696b-fa50-4f5b-9d33-c8054bd41b07" />
+
+- Bước 2: Trước khi tiếp tục ta nên kiểm tra các yêu cầu dưới đây nếu đủ các yêu cầu rồi ta có thể nhấn Next để tiếp tục.
+  
+<img width="950" height="606" alt="image" src="https://github.com/user-attachments/assets/1a5e8070-42be-4f60-8dd4-c63640bc3a9a" />
+
+- Bước 3: 
 
 
 
