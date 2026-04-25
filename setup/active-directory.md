@@ -2,7 +2,7 @@
 
 Trong lab này, tôi triển khai 1 Domain Controller sử dụng Windows Server để quản lý user và authentication trong môi trường doanh nghiệp mô phỏng cũng như sử dụng badBlood để populate AD với user, group, OU giả lập mục đích là tạo môi trường giống doanh nghệp thật
 
-## Giai đoạn 1: Chuẩn bị (Preparation)
+## Phase 1: Chuẩn bị (Preparation)
 - Chuẩn bị môi trường trước khi cài AD
 
 ### Install Windows Server
@@ -102,7 +102,7 @@ Tại đây ta sẽ đổi hostname sang DC01.
 
 <img width="1247" height="427" alt="image" src="https://github.com/user-attachments/assets/b915d18b-bb52-4cbe-9558-2b68b0fa1b49" />
 
-
+## Phase 2: Cài đặt Domain Controller
 
 
 
