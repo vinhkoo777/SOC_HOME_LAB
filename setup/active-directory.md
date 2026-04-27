@@ -159,9 +159,10 @@ Tại đây ta sẽ đổi hostname sang DC01.
 
 <img width="1315" height="571" alt="image" src="https://github.com/user-attachments/assets/61a0a5b3-589d-48e7-b8bf-f12c6b9adae9" />
 
-- Bước 4: Ta tiếp tục nhấn enter và khi đó gõ badblood.
+- Bước 4: Ta tiếp tục nhấn enter và khi đó gõ badblood. Và nó sẽ tiến hành chạy script.
 
-<img width="1076" height="613" alt="image" src="https://github.com/user-attachments/assets/34bb26c3-30f9-4f28-aeb8-fbd1dbd60e30" />
+<img width="1447" height="652" alt="image" src="https://github.com/user-attachments/assets/41953a61-aaff-471c-b631-b540217755b5" />
+
 
 
 
