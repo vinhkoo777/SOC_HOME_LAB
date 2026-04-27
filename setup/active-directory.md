@@ -155,7 +155,7 @@ Tại đây ta sẽ đổi hostname sang DC01.
 
 <img width="950" height="606" alt="image" src="https://github.com/user-attachments/assets/530f36d5-5098-4759-8956-09feaefc7f7e" />
 
-- Bước 3: Ta sẽ chạy lệnh Set-ExecutionPolicy Unrestricted -Force Để có thể có quyền thực thi script. Sau khi chạy xong tiến hành chạy ./invoke-badblood.ps1
+- Bước 3: Ta sẽ chạy lệnh Set-ExecutionPolicy Unrestricted -Scope Process -Force Để có thể có quyền thực thi script. Sau khi chạy xong tiến hành chạy Get-ChildItem . -Recurse | Unblock-File. Rồi tiếp đó Import-Module ActiveDirectory. Và cuối cùng .\Invoke-BadBlood.ps1.
 
 <img width="1315" height="571" alt="image" src="https://github.com/user-attachments/assets/61a0a5b3-589d-48e7-b8bf-f12c6b9adae9" />
 
