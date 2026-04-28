@@ -1,6 +1,8 @@
-# Kali Linux Setup 
+# Kali Linux Setup — Lab SIEM Attack Simulation
 
-Trong phần này tôi sẽ tiến hành triễn khai kali linux trong VM Ware. Mục tiêu là giả lập tấn công để có thể tạo log trong SIEM.
+## Tổng quan 
+
+Tài liệu này hướng dẫn triển khai Kali Linux trong VMware Workstation nhằm mục đích giả lập tấn công và tạo log trong hệ thống SIEM. Kali Linux sẽ đóng vai trò Attacker Machine trong môi trường lab.
 
 ## Phase 1: Chuẩn bị (Preparation) 
 
@@ -14,15 +16,15 @@ Bước 2: Tại đây tôi sẽ sử dụng VM Ware để tạo máy ảo Kali 
 
 ## Phase 2: Cài đặt Kali Linux 
 
-Bước 1: Ta chọn Graphical install.
+Bước 1: Khi boot từ ISO, màn hình GRUB hiện ra. Chọn Graphical Install để có giao diện trực quan, dễ thao tác hơn so với Text Install.
 
 <img width="717" height="633" alt="image" src="https://github.com/user-attachments/assets/b5dc2b05-33c0-4d72-ad07-2d6b4f23a315" />
 
-Bước 2: Tại bước này ta sẽ chọn ngôn ngữ tại đây tôi sẽ để tiếng anh. 
+Bước 2: Tại bước này ta sẽ chọn ngôn ngữ tại đây tôi sẽ để tiếng anh. Do khi có các thông báo lỗi thì các tài liệu hướng dẫn thường bằng tiếng anh nên ta có thể dễ tìm kiếm khi gặp sự cố.
 
 <img width="808" height="613" alt="image" src="https://github.com/user-attachments/assets/c37b4406-26b6-4923-bea6-c30855c43cd5" />
 
-Bước 3: Tại bước này tôi sẽ để mặc định và nhấn next.
+Bước 3: Để mặc định hoặc muốn timezone chính xác. Nhưng mà tại đây tui sẽ để mặc định 
 
 <img width="803" height="538" alt="image" src="https://github.com/user-attachments/assets/55215aee-f107-4d0c-b6ad-980278ffb60b" />
 
@@ -30,21 +32,21 @@ Bước 4: Tôi cũng sẽ để mặc định keyboard layout theo mặc địn
 
 <img width="813" height="656" alt="image" src="https://github.com/user-attachments/assets/fa6d2f03-4e73-4db2-93a7-df550930478d" />
 
-Bước 5: Tại đây tôi sẽ để hostname là kali.
+Bước 5: Tại đây tôi sẽ để hostname là kali. Hostname này cũng sẽ xuất hiện trong log, giúp nhận diện máy tấn công khi phân tích trong SIEM 
 
 <img width="811" height="593" alt="image" src="https://github.com/user-attachments/assets/743dc471-2514-42e8-a511-08310a8d7d31" />
 
-Bước 6: Tôi sẽ để trống phần domain name.
+Bước 6: Tôi sẽ để trống phần domain name. Do đây là môi trường lab độc lập.
 
 <img width="803" height="603" alt="image" src="https://github.com/user-attachments/assets/29082bfa-3a3c-4ad4-9e1a-2ea61f8c0726" />
 
 Bước 7: Ta sẽ setup tên của user và password ở đây ta sẽ đặt như nào cũng được nhưng mà ta sẽ cần phải nhớ username và password này.
 
-Bước 8: Cấu hình đồng hồ tôi vẫn sẻ để mặc định.
+Bước 8: Cấu hình đồng hồ tôi vẫn sẻ để mặc định. (Sẽ sửa lại cái này)
 
 <img width="810" height="571" alt="image" src="https://github.com/user-attachments/assets/06089c7a-82c6-4a0f-af31-1ad1bc4ac600" />
 
-Bước 9: Tôi sẽ chọn option là use entire disk. Và ấn next.
+Bước 9: Chọn Guided - use entire disk. Phù hợp cho VM lab vì toàn bộ disk ảo chỉ dành riêng cho Kali.
 
 <img width="921" height="762" alt="image" src="https://github.com/user-attachments/assets/1932203a-cf8a-4910-8401-9f0450a9b82d" />
 
@@ -64,4 +66,8 @@ Bước 12: Ta tick vào yes và nhấn continue. Và ta sẽ tiến hành đợ
 
 <img width="838" height="675" alt="image" src="https://github.com/user-attachments/assets/d9177008-978d-4208-bcba-35ac05015da1" />
 
+- Bước 14: Chọn Yes → chọn ổ đĩa `/dev/sda` xong rồi chọn. Continue. GRUB là bootloader mặc định, cần thiết để khởi động hệ thống.
 
+<img width="841" height="635" alt="image" src="https://github.com/user-attachments/assets/1efc1bc4-b2aa-478e-a108-23d5c82fe651" />
+
+<img width="871" height="696" alt="image" src="https://github.com/user-attachments/assets/525454d6-586b-4e1b-aab6-de765efaf784" />
