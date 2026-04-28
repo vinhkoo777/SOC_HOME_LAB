@@ -60,3 +60,8 @@ Trong phần này tôi sẽ tiến hành triễn khai kali linux trong VM Ware. 
 
 <img width="846" height="682" alt="image" src="https://github.com/user-attachments/assets/54414618-2a1a-4efe-9b50-2950e802da8e" />
 
+- Bước 13: Tại bước này ta có thể tùy chọn thêm gnome hoặc kde nhưng mà tui sẽ để mặc định và ấn continue.
+
+<img width="838" height="675" alt="image" src="https://github.com/user-attachments/assets/d9177008-978d-4208-bcba-35ac05015da1" />
+
+
