@@ -76,3 +76,19 @@ Bước 12: Ta tick vào yes và nhấn continue. Và ta sẽ tiến hành đợ
 
 <img width="861" height="647" alt="image" src="https://github.com/user-attachments/assets/11e1eb3e-d506-4cf1-a47a-a132c6f177b8" />
 
+## Phase 3: Sau khi cài đặt
+
+### Bước 1: Cập nhập hệ thống 
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+<img width="947" height="233" alt="image" src="https://github.com/user-attachments/assets/dc9c8368-ce0d-4921-b7af-323e4bfae80a" />
+
+### Bước 2: Tạo snapshot
+
+Sao khi cập nhập xong ta nên tạo 1 bảng snapshot để có thể backup khi cần thiết. Bằng cách chuột phỉa vào máy ảo. Tiếp đó nhấn Take snapshot và đặt tên theo ta muốn và nhấn Take snapshot
+
+<img width="646" height="367" alt="image" src="https://github.com/user-attachments/assets/191a233f-c8cd-4e8d-bf60-5f2521af8579" />
+
