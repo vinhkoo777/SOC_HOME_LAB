@@ -44,3 +44,19 @@ Trong phần này tôi sẽ tiến hành triễn khai kali linux trong VM Ware. 
 
 <img width="810" height="571" alt="image" src="https://github.com/user-attachments/assets/06089c7a-82c6-4a0f-af31-1ad1bc4ac600" />
 
+- Bước 9: Tôi sẽ chọn option là use entire disk. Và ấn next.
+
+<img width="921" height="762" alt="image" src="https://github.com/user-attachments/assets/1932203a-cf8a-4910-8401-9f0450a9b82d" />
+
+- Bước 10: Tại đây tôi sẽ chọn All files in one partition. Sau đó nhấn continue.
+
+<img width="882" height="733" alt="image" src="https://github.com/user-attachments/assets/0605f3e0-61f1-449c-be6a-6fdf4b14d301" />
+
+- Bước 11: Tại đây ta cũng sẽ nhấn tiếp continue.
+
+<img width="877" height="672" alt="image" src="https://github.com/user-attachments/assets/b82330bf-3873-4eb5-ba4d-dcb9a9697675" />
+
+- Bước 12: Ta tick vào yes và nhấn continue. Và ta sẽ tiến hành đợi kali tải base system.
+
+<img width="846" height="682" alt="image" src="https://github.com/user-attachments/assets/54414618-2a1a-4efe-9b50-2950e802da8e" />
+
