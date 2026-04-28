@@ -10,7 +10,8 @@ Phiên bản ở đây tui sẽ sử dụng là Windows Server 2025
 
 - Bước 1: Tải ISO image của [Window Server](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025) trên web chính chủ. Ta chọn phiên bản theo đánh dấu trong hình
 
-![Anh_1](../images/Windows_Server_1.png)
+<img width="1575" height="852" alt="image" src="https://github.com/user-attachments/assets/7896cb52-8520-481a-bea7-023b203b7e63" />
+
 
 - Bước 2: Ở đây tôi sẽ sử dụng VMware để tiến hành tạo máy ảo và cài đặt Windows Server nhằm phục vụ quá trình dựng Domain Controller trong lab.
 
