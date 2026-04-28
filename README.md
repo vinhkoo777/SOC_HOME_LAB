@@ -3,7 +3,7 @@
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Setup](#setup)
-  - [Active Directory](#active-directory)
+  - [Active Directory](#active-directory.md)
   - [Kali Linux](#kali-linux)
   - [Linux Client](#linux-client)
   - [Windows Client](#windows-client)
