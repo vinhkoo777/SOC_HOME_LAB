@@ -4,7 +4,7 @@
 
 Tài liệu này hướng dẫn triển khai Kali Linux trong VMware Workstation nhằm mục đích giả lập tấn công và tạo log trong hệ thống SIEM. Kali Linux sẽ đóng vai trò Attacker Machine trong môi trường lab.
 
-## Phase 1: Chuẩn bị (Preparation) 
+## Phase 1: Chuẩn bị 
 
 Bước 1: Tải ISO image của [Kali Linux](https://www.kali.org/get-kali/#kali-installer-images) 
 
@@ -71,3 +71,8 @@ Bước 12: Ta tick vào yes và nhấn continue. Và ta sẽ tiến hành đợ
 <img width="841" height="635" alt="image" src="https://github.com/user-attachments/assets/1efc1bc4-b2aa-478e-a108-23d5c82fe651" />
 
 <img width="871" height="696" alt="image" src="https://github.com/user-attachments/assets/525454d6-586b-4e1b-aab6-de765efaf784" />
+
+- Bước 15: Sau khi xong nhấn continue để reboot lại máy.
+
+<img width="861" height="647" alt="image" src="https://github.com/user-attachments/assets/11e1eb3e-d506-4cf1-a47a-a132c6f177b8" />
+
