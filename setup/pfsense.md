@@ -24,17 +24,23 @@ Tại đây tui sẽ sử dụng VM Workstation. Bạn có thể tải [tại đ
 
 ### Bước 1: Thiết kế mạng cho Lab 
 
-Trước tiên, mình cần xác định dải IP của mạng Host-Only. Để làm điều này, vào Edit → Virtual Network Editor.
+Đầu tiên ta sẽ cần mở VM ware với quyền adminstrator
+
+<img width="419" height="648" alt="image" src="https://github.com/user-attachments/assets/33357d5d-6953-4e56-847e-022f8cd0e3af" />
+
+Tiếp theo mình cần xác định dải IP của mạng Host-Only. Để làm điều này, vào Edit → Virtual Network Editor.
 
 Tại đây, ta có thể xem thông tin subnet address mà VMware cấp cho mạng Host-Only.
 
 <img width="1112" height="532" alt="image" src="https://github.com/user-attachments/assets/7c806f86-f101-43f4-a537-5307e0bddcfd" />
 
-Trong trường hợp này, Subnet Address là 192.168.188.0/24.
+<img width="693" height="91" alt="image" src="https://github.com/user-attachments/assets/9088d055-b147-479b-813a-3f5213179123" />
 
-<img width="697" height="102" alt="image" src="https://github.com/user-attachments/assets/d0d69817-c6ae-4071-a991-3e2985295e5c" />
+Trong trường hợp này, Subnet Address là 192.168.188.0/24. Tại Vmnet1. Ta cũng sẽ cần phải uncheck Use local DHCP service to distribute IP address to VMs -> Sau đó nhấn apply (Vì chút nữa ta sẽ cấu tình tĩnh IP.)
 
-Điều này có nghĩa là toàn bộ các máy ảo trong lab sẽ sử dụng địa chỉ IP thuộc dải 192.168.188.x .
+<img width="697" height="662" alt="image" src="https://github.com/user-attachments/assets/51d1d831-fdeb-48b9-b00c-365d7ebe02af" />
+
+Nên trong lab này sẽ sử dụng địa chỉ IP thuộc dải 192.168.188.x .
 
 - Network Address: 192.168.188.0
 - Broadcast Address: 192.168.188.255
@@ -91,7 +97,7 @@ Tại đây tui sẽ ấn vào Customize Hardware... . Để cấu hình thêm v
 
 <img width="510" height="546" alt="image" src="https://github.com/user-attachments/assets/492ee891-af75-40d2-b06a-aa1fb51314c3" />
 
-Tại đây tui sẽ để Memory là 1GB.
+Tại đây tui sẽ để Memory là 1GB. 
 
 <img width="891" height="887" alt="image" src="https://github.com/user-attachments/assets/c40015b8-8ed1-4bf6-a3b4-bdb0eb410594" />
 
@@ -99,13 +105,35 @@ Tiếp đó tui sẽ thêm 1 Network adapter. Bằng cách bấm Add -> chọn N
 
 <img width="906" height="840" alt="image" src="https://github.com/user-attachments/assets/7bb80d49-38b2-4ac6-a5c3-cb1ea57616ac" />
 
-Tại đây Network Adapter đầu tiên của tui là NAT và cái thứ hai sẽ là Host-only. Và ta nhấn close để thoát ra.
+Tại đây Network Adapter đầu tiên của tui là Vmnet1(Host-only) và cái thứ hai sẽ là NAT. Và ta nhấn close để thoát ra.
 
-<img width="378" height="270" alt="image" src="https://github.com/user-attachments/assets/79e39147-4f2b-4e70-a5fd-eac51644fa4c" />
+<img width="892" height="922" alt="image" src="https://github.com/user-attachments/assets/d1244fdb-5d76-45ee-ba47-c60bdbdfa4d7" />
 
 Khi này ta sẽ nhấn Finish để hoàn thành.
 
 <img width="647" height="632" alt="image" src="https://github.com/user-attachments/assets/255dcc41-4da3-48b0-b5f6-a1a8752ad09a" />
+
+## Phase 4: Cài đặt pfSense
+
+### Bước 1: Chấp nhận điều khoản.
+
+Ta sẽ nhấn enter để chấp nhận.
+
+<img width="945" height="552" alt="image" src="https://github.com/user-attachments/assets/40197dd8-ff18-499c-8e88-e61bf430c6a6" />
+
+### Bước 2: Cài pfSense.
+
+Ta sẽ select Install và nhấn Enter.
+
+<img width="817" height="487" alt="image" src="https://github.com/user-attachments/assets/e28c8621-6fb7-4a93-8fc6-ed0301c3dc52" />
+
+Tại đây em0 sẽ là Network Adapter đầu tiên của tui ở đây là Vmnet1(Host-only) nên tui sẽ chọn vào.
+
+<img width="952" height="551" alt="image" src="https://github.com/user-attachments/assets/64b34ac3-430b-4052-b9e7-a0dfce128379" />
+
+Tại đây ta sẽ nhấn okey để tiếp tục.
+
+<img width="833" height="542" alt="image" src="https://github.com/user-attachments/assets/73802b46-d194-4924-be6e-2952154d5c5c" />
 
 
 
