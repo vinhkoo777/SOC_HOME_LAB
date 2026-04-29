@@ -20,7 +20,7 @@ Tại đây tui sẽ sử dụng VM Workstation. Bạn có thể tải [tại đ
 
 <img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/d8c2c948-a367-4bc5-a8dd-d90f4dc55c3a" />
 
-## phaase 2: Thiết kế và cấu hình mạng 
+## Phase 2: Thiết kế và cấu hình mạng 
 
 ### Bước 1: Thiết kế mạng cho Lab 
 
