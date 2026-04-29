@@ -1,4 +1,4 @@
-<img width="711" height="448" alt="image" src="https://github.com/user-attachments/assets/666a3b8d-4d94-427c-b0f6-3e355c13b46e" /># pfSense Set Up 
+# pfSense Set Up 
 
 Đây là phần đầu tiên của chuỗi SOC_HOME_LAB (by k0g4). Trong phần đầu tiên này tôi sẽ tiến hành setup pfSense. Đóng vai trò như **firewall/router** kiểm tra toàn bộ traffic mạng giữa các máy trong lab trước khi đưa vào SIEM phân tích.
 
@@ -160,6 +160,8 @@ Ta sẽ enter cho đến khi tới bước Confirnmation rồi ta nhấn enter.
 <img width="710" height="547" alt="image" src="https://github.com/user-attachments/assets/8771db39-edde-4e48-bf67-115f35243535" />
 
 Tại đây ta sẽ chọn phiên bản mà ta muốn cài rồi ấn enter.
+
+<img width="711" height="448" alt="image" src="https://github.com/user-attachments/assets/666a3b8d-4d94-427c-b0f6-3e355c13b46e" />
 
 <img width="713" height="426" alt="image" src="https://github.com/user-attachments/assets/d6a5e916-e0c5-45a3-993c-89e487c9ec04" />
 
