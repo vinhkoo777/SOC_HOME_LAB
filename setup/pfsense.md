@@ -161,8 +161,6 @@ Ta sẽ enter cho đến khi tới bước Confirnmation rồi ta nhấn enter.
 
 Tại đây ta sẽ chọn phiên bản mà ta muốn cài rồi ấn enter.
 
-<img width="711" height="448" alt="image" src="https://github.com/user-attachments/assets/666a3b8d-4d94-427c-b0f6-3e355c13b46e" />
-
 <img width="713" height="426" alt="image" src="https://github.com/user-attachments/assets/d6a5e916-e0c5-45a3-993c-89e487c9ec04" />
 
 Bây giờ ta sẽ đợi quá trình cài đặt hoàn tất.
