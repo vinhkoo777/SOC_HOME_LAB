@@ -1,18 +1,1 @@
-## Table of Contents
 
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Setup](#setup)
-  - [Active Directory](#active-directory)
-  - [Kali Linux](#kali-linux)
-  - [Linux Client](#linux-client)
-  - [Windows Client](#windows-client)
-  - [SIEM Setup](#siem-setup)
-- [Detection Rules](#detection-rules)
-  - [Linux](#linux)
-    - [SSH Bruteforce](#ssh-bruteforce)
-  - [Windows](#windows)
-    - [Brute Force](#brute-force)
-    - [Privilege Escalation](#privilege-escalation)
-- [Use Cases](#use-cases)
-- [License](#license)
