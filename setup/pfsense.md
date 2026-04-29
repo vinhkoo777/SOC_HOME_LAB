@@ -107,7 +107,7 @@ Tiếp đó tui sẽ thêm 1 Network adapter. Bằng cách bấm Add -> chọn N
 
 Tại đây Network Adapter đầu tiên của tui là NAT và cái thứ hai sẽ là Vmnet1(Host-only). Và ta nhấn close để thoát ra.
 
-<img width="886" height="906" alt="image" src="https://github.com/user-attachments/assets/f73b943e-c5d4-469b-a5a5-289abb4dd0b5" />
+<img width="883" height="636" alt="image" src="https://github.com/user-attachments/assets/7ae5aade-48ec-4383-bfba-f6968e7289f8" />
 
 Khi này ta sẽ nhấn Finish để hoàn thành.
 
@@ -127,9 +127,9 @@ Ta sẽ select Install và nhấn Enter.
 
 <img width="817" height="487" alt="image" src="https://github.com/user-attachments/assets/e28c8621-6fb7-4a93-8fc6-ed0301c3dc52" />
 
-Tại WAN interfacface Assignment and Congiguration. Em0 sẽ là Network Adapter đầu tiên của tui ở đây là NAT nên tui sẽ chọn vào. ( Lưu ý nếu chọn Em1 ở đây là VMnet1 (Host-only) thì nó sẽ khá kì kiểu WAN thành nội bộ ấy =)) )
+Tại WAN interfacface Assignment and Congiguration. Em0 sẽ là Network Adapter đầu tiên của tui ở đây là NAT nên tui sẽ chọn vào. ( Lưu ý nếu chọn Em1 ở đây là VMnet1 (Host-only) thì nó sẽ khá kì kiểu WAN mà thành nội bộ ấy =)) )
 
-<img width="952" height="551" alt="image" src="https://github.com/user-attachments/assets/64b34ac3-430b-4052-b9e7-a0dfce128379" />
+<img width="723" height="422" alt="image" src="https://github.com/user-attachments/assets/d4a36234-ebf5-4670-861c-ceee1ff37283" />
 
 Tại đây ta sẽ nhấn okey để tiếp tục.
 
@@ -137,7 +137,7 @@ Tại đây ta sẽ nhấn okey để tiếp tục.
 
 Tại LAN interfacface Assignment and Congiguration chọn Em1 ở đây là Network Adapter thứ của tui ở đây là VMnet1 (Host-only)
 
-<img width="707" height="457" alt="image" src="https://github.com/user-attachments/assets/5741ab90-4150-403b-afe3-cf5f7bcf59ff" />
+<img width="713" height="393" alt="image" src="https://github.com/user-attachments/assets/bc63235a-9e1f-47f6-9b0f-ced24f9ae77e" />
 
 Tiếp đó tui sẽ ấn Enter.
 
