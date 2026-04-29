@@ -1,4 +1,4 @@
-# pfSense Set Up 
+<img width="711" height="448" alt="image" src="https://github.com/user-attachments/assets/666a3b8d-4d94-427c-b0f6-3e355c13b46e" /># pfSense Set Up 
 
 Đây là phần đầu tiên của chuỗi SOC_HOME_LAB (by k0g4). Trong phần đầu tiên này tôi sẽ tiến hành setup pfSense. Đóng vai trò như **firewall/router** kiểm tra toàn bộ traffic mạng giữa các máy trong lab trước khi đưa vào SIEM phân tích.
 
@@ -129,7 +129,7 @@ Ta sẽ select Install và nhấn Enter.
 
 Tại WAN interfacface Assignment and Congiguration. Em0 sẽ là Network Adapter đầu tiên của tui ở đây là NAT nên tui sẽ chọn vào. ( Lưu ý nếu chọn Em1 ở đây là VMnet1 (Host-only) thì nó sẽ khá kì kiểu WAN mà thành nội bộ ấy =)) )
 
-<img width="723" height="422" alt="image" src="https://github.com/user-attachments/assets/d4a36234-ebf5-4670-861c-ceee1ff37283" />
+<img width="712" height="398" alt="image" src="https://github.com/user-attachments/assets/91e12664-1d90-4a55-82bd-11e87e96f2d8" />
 
 Tại đây ta sẽ nhấn okey để tiếp tục.
 
@@ -137,16 +137,32 @@ Tại đây ta sẽ nhấn okey để tiếp tục.
 
 Tại LAN interfacface Assignment and Congiguration chọn Em1 ở đây là Network Adapter thứ của tui ở đây là VMnet1 (Host-only)
 
-<img width="713" height="393" alt="image" src="https://github.com/user-attachments/assets/bc63235a-9e1f-47f6-9b0f-ced24f9ae77e" />
+<img width="705" height="408" alt="image" src="https://github.com/user-attachments/assets/8d2c2778-5e2f-4ea7-a313-cf4ccd56c1b4" />
 
-Tiếp đó tui sẽ ấn Enter.
+Tại đây tui sẽ tắt DHCP và đặt IP address là 192.168.188.1. Sau đó tui nhấn enter.
 
-<img width="713" height="421" alt="image" src="https://github.com/user-attachments/assets/f41b4b6c-b3b3-41cd-92e3-1a9a1096fcc4" />
+<img width="810" height="492" alt="image" src="https://github.com/user-attachments/assets/57bfa3b3-5161-4dc2-bcc2-4cf77968c768" />
 
 Tui sẽ ấn enter tiếp.
 
 <img width="705" height="397" alt="image" src="https://github.com/user-attachments/assets/2623a222-73e2-4481-b7fb-27938bc16dbd" />
 
-Ở đây tui sẽ đợi pfSense check kết nối.
+Ở đây tui sẽ đợi pfSense check kết nối. Sau khi check xong thì sẽ có bản thông báo hiện ra. Ấn enter để tiếp tục.
 
-<img width="719" height="434" alt="image" src="https://github.com/user-attachments/assets/a2151651-f62d-465a-9e43-58722459e8d4" />
+<img width="707" height="460" alt="image" src="https://github.com/user-attachments/assets/a94006e4-47d8-4992-93a7-57c3def1f33a" />
+
+Tại Installation Option ta ấn enter tiếp
+
+<img width="690" height="475" alt="image" src="https://github.com/user-attachments/assets/518b74be-57b8-4254-a4b1-bedcdd5dabbc" />
+
+Ta sẽ enter cho đến khi tới bước Confirnmation rồi ta nhấn enter.
+
+<img width="710" height="547" alt="image" src="https://github.com/user-attachments/assets/8771db39-edde-4e48-bf67-115f35243535" />
+
+Tại đây ta sẽ chọn phiên bản mà ta muốn cài rồi ấn enter.
+
+<img width="713" height="426" alt="image" src="https://github.com/user-attachments/assets/d6a5e916-e0c5-45a3-993c-89e487c9ec04" />
+
+Bây giờ ta sẽ đợi quá trình cài đặt hoàn tất.
+
+<img width="711" height="528" alt="image" src="https://github.com/user-attachments/assets/98e772b8-0335-414f-8bea-00df8e53e852" />
