@@ -105,9 +105,9 @@ Tiếp đó tui sẽ thêm 1 Network adapter. Bằng cách bấm Add -> chọn N
 
 <img width="906" height="840" alt="image" src="https://github.com/user-attachments/assets/7bb80d49-38b2-4ac6-a5c3-cb1ea57616ac" />
 
-Tại đây Network Adapter đầu tiên của tui là Vmnet1(Host-only) và cái thứ hai sẽ là NAT. Và ta nhấn close để thoát ra.
+Tại đây Network Adapter đầu tiên của tui là NAT và cái thứ hai sẽ là Vmnet1(Host-only). Và ta nhấn close để thoát ra.
 
-<img width="892" height="922" alt="image" src="https://github.com/user-attachments/assets/d1244fdb-5d76-45ee-ba47-c60bdbdfa4d7" />
+<img width="886" height="906" alt="image" src="https://github.com/user-attachments/assets/f73b943e-c5d4-469b-a5a5-289abb4dd0b5" />
 
 Khi này ta sẽ nhấn Finish để hoàn thành.
 
@@ -127,7 +127,7 @@ Ta sẽ select Install và nhấn Enter.
 
 <img width="817" height="487" alt="image" src="https://github.com/user-attachments/assets/e28c8621-6fb7-4a93-8fc6-ed0301c3dc52" />
 
-Tại đây em0 sẽ là Network Adapter đầu tiên của tui ở đây là Vmnet1(Host-only) nên tui sẽ chọn vào.
+Tại WAN interfacface Assignment and Congiguration. Em0 sẽ là Network Adapter đầu tiên của tui ở đây là NAT nên tui sẽ chọn vào. ( Lưu ý nếu chọn Em1 ở đây là VMnet1 (Host-only) thì nó sẽ khá kì kiểu WAN thành nội bộ ấy =)) )
 
 <img width="952" height="551" alt="image" src="https://github.com/user-attachments/assets/64b34ac3-430b-4052-b9e7-a0dfce128379" />
 
@@ -135,5 +135,18 @@ Tại đây ta sẽ nhấn okey để tiếp tục.
 
 <img width="833" height="542" alt="image" src="https://github.com/user-attachments/assets/73802b46-d194-4924-be6e-2952154d5c5c" />
 
+Tại LAN interfacface Assignment and Congiguration chọn Em1 ở đây là Network Adapter thứ của tui ở đây là VMnet1 (Host-only)
 
+<img width="707" height="457" alt="image" src="https://github.com/user-attachments/assets/5741ab90-4150-403b-afe3-cf5f7bcf59ff" />
 
+Tiếp đó tui sẽ ấn Enter.
+
+<img width="713" height="421" alt="image" src="https://github.com/user-attachments/assets/f41b4b6c-b3b3-41cd-92e3-1a9a1096fcc4" />
+
+Tui sẽ ấn enter tiếp.
+
+<img width="705" height="397" alt="image" src="https://github.com/user-attachments/assets/2623a222-73e2-4481-b7fb-27938bc16dbd" />
+
+Ở đây tui sẽ đợi pfSense check kết nối.
+
+<img width="719" height="434" alt="image" src="https://github.com/user-attachments/assets/a2151651-f62d-465a-9e43-58722459e8d4" />
