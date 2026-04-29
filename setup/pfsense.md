@@ -24,7 +24,40 @@ Tại đây tui sẽ sử dụng VM Workstation. Bạn có thể tải [tại đ
 
 ### Bước 1: Thiết kế mạng cho Lab 
 
-Cấu trúc lab của tui sẽ theo cấu trúc như thế này.
+Trước tiên, mình cần xác định dải IP của mạng Host-Only. Để làm điều này, vào Edit → Virtual Network Editor.
+
+Tại đây, ta có thể xem thông tin subnet address mà VMware cấp cho mạng Host-Only.
+
+<img width="1112" height="532" alt="image" src="https://github.com/user-attachments/assets/7c806f86-f101-43f4-a537-5307e0bddcfd" />
+
+Trong trường hợp này, Subnet Address là 192.168.188.0/24.
+
+<img width="697" height="102" alt="image" src="https://github.com/user-attachments/assets/d0d69817-c6ae-4071-a991-3e2985295e5c" />
+
+Điều này có nghĩa là toàn bộ các máy ảo trong lab sẽ sử dụng địa chỉ IP thuộc dải 192.168.188.x .
+
+- Network Address: 192.168.188.0
+- Broadcast Address: 192.168.188.255
+- Network Address: 192.168.188.1 - 192.168.188.254
+
+Nên dựa vào dãi mạng mà ta có thể sử dụng được. Tôi set up cấu trúc lab như sau.
+
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│                                  Host Computer                                           │
+│  ┌────────────────────────────────────────────────────────────────────────────────────┐  │
+│  │                    VM Workstation Host-Only Network                                │  │
+│  │                          192.168.188.0/24                                          │  │
+│  │                                                                                    │  │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────┐  ┌────────────┐│  │
+│  │  │ pfSense  │  │  Splunk  │  │   Kali   │  │    AD    │  │Windows │  │   Linux    ││  │
+│  │  │ Firewall │  │   SIEM   │  │ Attacker │  │ Domain   │  │ Client │  │   Client   ││  │
+│  │  │ .188.1   │  │ .188.10  │  │ .188.20  │  │ .188.30  │  │ .188.40│  │  .188.50   ││  │
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └────────┘  └────────────┘│  │
+│  │                                                                                    │  │
+│  └────────────────────────────────────────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 
 
