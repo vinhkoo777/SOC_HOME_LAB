@@ -167,4 +167,22 @@ Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc 
 
 ## Phase 3: Tải Splunk
 
+### Bước 1: Update hệ thống
 
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### Bước 2: Cài đặt splunk.
+
+```bash
+wget -O splunk-10.2.2-80b90d638de6-linux-amd64.deb "https://download.splunk.com/products/splunk/releases/10.2.2/linux/splunk-10.2.2-80b90d638de6-linux-amd64.deb"
+```
+
+<img width="1326" height="405" alt="image" src="https://github.com/user-attachments/assets/b476d16c-3345-467e-bff5-f370b74dc1b3" />
+
+Xong rồi ta tiến hành nhập lệnh dưới để tiến hành cài đặt.
+
+```bash
+sudo apt install ./splunk-10.2.2-80b90d638de6-linux-amd64.deb
+```
