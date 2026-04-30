@@ -188,3 +188,17 @@ Xong rồi ta tiến hành nhập lệnh dưới để tiến hành cài đặt.
 ```bash
 sudo apt install ./splunk-10.2.2-80b90d638de6-linux-amd64.deb
 ```
+
+### Bước 3: Chạy splunk 
+```bash
+sudo /opt/splunk/bin/splunk start --accept-license
+```
+### Bước 4: Tạo tài khoản admin
+- Username: admin
+- Password: [chọn mật khẩu mạnh]
+### Bước 5: Tự động bật khi khởi động 
+```bash
+sudo /opt/splunk/bin/splunk enable boot-start -user socadmin
+```
+### Bước 6: Truy cập splunk 
+Truy cập thông qua browers của host http://192.168.188.10:8000. Xong rồi đăng nhập vào tài khoản admin.
