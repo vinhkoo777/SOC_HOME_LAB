@@ -1,6 +1,6 @@
 # SIEM - Splunk Set up
 
-Đây là phần thứ hai của chuỗi SOC_HOME_LAB (by k0g4). Sau khi có network foundation từ pfSense, bước tiếp theo ta sẽ sử dụng Splink làm SIEM - Nơi thu nhập và phân tích toàn bộ log từ lab.
+Đây là phần thứ hai của chuỗi SOC_HOME_LAB (by k0g4). Sau khi có network foundation từ pfSense, bước tiếp theo ta sẽ sử dụng Splunk làm SIEM - Nơi thu nhập và phân tích toàn bộ log từ lab.
 
 ## Phase 1: Chuẩn bị
 
