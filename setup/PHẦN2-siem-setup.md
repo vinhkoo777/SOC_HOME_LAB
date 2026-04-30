@@ -184,5 +184,5 @@ wget -O splunk-10.2.2-80b90d638de6-linux-amd64.deb "https://download.splunk.com/
 Xong rồi ta tiến hành nhập lệnh dưới để tiến hành cài đặt.
 
 ```bash
-sudo apt install splunk-10.2.2-80b90d638de6-linux-amd64.deb
+sudo apt install ./splunk-10.2.2-80b90d638de6-linux-amd64.deb
 ```
