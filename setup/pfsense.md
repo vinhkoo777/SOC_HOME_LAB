@@ -238,3 +238,10 @@ Và ta đã hoàn tất quá trình cài đặt bây giờ nhấn finish để h
 Đây là trang dashboard của pfSense.
 
 <img width="1914" height="751" alt="image" src="https://github.com/user-attachments/assets/eff989b1-e49d-4b65-96b2-2ef42f3aece0" />
+
+## Một số lỗi trong quá trình cài đặt có thể diển ra
+
+Trong quá trình cài đặt thì tôi có gặp 1 lỗi là nó sẽ treo việc tải (ảnh ở dưới). Cách fix của tôi là bạn hãy thử cài 1.1.1.1 và quá trình cài đặt sẽ diễn ra. (Tôi đã thử và thành công kiikkikiki :3 )
+
+<img width="700" height="393" alt="Screenshot 2026-04-30 161506" src="https://github.com/user-attachments/assets/015a46be-63c5-4fc8-9530-5805af08f77c" />
+
