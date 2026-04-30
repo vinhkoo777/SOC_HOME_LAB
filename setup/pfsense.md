@@ -183,7 +183,7 @@ Ta tiến hành reboot. bằng cách nhấn enter.
 
 <img width="768" height="517" alt="image" src="https://github.com/user-attachments/assets/4c0a65e0-d6cf-48a2-8805-536a8f2bba0a" />
 
-**NOTE:** Nhưng mà trước khi bắt đầu cấu hình tui sẽ cần tháo ios image pfSense ra. Đầu tiên ta tắt pfSense -> Tiếp đó chuột phải vào VM pfSense rồi vào CD/DVD (IDE). Rồi uncheck connect at power on. Và bạn cũng nên tạo 1 bản snapshot để quay về trạng thái ban đầu nếu có chuyện giò xảy ra. Đầu Tiên chuột phải vào VM pfSense -> chọn snapshot -> xong take snapshot -> đặt tên và confirm và ta đã có 1 bản snapshot để quay về.
+**NOTE:** Nhưng mà trước khi bắt đầu cấu hình tui sẽ cần tháo ios image pfSense ra. Đầu tiên ta tắt pfSense -> Tiếp đó chuột phải vào VM pfSense rồi vào CD/DVD (IDE). Rồi uncheck connect at power on. Và bạn cũng nên tạo 1 bản snapshot để quay về trạng thái ban đầu nếu có chuyện gì xảy ra. Đầu Tiên chuột phải vào VM pfSense -> chọn snapshot -> xong take snapshot -> đặt tên và confirm và ta đã có 1 bản snapshot để quay về.
 
 ### Bước 3: Truy cập pfSense thông qua web
 - Đầu tiên mở trình duyệt rồi truy cập vào https://192.168.188.2/
