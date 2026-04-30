@@ -49,19 +49,19 @@ Tiếp đó là cấu hình keyboard layout ở đây tui sẽ để mặc đị
 
 <img width="1278" height="467" alt="image" src="https://github.com/user-attachments/assets/bdfff16a-9ee7-4257-b8b8-a7e447df8156" />
 
-Ở đây tui cũng sẽ để mặc định và tiếp tục nhấn enter tiếp.
+Tại Chose the type of Installation tui sẽ để là Ubuntu Server. Sau đó tiếp tục nhấn enter để xác thực.
 
 <img width="1175" height="543" alt="image" src="https://github.com/user-attachments/assets/65b3169f-1f91-46cd-9872-056a5cc2e438" />
 
-Tiếp tục enter.
+Tại Network configuration ta tiếp tục nhấn enter.
 
 <img width="1344" height="864" alt="image" src="https://github.com/user-attachments/assets/28f4db89-6404-42f6-987a-2e6c09274890" />
 
-Nhấn enter.
+Mục proxy configuration tui sẽ để trống và nhấn enter để tiếp tục.
 
 <img width="1385" height="825" alt="image" src="https://github.com/user-attachments/assets/bed3a152-4b34-4087-b47b-e477c6dea547" />
 
-Tại đây Ubuntu Server đang test Mirror. Nhấn enter để tiếp tục .
+Tại đây Ubuntu Server đang test Mirror. Nhấn enter để tiếp tục. Sau khi có mirror location đã thành công vượt qua bài test.
 
 <img width="1367" height="843" alt="Screenshot 2026-04-30 205633" src="https://github.com/user-attachments/assets/f5e31ced-fd4e-4000-909a-5b918a8725f4" />
 
