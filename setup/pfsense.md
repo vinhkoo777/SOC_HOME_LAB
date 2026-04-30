@@ -186,4 +186,55 @@ Ta tiến hành reboot. bằng cách nhấn enter.
 **NOTE:** Nhưng mà trước khi bắt đầu cấu hình tui sẽ cần tháo ios image pfSense ra. Đầu tiên ta tắt pfSense -> Tiếp đó chuột phải vào VM pfSense rồi vào CD/DVD (IDE). Rồi uncheck connect at power on. Và bạn cũng nên tạo 1 bản snapshot để quay về trạng thái ban đầu nếu có chuyện giò xảy ra. Đầu Tiên chuột phải vào VM pfSense -> chọn snapshot -> xong take snapshot -> đặt tên và confirm và ta đã có 1 bản snapshot để quay về.
 
 ### Bước 3: Truy cập pfSense thông qua web
+- Đầu tiên mở trình duyệt rồi truy cập vào https://192.168.188.2/
+- Tiếp đó Chấp nhận security warning (self-signed certificate)
+<img width="1907" height="1030" alt="image" src="https://github.com/user-attachments/assets/6d92ff53-a687-4223-af09-fd8c594f64fa" />
 
+Đây là màn hình chính tại đây ta đặng nhập với thông tin tài khoản.
+- Username: admin
+- Password: pfsense
+
+<img width="1919" height="978" alt="image" src="https://github.com/user-attachments/assets/56888fe6-7770-43cb-bff5-01119f4dfb8d" />
+
+Tiếp theo ta sẽ cần hoàn thành Setup Wizard. Đầu tiên ấn Next.
+
+<img width="1916" height="982" alt="image" src="https://github.com/user-attachments/assets/0be2a973-7947-4b9d-b2f9-cbf1f3c0ec3c" />
+
+Và ấn next thêm 1 lần nữa.
+
+<img width="1918" height="970" alt="image" src="https://github.com/user-attachments/assets/01fd84f2-e2d1-488a-b9ed-9dd601d4eecb" />
+
+Ta sẽ set 
+- Hostname: pfsense
+- Domain: localdomain
+Tiếp đó ta sẽ nhấn next để tiếp tục.
+
+<img width="1910" height="977" alt="image" src="https://github.com/user-attachments/assets/b536921c-ace7-4703-b54b-afb44ffeb834" />
+
+Hãy thay đổi timezone của bạn rồi nhấn next.
+
+<img width="1918" height="862" alt="image" src="https://github.com/user-attachments/assets/8b2c8e7e-fe94-42f8-9ac6-2a188a20389a" />
+
+Tại đây ta sẽ để nguyên. Ta kéo chuột xuống và nhấn next.
+
+<img width="1919" height="809" alt="image" src="https://github.com/user-attachments/assets/badbbb02-43dc-49b0-b775-cffc629d30fb" />
+
+Tại đây ta cũng sẽ nhấn next.
+
+<img width="1919" height="922" alt="image" src="https://github.com/user-attachments/assets/cd92ffb3-9417-4363-b585-b2e2d9040803" />
+
+Thay đổi mật khẩu admin của bạn.
+
+<img width="1918" height="901" alt="image" src="https://github.com/user-attachments/assets/5a1c4640-145f-43da-813f-e47f3ab0385b" />
+
+Xong rồi ta sẽ nhấn nút reload.
+
+<img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/b8b4bd05-be04-445e-bfe6-eeeed9b81a08" />
+
+Và ta đã hoàn tất quá trình cài đặt bây giờ nhấn finish để hoàn tất.
+
+<img width="1911" height="915" alt="image" src="https://github.com/user-attachments/assets/722d8d3f-72c8-4d07-b2d2-888aa8672a79" />
+
+Đây là trang dashboard của pfSense.
+
+<img width="1914" height="751" alt="image" src="https://github.com/user-attachments/assets/eff989b1-e49d-4b65-96b2-2ef42f3aece0" />
