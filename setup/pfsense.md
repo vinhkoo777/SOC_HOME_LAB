@@ -57,7 +57,7 @@ Nên dựa vào dãi mạng mà ta có thể sử dụng được. Tôi set up c
 │  │                                                                                    │  │
 │  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────┐  ┌────────────┐│  │
 │  │  │ pfSense  │  │  Splunk  │  │   Kali   │  │    AD    │  │Windows │  │   Linux    ││  │
-│  │  │ Firewall │  │   SIEM   │  │ Attacker │  │ Domain   │  │ Client │  │   Client   ││  │
+│  │  │ Firewall │  │   SIEM   │  │ Attacker │  │  Domain  │  │ Client │  │   Client   ││  │
 │  │  │ .188.1   │  │ .188.10  │  │ .188.20  │  │ .188.30  │  │ .188.40│  │  .188.50   ││  │
 │  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └────────┘  └────────────┘│  │
 │  │                                                                                    │  │
