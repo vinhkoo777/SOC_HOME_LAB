@@ -46,6 +46,14 @@ Nên trong lab này sẽ sử dụng địa chỉ IP thuộc dải 192.168.188.x
 - Broadcast Address: 192.168.188.255
 - Network Address: 192.168.188.1 - 192.168.188.254
 
+**NOTE QUAN TRỌNG:** Tránh trùng IP giữa VMware và pfSense.
+
+Mặc định VMware VMnet1 (Host-only) thường có IP là `192.168.188.1`. Có thể dùng lệnh `ipconfig` trên máy host. 
+
+<img width="860" height="198" alt="image" src="https://github.com/user-attachments/assets/a1fb9470-4de3-4646-a67f-2fb812372ab8" />
+
+Nếu pfSense được set cấu hình LAN là `192.168.188.1` nó có thể bị xung đột. Nên ở đây tui sẽ để là. `192.168.188.2` Cho cấu hình LAN của pfSense.
+
 Nên dựa vào dãi mạng mà ta có thể sử dụng được. Tôi set up cấu trúc lab như sau.
 
 ```
@@ -58,7 +66,7 @@ Nên dựa vào dãi mạng mà ta có thể sử dụng được. Tôi set up c
 │  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────┐  ┌────────────┐│  │
 │  │  │ pfSense  │  │  Splunk  │  │   Kali   │  │    AD    │  │Windows │  │   Linux    ││  │
 │  │  │ Firewall │  │   SIEM   │  │ Attacker │  │  Domain  │  │ Client │  │   Client   ││  │
-│  │  │ .188.1   │  │ .188.10  │  │ .188.20  │  │ .188.30  │  │ .188.40│  │  .188.50   ││  │
+│  │  │ .188.2   │  │ .188.10  │  │ .188.20  │  │ .188.30  │  │ .188.40│  │  .188.50   ││  │
 │  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └────────┘  └────────────┘│  │
 │  │                                                                                    │  │
 │  └────────────────────────────────────────────────────────────────────────────────────┘  │
