@@ -177,9 +177,43 @@ Ta tiến hành reboot. bằng cách nhấn enter.
 
 **NOTE:** Nhưng mà trước khi bắt đầu cấu hình tui sẽ cần tháo ios image pfSense ra. Đầu tiên ta tắt pfSense -> Tiếp đó chuột phải vào VM pfSense rồi vào CD/DVD (IDE). Rồi uncheck connect at power on. Và bạn cũng nên tạo 1 bản snapshot để quay về trạng thái ban đầu nếu có chuyện giò xảy ra. Đầu Tiên chuột phải vào VM pfSense -> chọn snapshot -> xong take snapshot -> đặt tên và confirm và ta đã có 1 bản snapshot để quay về.
 
+### Bước 3: Cấu hình pfSense Interfaces
 
+Đầu tiên ta sẽ nhập **2** mục đích là Set interface(s) IP address.
 
+<img width="711" height="316" alt="image" src="https://github.com/user-attachments/assets/0e8043b5-5c3d-4739-a55e-6ee1e886e096" />
 
+Tiếp đó nhập **2** tiếp là ta sẽ chọn LAN.
 
+<img width="541" height="82" alt="image" src="https://github.com/user-attachments/assets/6c7d4a15-a4ea-4e95-ab1d-18c7660e0232" />
 
+Tiếp đó pfSense kêu ta rằng Configure IPv4 address LAN interface via DHCP tại đây ta nhập **n**.
+
+<img width="553" height="81" alt="image" src="https://github.com/user-attachments/assets/4794bdf4-cb37-446c-8831-ad899cd2d5a9" />
+
+pfSense sẽ kêu tui nhập IPV4 mới tui sẽ nhập lại 192.168.188.1.
+
+<img width="675" height="181" alt="image" src="https://github.com/user-attachments/assets/e1315f91-effa-40a5-b0fa-828bbba62667" />
+
+Sau đó ta sẽ nhập 24.
+
+<img width="474" height="47" alt="image" src="https://github.com/user-attachments/assets/d9265890-ab0e-4395-a025-eecb3a2f2889" />
+
+Tại đây tui sẽ nhấn enter để không upstream gateway.
+
+<img width="607" height="74" alt="image" src="https://github.com/user-attachments/assets/dcf0ec05-cb36-477d-88fb-cb75fab62c17" />
+
+Tiếp theo pfSense sẽ hỏi cấu hình IPv6 address LAN interface via DHCP ở đây tui để n. Và nhấn tiếp enter để không nhập IPv6.
+
+<img width="547" height="87" alt="image" src="https://github.com/user-attachments/assets/7c16cd32-ce90-4d01-bee7-7647a4795146" />
+
+Tại đây ta sẽ nhập n vì tí nữa ta sẽ cấu hình tĩnh IP.
+
+<img width="590" height="68" alt="image" src="https://github.com/user-attachments/assets/2ec853b7-43a3-46ea-830d-6bf11fc0be5e" />
+
+Tại đây ta nhập xong xong rồi pfSense sẽ lưu setting lại. 
+
+<img width="703" height="204" alt="image" src="https://github.com/user-attachments/assets/5ad2d9a1-3d4a-4ccc-a9ae-478d368f2c6a" />
+
+### Bước 4: Truy cập pfSense thông qua web
 
