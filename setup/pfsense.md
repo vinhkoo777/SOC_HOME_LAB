@@ -166,3 +166,8 @@ Tại đây ta sẽ chọn phiên bản mà ta muốn cài rồi ấn enter.
 Bây giờ ta sẽ đợi quá trình cài đặt hoàn tất.
 
 <img width="711" height="528" alt="image" src="https://github.com/user-attachments/assets/98e772b8-0335-414f-8bea-00df8e53e852" />
+
+Sau khi cài đặt xong ta khoang hẳng reboot. Bây giờ ta sẽ cần tháo ios image ra nếu không thì khi reboot lại nó sẽ vô lại phần cài đặt một lần nữa. 
+
+
+
