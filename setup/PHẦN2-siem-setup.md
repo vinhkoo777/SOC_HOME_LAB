@@ -191,7 +191,8 @@ sudo apt install ./splunk-10.2.2-80b90d638de6-linux-amd64.deb
 
 ### Bước 3: Chạy splunk 
 ```bash
-sudo /opt/splunk/bin/splunk start --accept-license
+sudo chown -R socadmin:socadmin /opt/splunk
+/opt/splunk/bin/splunk start --accept-license
 ```
 ### Bước 4: Tạo tài khoản admin
 - Username: admin
