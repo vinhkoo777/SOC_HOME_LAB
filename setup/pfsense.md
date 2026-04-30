@@ -167,7 +167,19 @@ Bây giờ ta sẽ đợi quá trình cài đặt hoàn tất.
 
 <img width="711" height="528" alt="image" src="https://github.com/user-attachments/assets/98e772b8-0335-414f-8bea-00df8e53e852" />
 
-Sau khi cài đặt xong ta khoang hẳng reboot. Bây giờ ta sẽ cần tháo ios image ra nếu không thì khi reboot lại nó sẽ vô lại phần cài đặt một lần nữa. 
+Ta tiến hành reboot. bằng cách nhấn enter.
+
+<img width="882" height="572" alt="image" src="https://github.com/user-attachments/assets/0f9a274f-4438-4bde-920a-a8261c23abab" />
+
+Đây là giao diện màn hình chính của pfSense.
+
+<img width="768" height="517" alt="image" src="https://github.com/user-attachments/assets/4c0a65e0-d6cf-48a2-8805-536a8f2bba0a" />
+
+**NOTE:** Nhưng mà trước khi bắt đầu cấu hình tui sẽ cần tháo ios image pfSense ra. Đầu tiên ta tắt pfSense -> Tiếp đó chuột phải vào VM pfSense rồi vào CD/DVD (IDE). Rồi uncheck connect at power on. Và bạn cũng nên tạo 1 bản snapshot để quay về trạng thái ban đầu nếu có chuyện giò xảy ra. Đầu Tiên chuột phải vào VM pfSense -> chọn snapshot -> xong take snapshot -> đặt tên và confirm và ta đã có 1 bản snapshot để quay về.
+
+
+
+
 
 
 
