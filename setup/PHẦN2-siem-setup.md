@@ -190,6 +190,7 @@ sudo apt install ./splunk-10.2.2-80b90d638de6-linux-amd64.deb
 ```
 
 ### Bước 3: Chạy splunk 
+Ta cần phải cd.. về root trước. Xong rồi mới thực hiện các lệnh ở dưới.
 ```bash
 sudo chown -R socadmin:socadmin /opt/splunk
 /opt/splunk/bin/splunk start --accept-license
