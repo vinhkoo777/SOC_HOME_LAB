@@ -101,3 +101,52 @@ Tại đây ta sẽ cần chuột phải vào máy ảo Ubuntu Server chọn set
 
 ## Phase 2: Cấu hình IP tĩnh.
 
+### Bước 1: Check IP 
+
+Đầu tiên ta sẽ check ip hiện tại của ta
+
+```bash
+ip addr show
+```
+
+<img width="1028" height="299" alt="image" src="https://github.com/user-attachments/assets/b0a242a0-d9f4-4bf0-9feb-5f9c259a3255" />
+
+Do tui mới đổi sang VMnet1(Host-only) nên ta sẽ cần tự config IP tĩnh.
+
+### Bước 2: edit netplan configuration.
+
+Tiếp theo đó sử nhập lệnh. Để edit netplan configuration.
+
+```bash
+sudo nano /etc/netplan/00-installer-config.yaml
+```
+
+### Bước 3: Thay đổi content trong config đó
+
+Tại đây ta sẽ nhập giống như vậy. 
+
+```bash
+network:
+  version: 2
+  ethernets:
+    ens33:
+      addresses:
+        - 192.168.188.10/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+      routes:
+        - to: default
+          via: 192.168.188.2
+```
+
+### Bước 4:
+
+Xong rồi ta sẽ apply config trên bằng cách nhập.
+```bash
+sudo netplan apply
+```
+
+Tiếp đó ta sẽ tiến
+
