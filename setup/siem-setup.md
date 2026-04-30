@@ -141,12 +141,30 @@ network:
           via: 192.168.188.2
 ```
 
-### Bước 4:
+### Bước 4: Áp dụng config
 
 Xong rồi ta sẽ apply config trên bằng cách nhập.
 ```bash
 sudo netplan apply
 ```
 
-Tiếp đó ta sẽ tiến
+## Bước 5: Tiến hành confirm 
+Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đã được config đúng hay chưa.
+```bash
+ip adđr show ens33
+```
+
+<img width="715" height="147" alt="image" src="https://github.com/user-attachments/assets/9e569016-4952-46ea-ba30-1668b1528aed" />
+
+Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
+```bash
+ping -c 3 8.8.8.8
+```
+
+<img width="716" height="151" alt="image" src="https://github.com/user-attachments/assets/bd36bfad-ae86-4381-887e-16e84ebaeaaa" />
+
+Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc cấu hình IP tĩnh của chúng ta đã hoàn thành bây giờ ta sẽ qua phase tiếp theo.
+
+<img width="481" height="95" alt="image" src="https://github.com/user-attachments/assets/079a75d0-4c1d-4483-9580-bf023bae491d" />
+
 
