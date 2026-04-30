@@ -148,7 +148,7 @@ Xong rồi ta sẽ apply config trên bằng cách nhập.
 sudo netplan apply
 ```
 
-## Bước 5: Tiến hành confirm 
+### Bước 5: Tiến hành confirm 
 Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đã được config đúng hay chưa.
 ```bash
 ip adđr show ens33
