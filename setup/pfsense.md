@@ -149,7 +149,7 @@ Tại LAN interfacface Assignment and Congiguration chọn Em1 ở đây là Net
 
 Tại đây tui sẽ tắt DHCP và đặt IP address là 192.168.188.2. Sau đó tui nhấn enter.
 
-<img width="810" height="492" alt="image" src="https://github.com/user-attachments/assets/57bfa3b3-5161-4dc2-bcc2-4cf77968c768" />
+<img width="832" height="500" alt="image" src="https://github.com/user-attachments/assets/e35f305e-3b08-4893-a87d-4381678b74d7" />
 
 Tui sẽ ấn enter tiếp.
 
