@@ -89,3 +89,13 @@ Trong mục này ta sẽ không tải snap nào hết kéo xuống done và ti�
 
 <img width="1308" height="832" alt="image" src="https://github.com/user-attachments/assets/07551ab9-968d-464e-91c3-fbd002c0127c" />
 
+Sau khi cài đặt xong ta tiến hành reboot.
+
+<img width="1293" height="846" alt="image" src="https://github.com/user-attachments/assets/150eb0b4-1a27-43ff-8515-b137e2217d3c" />
+
+Tại đây ta sẽ cần chuột phải vào máy ảo Ubuntu Server chọn setting -> Xong rồi vào mục CD/DVD (Sata) rồi uncheck connect at power on. Nhấn ok để hoàn tất. Xong rồi tiếp đó ta sẽ nhấn enter để tiến hành quá trình vào ubuntu server.
+
+<img width="1091" height="631" alt="image" src="https://github.com/user-attachments/assets/82795537-718d-417d-a8e6-c9deb801c91a" />
+
+## Phase 2: Cấu hình IP tĩnh.
+
