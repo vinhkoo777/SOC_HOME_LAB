@@ -175,6 +175,8 @@ sudo apt update && sudo apt upgrade -y
 
 ### Bước 2: Cài đặt splunk.
 
+Đầu tiên ta sẽ cần tải file .deb về.
+
 ```bash
 wget -O splunk-10.2.2-80b90d638de6-linux-amd64.deb "https://download.splunk.com/products/splunk/releases/10.2.2/linux/splunk-10.2.2-80b90d638de6-linux-amd64.deb"
 ```
