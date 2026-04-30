@@ -29,12 +29,63 @@ Tiếp theo bạn sẽ cần đặt tên máy ảo và chọn nơi mà máy ảo
 
 <img width="497" height="531" alt="image" src="https://github.com/user-attachments/assets/865cae5d-ccc5-45c2-a6d2-1cd16dbb549f" />
 
-Tôi sẻ để 60gb và nhấn next.
+Tôi sẽ để 60gb và nhấn next.
 
 <img width="505" height="540" alt="image" src="https://github.com/user-attachments/assets/c677cdcd-f12c-46cd-a7f2-63d637e115f4" />
 
-Ta sẽ cần Customize Hardware. Để chỉnh Network Adapter sang vmNet1 (Host-only). Xong rồi ta nhấn close để hoàn thành xong phần chuẩn bị. Và nhấn Finish.
+Ta sẽ cần Customize Hardware. Để chỉnh Network Adapter sang NAT (Tí nữa ta sẽ chỉnh sang VMnet1 (host-only) sau ). Xong rồi ta nhấn close để hoàn thành xong phần chuẩn bị. Và nhấn Finish.
 
 <img width="895" height="897" alt="image" src="https://github.com/user-attachments/assets/ea8bad8d-b99c-4141-9c5a-b9561f5dfbb5" />
 
+## Phase 2: Cài đặt Ubuntu server.
+
+Ta nhấn enter để tiến hành cài đặt ubuntu server.
+
+Tại đây ta chọn ngôn ngữ và tui sẽ để là tiếng anh. Ta nhấn enter để xác nhận.
+
+<img width="972" height="507" alt="image" src="https://github.com/user-attachments/assets/b3cdb356-c4e1-49ca-850e-bce24a6a1c0e" />
+
+Tiếp đó là cấu hình keyboard layout ở đây tui sẽ để mặc định và nhấn enter.
+
+<img width="1278" height="467" alt="image" src="https://github.com/user-attachments/assets/bdfff16a-9ee7-4257-b8b8-a7e447df8156" />
+
+Ở đây tui cũng sẽ để mặc định và tiếp tục nhấn enter tiếp.
+
+<img width="1175" height="543" alt="image" src="https://github.com/user-attachments/assets/65b3169f-1f91-46cd-9872-056a5cc2e438" />
+
+Tiếp tục enter.
+
+<img width="1344" height="864" alt="image" src="https://github.com/user-attachments/assets/28f4db89-6404-42f6-987a-2e6c09274890" />
+
+Nhấn enter.
+
+<img width="1385" height="825" alt="image" src="https://github.com/user-attachments/assets/bed3a152-4b34-4087-b47b-e477c6dea547" />
+
+Tại đây Ubuntu Server đang test Mirror. Nhấn enter để tiếp tục .
+
+<img width="1367" height="843" alt="Screenshot 2026-04-30 205633" src="https://github.com/user-attachments/assets/f5e31ced-fd4e-4000-909a-5b918a8725f4" />
+
+Ta sẽ dùng option use entire disk. Xong rồi sử dụng các nút mũi tên duy chuyển xuống done. Rồi nhấn enter.
+
+<img width="1395" height="853" alt="image" src="https://github.com/user-attachments/assets/2b191297-6f79-4821-a13c-d974c5619581" />
+
+Kiểm tra thông tin. Thấy okey rồi ta sẽ nhấn enter.
+
+<img width="1344" height="818" alt="image" src="https://github.com/user-attachments/assets/5cc09c40-a34c-4650-939b-72777489f034" />
+
+Ở đây ta confirm bằng cách nhấn vào continue. Để tiến hành xác nhân.
+
+<img width="771" height="297" alt="image" src="https://github.com/user-attachments/assets/d010d34c-e7f5-4de0-be4d-1a995fb20520" />
+
+Tại profile configuration. Ta tiến hành set up profile của chúng ta. Xong rồi nhấn enter để xác nhận.
+
+<img width="1283" height="796" alt="image" src="https://github.com/user-attachments/assets/acd585df-eed0-4006-9cf1-14edd7ed56b7" />
+
+Trong ssh configuration ta sẽ cần tick vào Install OpenSSH server. Xong rồi kéo xuống done rồi enter để tiếp tục.
+
+<img width="1377" height="828" alt="image" src="https://github.com/user-attachments/assets/d1d591e1-5ad1-459a-8717-4f10792d72ee" />
+
+Trong mục này ta sẽ không tải snap nào hết kéo xuống done và tiến hành cài đặt.
+
+<img width="1308" height="832" alt="image" src="https://github.com/user-attachments/assets/07551ab9-968d-464e-91c3-fbd002c0127c" />
 
