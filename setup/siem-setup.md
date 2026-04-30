@@ -97,7 +97,7 @@ Tại đây ta sẽ cần chuột phải vào máy ảo Ubuntu Server chọn set
 
 <img width="1091" height="631" alt="image" src="https://github.com/user-attachments/assets/82795537-718d-417d-a8e6-c9deb801c91a" />
 
-**Sau khi xong các bước trên ta nên tắt ubuntu server. Tiến hành đổi Network Adaptor sang VMnet1. Và cuối cùng là tạo 1 bản snap shut để backup lại phòng khi có lỗi xảy ra.**
+**Sau khi xong các bước trên ta nên tắt ubuntu server. Tiến hành đổi Network Adaptor sang VMnet1 (Host-Only). Và cuối cùng là tạo 1 bản snap shut để backup lại phòng khi có lỗi xảy ra.**
 
 ## Phase 2: Cấu hình IP tĩnh.
 
