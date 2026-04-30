@@ -165,4 +165,6 @@ Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc 
 
 <img width="481" height="95" alt="image" src="https://github.com/user-attachments/assets/079a75d0-4c1d-4483-9580-bf023bae491d" />
 
+## Phase 3: Tải Splunk
+
 
