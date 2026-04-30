@@ -154,14 +154,12 @@ Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đ
 ip adđr show ens33
 ```
 
-<img width="715" height="147" alt="image" src="https://github.com/user-attachments/assets/9e569016-4952-46ea-ba30-1668b1528aed" />
+<img width="716" height="151" alt="image" src="https://github.com/user-attachments/assets/7b0d3cdd-6a55-4f99-a1e2-4a248dcdcb80" />
 
 Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
 ```bash
 ping -c 3 8.8.8.8
 ```
-
-<img width="716" height="151" alt="image" src="https://github.com/user-attachments/assets/bd36bfad-ae86-4381-887e-16e84ebaeaaa" />
 
 Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc cấu hình IP tĩnh của chúng ta đã hoàn thành bây giờ ta sẽ qua phase tiếp theo.
 
