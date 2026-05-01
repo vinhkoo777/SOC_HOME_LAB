@@ -12,7 +12,7 @@ Trong lab này, tôi triển khai một **Domain Controller** sử dụng Window
 
 ### 1.1 — Cài đặt Windows Server
 
-> Phiên bản sử dụng: **Windows Server 2025**
+Phiên bản sử dụng: **Windows Server 2025**
 
 **Bước 1: Tải ISO image**
 
@@ -46,7 +46,7 @@ Nhấn **Customize Hardware** để cấu hình thêm. Đặt **Memory: 4.9 GB**
 
 <img width="317" height="280" alt="image" src="https://github.com/user-attachments/assets/5c5d3183-96f8-47ae-83d2-b938101f9fd1" />
 
-Vào **CD/DVD (SATA)** → chọn mục 2 → browse đến file ISO Windows Server.
+Vào **CD/DVD (SATA)** tiếp đó chọn mục 2 → browse đến file ISO Windows Server.
 
 <img width="886" height="376" alt="image" src="https://github.com/user-attachments/assets/7155dc78-8b8b-45d6-bb2a-41692ada6655" />
 
@@ -54,7 +54,7 @@ Vào **CD/DVD (SATA)** → chọn mục 2 → browse đến file ISO Windows Ser
 
 Khởi động máy ảo. Các bước đầu nhấn **Next** liên tục.
 
-Tại mục **Select Image** chọn phiên bản thứ 4 → nhấn **Next** → Accept điều khoản.
+Tại mục **Select Image** chọn phiên bản thứ 4 -> sau đó nhấn **Next** -> và Accept điều khoản.
 
 <img width="1222" height="852" alt="image" src="https://github.com/user-attachments/assets/9a220331-f4c3-49d8-bc28-e2e916a49303" />
 
@@ -66,10 +66,9 @@ Sau khi cài đặt xong, nhập mật khẩu Administrator và nhấn **Next**.
 
 <img width="1261" height="879" alt="image" src="https://github.com/user-attachments/assets/68648a44-871c-4889-951e-48e3e4040658" />
 
-Cài đặt hoàn tất. *(Nên tạo snapshot ngay lúc này để phòng hờ.)*
+Cài đặt hoàn tất. (nên tạo snapshot để phòng hờ có chuyện gì đó xảy ra)
 
 <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
-
 
 ### 1.2 — Cấu hình Static IP
 
@@ -87,19 +86,19 @@ Cấu hình:
 | IP Address | 192.168.188.30 |
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.188.2 |
-| DNS Server | 127.0.0.1 |
+| DNS Server | 8.8.8.8 |
 
 ### 1.3 — Đổi Hostname thành DC01
 
-**Bước 1:** Vào **Server Manager** → chọn **Local Server**.
+**Bước 1:** Vào **Server Manager** -> chọn **Local Server**.
 
 <img width="958" height="481" alt="image" src="https://github.com/user-attachments/assets/eb61c9ba-8dba-46f4-9367-36b4810d0c55" />
 
-**Bước 2:** Nhấn vào **Computer Name** → nhấn **Change**.
+**Bước 2:** Nhấn vào **Computer Name** -> nhấn **Change**.
 
 <img width="1028" height="722" alt="image" src="https://github.com/user-attachments/assets/c4e530a8-3dde-4a85-b5d1-e734eff81812" />
 
-**Bước 3:** Đổi tên thành `DC01` → nhấn **OK**. Máy sẽ yêu cầu khởi động lại để áp dụng.
+**Bước 3:** Đổi tên thành `DC01` -> nhấn **OK**. Máy sẽ yêu cầu khởi động lại để áp dụng.
 
 <img width="537" height="571" alt="image" src="https://github.com/user-attachments/assets/ec7c708e-68ba-4ab1-951b-2be6a7fd54eb" />
 
