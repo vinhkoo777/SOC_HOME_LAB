@@ -34,9 +34,13 @@ Tại **Specify Disk Capacity** tôi sẽ để là 90gb và nhấn next để t
 
 <img width="492" height="530" alt="image" src="https://github.com/user-attachments/assets/51a20a1d-fdee-4654-b2b6-c696fc33e025" />
 
-Bước này tui sẽ phải đổi network adapter sang VMnet1 (Host-Only) và chỉnh sửa thêm một vài thứ nữa. Nên ta tiến hành bấm vào Customize Hardware.
+Bước này tui sẽ phải đổi network adapter sang VMnet1 (Host-Only) và mount ỗ đĩa chứa file hệ điều hành kali linux. Nên ta tiến hành bấm vào Customize Hardware.
 
 <img width="492" height="528" alt="image" src="https://github.com/user-attachments/assets/82352e3b-526e-4863-a8fd-96c4c2a03fcf" />
+
+Ta sẽ nhấp vào mục CD/DVD (SATA). Tại góc bên tay phải ở optione **use ISO image file** ta sẽ browse đến file iso kali linux.
+
+<img width="885" height="390" alt="image" src="https://github.com/user-attachments/assets/83224696-793c-4047-8cb0-9e57a04323f0" />
 
 Khi cấu hình xong rồi ta nhấn vào Close để thoát ra. 
 
@@ -46,14 +50,11 @@ Và nhấn Finish để hoàn thành.
 
 <img width="490" height="532" alt="image" src="https://github.com/user-attachments/assets/98b082eb-6413-4f67-a491-c3c1217a1110" />
 
-
-
-
 ## Phase 2: Cài đặt Kali Linux 
 
 ### Bước 1: Chọn chế độ cài đặt
 
-Khi boot từ ISO, màn hình GRUB hiện ra. Chọn Graphical Install để có giao diện trực quan, dễ thao tác hơn so với Text Install.
+Khi boot từ ISO, màn hình GRUB hiện ra. Chọn Graphical Install để có giao diện thân thiện, dễ thao tác hơn so với Text Install.
 
 <img width="717" height="633" alt="image" src="https://github.com/user-attachments/assets/b5dc2b05-33c0-4d72-ad07-2d6b4f23a315" />
 
