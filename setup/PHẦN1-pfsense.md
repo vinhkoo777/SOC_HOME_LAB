@@ -2,6 +2,14 @@
 
 Đây là phần đầu tiên của chuỗi SOC_HOME_LAB (by k0g4). Trong phần đầu tiên này tôi sẽ tiến hành setup pfSense. Đóng vai trò như **firewall/router** kiểm tra toàn bộ traffic mạng giữa các máy trong lab trước khi đưa vào SIEM phân tích.
 
+## Mục Lục
+
+- [Phase 1: Chuẩn bị](#phase-1-chuẩn-bị)
+- [Phase 2: Thiết kế và cấu hình mạng](#phase-2-thiết-kế-và-cấu-hình-mạng)
+- [Phase 3: Tạo máy ảo pfSense](#phase-3-tạo-máy-ảo-pfsense)
+- [Phase 4: Cài đặt pfSense](#phase-4-cài-đặt-pfsense)
+- [Một số lỗi thường gặp](#một-số-lỗi-thường-gặp)
+
 ## Phase 1: Chuẩn bị 
 
 ### Bước 1: Tiến hành tải IOS image pfSense
