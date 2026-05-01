@@ -2,6 +2,13 @@
 
 Đây là phần thứ hai của chuỗi SOC_HOME_LAB (by k0g4). Sau khi có network foundation từ pfSense, bước tiếp theo ta sẽ sử dụng Splunk làm SIEM - Nơi thu nhập và phân tích toàn bộ log từ lab.
 
+## Mục Lục
+ 
+- [Phase 1: Chuẩn bị môi trường](#phase-1-chuẩn-bị-môi-trường)
+- [Phase 2: Cài đặt Ubuntu Server](#phase-2-cài-đặt-ubuntu-server)
+- [Phase 3: Cấu hình IP tĩnh](#phase-3-cấu-hình-ip-tĩnh)
+- [Phase 4: Cài đặt Splunk](#phase-4-cài-đặt-splunk)
+
 ## Phase 1: Chuẩn bị
 
 ### Bước 1: Tải iso image ubuntu sever 
@@ -99,7 +106,7 @@ Tại đây ta sẽ cần chuột phải vào máy ảo Ubuntu Server chọn set
 
 **Sau khi xong các bước trên ta nên tắt ubuntu server. Tiến hành đổi Network Adaptor sang VMnet1 (Host-Only). Và cuối cùng là tạo 1 bản snap shut để backup lại phòng khi có lỗi xảy ra.**
 
-## Phase 2: Cấu hình IP tĩnh.
+## Phase 3: Cấu hình IP tĩnh.
 
 ### Bước 1: Check IP 
 
@@ -165,7 +172,7 @@ Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc 
 
 <img width="481" height="95" alt="image" src="https://github.com/user-attachments/assets/079a75d0-4c1d-4483-9580-bf023bae491d" />
 
-## Phase 3: Tải Splunk
+## Phase 4: Tải Splunk
 
 ### Bước 1: Update hệ thống
 
