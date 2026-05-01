@@ -1,6 +1,6 @@
 # SOC_HOME_LAB 
 
-https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXpva2xzajJpM2wzNzk1ZDdueTBvdnBhajBzNnZteDBjb28xYnhjZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ytu2GUYbvhz7zShGwS/giphy.gif
+![Demo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXpva2xzajJpM2wzNzk1ZDdueTBvdnBhajBzNnZteDBjb28xYnhjZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ytu2GUYbvhz7zShGwS/giphy.gif)
 
 > Đây là lab an ninh mạng thực hành (by k0g4), mô phỏng các kịch bản tấn công thực tế và phát hiện tự động bằng hệ thống SIEM tự triển khai.
 
