@@ -1,4 +1,4 @@
-# Kali Linux Setup — Lab SIEM Attack Simulation
+# Kali Linux Setup 
 
 ## Tổng quan 
 
