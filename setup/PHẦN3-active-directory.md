@@ -1,4 +1,4 @@
-# PHẦN 3 — Active Directory Setup
+# Active Directory Setup
 
 Trong lab này, tôi triển khai một **Domain Controller** sử dụng Windows Server để quản lý user và authentication trong môi trường doanh nghiệp mô phỏng. Đồng thời sử dụng **BadBlood** để populate AD với user, group, OU giả lập — nhằm tạo môi trường giống doanh nghiệp thật.
 
