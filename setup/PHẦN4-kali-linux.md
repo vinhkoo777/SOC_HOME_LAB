@@ -44,7 +44,7 @@ Ta sẽ nhấp vào mục CD/DVD (SATA). Tại góc bên tay phải ở optione 
 
 Khi cấu hình xong rồi ta nhấn vào Close để thoát ra. 
 
-<img width="890" height="900" alt="image" src="https://github.com/user-attachments/assets/c2dbd18b-a8bf-4250-8543-a36944c5a34b" />
+<img width="357" height="283" alt="image" src="https://github.com/user-attachments/assets/93f37e74-c549-4fd9-b6f0-70fa67ce0f03" />
 
 Và nhấn Finish để hoàn thành.
 
