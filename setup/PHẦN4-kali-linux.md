@@ -76,27 +76,41 @@ Tôi cũng sẽ để mặc định keyboard layout theo mặc định.
 
 <img width="813" height="656" alt="image" src="https://github.com/user-attachments/assets/fa6d2f03-4e73-4db2-93a7-df550930478d" />
 
-### Bước 5: Đặt Hostname
+### Bước 5: Cấu hình mạng
+
+Do tại đây tui đã đặt network adapter sang VMnet(host-only) nên vẫn chưa có mạng nên sẽ có thông báo trên. Ta chọn continue để tiếp tục 
+
+<img width="798" height="593" alt="image" src="https://github.com/user-attachments/assets/6afab3f1-9f07-49fa-85e7-97d28b9536e1" />
+
+Tại đây ta sẽ chọn optine **Do not configure the network at this time** xong rồi nhấn tiếp tục.
+
+<img width="797" height="590" alt="image" src="https://github.com/user-attachments/assets/44ffa045-361e-45ae-b25f-e3f094d98485" />
+
+### Bước 6: Đặt Hostname
 
 Tại đây tôi sẽ để hostname là kali. Hostname này cũng sẽ xuất hiện trong log, giúp nhận diện máy tấn công khi phân tích trong SIEM 
 
 <img width="811" height="593" alt="image" src="https://github.com/user-attachments/assets/743dc471-2514-42e8-a511-08310a8d7d31" />
 
-### Bước 6: Domain Name
+### Bước 6: Tạo User và Password
 
-Tôi sẽ để trống phần domain name. Do đây là môi trường lab độc lập.
+Tại bước này tui sẽ để user tên là kuga. Xong rồi ta sẽ ấn continue.
 
-<img width="803" height="603" alt="image" src="https://github.com/user-attachments/assets/29082bfa-3a3c-4ad4-9e1a-2ea61f8c0726" />
+<img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/726b13ae-62d0-4466-b630-243d0db58640" />
 
-### Bước 7: Tạo User và Password
+Tại đây tui cũng sẽ nhập lại user name và ấn continue.
 
-Ta sẽ setup tên của user và password ở đây ta sẽ đặt như nào cũng được nhưng mà ta sẽ cần phải nhớ username và password này.
+<img width="796" height="602" alt="image" src="https://github.com/user-attachments/assets/ab2a78df-861c-47c4-bdfd-b00317c57bce" />
 
-### Bước 8: Cấu hình đồng hồ (Clock)
+Tiếp đó ta sẽ đặt mật khẩu xong rồi ta nhấn continue để tiếp tục quá trình cài đặt.
 
-Cấu hình đồng hồ tôi vẫn sẻ để mặc định. (Sẽ sửa lại cái này)
+<img width="791" height="590" alt="image" src="https://github.com/user-attachments/assets/01ba9ad5-f022-482e-8929-b6f5ef75e41c" />
 
-<img width="810" height="571" alt="image" src="https://github.com/user-attachments/assets/06089c7a-82c6-4a0f-af31-1ad1bc4ac600" />
+### Bước 7: Cấu hình đồng hồ (Clock)
+
+Cấu hình đồng hồ tôi vẫn sẽ để mặc định. 
+
+<img width="800" height="608" alt="image" src="https://github.com/user-attachments/assets/23530f97-ba37-4a35-9a98-5e092f17580a" />
 
 ### Bước 9: Phân vùng ổ đĩa — Phương pháp
 
