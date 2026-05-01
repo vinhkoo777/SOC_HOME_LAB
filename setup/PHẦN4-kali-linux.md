@@ -2,7 +2,7 @@
 
 ## Tổng quan 
 
-Đây là phần thứ hai của chuỗi SOC_HOME_LAB (by k0g4). Sau khi có network foundation từ pfSense. Tại phần này tôi sẽ triển khai Kali Linux trong VMware Workstation nhằm mục đích giả lập tấn công và tạo log trong hệ thống SIEM. Kali Linux sẽ đóng vai trò Attacker Machine trong môi trường lab.
+Đây là phần thứ tư của chuỗi SOC_HOME_LAB (by k0g4). Sau khi có network foundation từ pfSense. Tại phần này tôi sẽ triển khai Kali Linux trong VMware Workstation nhằm mục đích giả lập tấn công và tạo log trong hệ thống SIEM. Kali Linux sẽ đóng vai trò Attacker Machine trong môi trường lab.
 
 ## Phase 1: Chuẩn bị 
 
