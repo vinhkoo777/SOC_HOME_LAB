@@ -146,9 +146,19 @@ iface eth0 inet static
   address 192.168.188.20
   netmask 255.255.255.0
   gateway 172.16.1.4
-  dns-nameservers 8.8.8.8 1.1.1.1
+  dns-nameservers 8.8.8.8 8.8.4.4
 ```
 <img width="627" height="410" alt="image" src="https://github.com/user-attachments/assets/558763db-079f-438e-af21-2e187fbe3b09" />
+
+Tiếp đó sử dụng.
+```bash
+sudo systemctl restart networking
+```
+Bây giờ tui sẽ kiểm tra bằng lệnh ```ifconfig``` và ```ping 8.8.8.8```
+
+<img width="832" height="566" alt="image" src="https://github.com/user-attachments/assets/184d3f15-abaf-4037-8860-787b4216433e" />
+
+Thì tui đã thành công trong việc cấu hình IP tĩnh
 
 ### Bước 3: Tạo snapshot
 
