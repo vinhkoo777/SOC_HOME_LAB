@@ -118,7 +118,29 @@ sudo apt update && sudo apt upgrade -y
 
 <img width="947" height="233" alt="image" src="https://github.com/user-attachments/assets/dc9c8368-ce0d-4921-b7af-323e4bfae80a" />
 
-### Bước 2: Tạo snapshot
+### Bước 2: Cấu hình IP tĩnh
+
+Đầu tiên ta dùng lệnh dưới để kiểm tra xem liệu file interfacs có tồn tại hay không.
+
+```bash
+cat /etc/network/interfaces
+```
+<img width="647" height="523" alt="image" src="https://github.com/user-attachments/assets/95735707-f2cd-468f-a3d7-b22f1e2bc540" />
+
+Tiếp đó tôi sẽ sử dụng lệnh dưới để check xem liệu máy kali tui đang sử dụng interface nào. 
+```bash
+ifconfig
+```
+
+<img width="575" height="147" alt="image" src="https://github.com/user-attachments/assets/6111ed74-c2cd-44c8-afc2-d5a1d6b2419a" />
+
+Thì ta thấy rằng kali đang sử dụng eth0 nên ta sẽ cấu hình IP tĩnh trên interface đó. Bằng cách sử dụng lệnh.
+```bash
+sudo nano /etc/network/interfaces
+```
+
+
+### Bước 3: Tạo snapshot
 
 Sao khi cập nhập xong ta nên tạo 1 bảng snapshot để có thể backup khi cần thiết. Bằng cách chuột phỉa vào máy ảo. Tiếp đó nhấn Take snapshot và đặt tên theo ta muốn và nhấn Take snapshot
 
