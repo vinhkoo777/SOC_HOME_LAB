@@ -90,9 +90,9 @@ Tại đây ta sẽ chọn optine **Do not configure the network at this time** 
 
 Tại đây tôi sẽ để hostname là kali. Hostname này cũng sẽ xuất hiện trong log, giúp nhận diện máy tấn công khi phân tích trong SIEM 
 
-<img width="811" height="593" alt="image" src="https://github.com/user-attachments/assets/743dc471-2514-42e8-a511-08310a8d7d31" />
+<img width="797" height="602" alt="image" src="https://github.com/user-attachments/assets/f777f87b-8391-49f3-955d-9723c3c33844" />
 
-### Bước 6: Tạo User và Password
+### Bước 7: Tạo User và Password
 
 Tại bước này tui sẽ để user tên là kuga. Xong rồi ta sẽ ấn continue.
 
@@ -104,15 +104,15 @@ Tại đây tui cũng sẽ nhập lại user name và ấn continue.
 
 Tiếp đó ta sẽ đặt mật khẩu xong rồi ta nhấn continue để tiếp tục quá trình cài đặt.
 
-<img width="791" height="590" alt="image" src="https://github.com/user-attachments/assets/01ba9ad5-f022-482e-8929-b6f5ef75e41c" />
+<img width="802" height="602" alt="image" src="https://github.com/user-attachments/assets/8c2704a0-3448-455c-9575-568936cb11f6" />
 
-### Bước 7: Cấu hình đồng hồ (Clock)
+### Bước 8: Cấu hình đồng hồ (Clock)
 
 Cấu hình đồng hồ tôi vẫn sẽ để mặc định. 
 
 <img width="800" height="608" alt="image" src="https://github.com/user-attachments/assets/23530f97-ba37-4a35-9a98-5e092f17580a" />
 
-### Bước 9: Phân vùng ổ đĩa — Phương pháp
+### Bước 9: Phân vùng ổ đĩa 
 
 Chọn Guided - use entire disk. Phù hợp cho VM lab vì toàn bộ disk ảo chỉ dành riêng cho Kali.
 
@@ -122,13 +122,14 @@ Chọn Guided - use entire disk. Phù hợp cho VM lab vì toàn bộ disk ảo 
 
 Tại đây tôi sẽ chọn All files in one partition. Sau đó nhấn continue.
 
-<img width="882" height="733" alt="image" src="https://github.com/user-attachments/assets/0605f3e0-61f1-449c-be6a-6fdf4b14d301" />
+<img width="793" height="597" alt="image" src="https://github.com/user-attachments/assets/0d2732a6-c305-4692-8a07-50ddc420492a" />
 
 ### Bước 11: Xác nhận phân vùng
 
 Tại đây ta cũng sẽ nhấn tiếp continue.
 
-<img width="877" height="672" alt="image" src="https://github.com/user-attachments/assets/b82330bf-3873-4eb5-ba4d-dcb9a9697675" />
+<img width="802" height="607" alt="image" src="https://github.com/user-attachments/assets/a2e7a3cf-d441-4a5c-a4ce-4bafc0ee74f6" />
+
 
 ### Bước 12: Xác nhận ghi vào ổ đĩa
 
