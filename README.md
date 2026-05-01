@@ -4,12 +4,13 @@
 
 ![Nền tảng](https://img.shields.io/badge/Nền_tảng-pfSense%20%7C%20Windows%20AD%20%7C%20Kali%20Linux-blue)
 ![SIEM](https://img.shields.io/badge/SIEM-Splunk-orange)
+![Mạng](https://img.shields.io/badge/Mạng-192.168.188.0%2F24-informational)
 ![Trạng thái](https://img.shields.io/badge/Trạng_thái-Đang_hoạt_động-brightgreen)
 ![Giấy phép](https://img.shields.io/badge/Giấy_phép-MIT-lightgrey)
 
 ---
 
-## 📋 Mục Lục
+## Mục Lục
 
 - [Tổng quan](#tổng-quan)
 - [Kiến trúc hệ thống](#kiến-trúc-hệ-thống)
@@ -23,42 +24,49 @@
 
 ## Tổng Quan
 
-Dự án xây dựng một **Trung tâm Vận hành Bảo mật (SOC) hoàn chỉnh** để thực hành:
+Dự án xây dựng một SOC home lab để thực hành:
 
 - Thu thập, tương quan và cảnh báo log bằng **Splunk**
 - Mô phỏng các cuộc tấn công thực tế (brute-force, leo thang đặc quyền, di chuyển ngang)
 - Viết và tinh chỉnh các quy tắc phát hiện tùy chỉnh bằng **SPL (Splunk Processing Language)**
 - Quy trình ứng phó sự cố bảo mật
 
-Môi trường lab mô phỏng một doanh nghiệp vừa và nhỏ, gồm tường lửa, miền Active Directory, các máy đầu cuối Linux/Windows và máy tấn công.
+Môi trường lab mô phỏng một doanh nghiệp vừa và nhỏ, gồm tường lửa, miền Active Directory, các máy đầu cuối Linux/Windows và máy tấn công — tất cả chạy trên VMware Workstation (Host-Only Network).
 
 ---
 
 ## Kiến Trúc Hệ Thống
 
 ```
-┌──────────────────────────────────────────────────────┐
-│                    Mạng Lab                          │
-│                                                      │
-│  [pfSense Firewall]  ←──  [Kali Linux (Kẻ tấn công)] │
-│         │                                            │
-│  ┌──────┴───────────────────────────┐                │
-│  │         Mạng nội bộ             │                 │
-│  │                                  │                │
-│  │  [Splunk Server]  [AD Server]    │                │
-│  │  [Linux Client]   [Win Client]   │                │
-│  └──────────────────────────────────┘                │
-└──────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                            Host Computer                                 │
+│  ┌────────────────────────────────────────────────────────────────────┐  │
+│  │              VMware Workstation — Host-Only Network                │  │
+│  │                        192.168.188.0/24                            │  │
+│  │                                                                    │  │
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐                          │  │
+│  │  │ pfSense  │  │  Splunk  │  │   Kali   │                          │  │
+│  │  │ Firewall │  │   SIEM   │  │ Attacker │                          │  │
+│  │  │ .188.2   │  │ .188.10  │  │ .188.20  │                          │  │
+│  │  └──────────┘  └──────────┘  └──────────┘                         │  │
+│  │                                                                    │  │
+│  │  ┌──────────┐  ┌──────────┐  ┌────────────┐                       │  │
+│  │  │    AD    │  │ Windows  │  │   Linux    │                       │  │
+│  │  │  Domain  │  │  Client  │  │   Client   │                       │  │
+│  │  │ .188.30  │  │ .188.40  │  │  .188.50   │                       │  │
+│  │  └──────────┘  └──────────┘  └────────────┘                       │  │
+│  └────────────────────────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
-| Thành phần | Vai trò |
-|------------|---------|
-| **pfSense** | Tường lửa, phân vùng mạng, giám sát lưu lượng |
-| **Splunk** | Thu thập log, tìm kiếm SPL, cảnh báo, dashboard trực quan |
-| **Windows Server (AD)** | Bộ điều khiển miền Active Directory |
-| **Kali Linux** | Máy tấn công để mô phỏng các mối đe dọa |
-| **Linux Client** | Máy đầu cuối chạy Splunk Universal Forwarder (Ubuntu/Debian) |
-| **Windows Client** | Máy đầu cuối chạy Splunk Universal Forwarder (Windows 10/11) |
+| Thành phần | IP | Vai trò |
+|------------|----|---------|
+| **pfSense Firewall** | 192.168.188.2 | Tường lửa, phân vùng mạng, giám sát lưu lượng |
+| **Splunk SIEM** | 192.168.188.10 | Thu thập log, tìm kiếm SPL, cảnh báo, dashboard |
+| **Kali Linux (Attacker)** | 192.168.188.20 | Máy tấn công để mô phỏng các mối đe dọa |
+| **AD Domain Controller** | 192.168.188.30 | Bộ điều khiển miền Active Directory |
+| **Windows Client** | 192.168.188.40 | Máy đầu cuối Windows + Splunk Universal Forwarder |
+| **Linux Client** | 192.168.188.50 | Máy đầu cuối Linux + Splunk Universal Forwarder |
 
 ---
 
@@ -81,12 +89,12 @@ Hướng dẫn từng bước để tái tạo môi trường lab từ đầu:
 
 Các quy tắc phát hiện tùy chỉnh bằng SPL, phân loại theo hệ điều hành:
 
-### 🐧 Linux
+### Linux
 | Quy tắc | Mô tả |
 |---------|-------|
 | [SSH Brute Force](detection-rules/linux/ssh-bruteforce.md) | Phát hiện các lần đăng nhập SSH thất bại liên tiếp |
 
-### 🪟 Windows
+### Windows
 | Quy tắc | Mô tả |
 |---------|-------|
 | [Tấn công Brute Force](detection-rules/windows/brute-force.md) | Phát hiện dò mật khẩu và phun mật khẩu (password spraying) |
@@ -105,7 +113,7 @@ Mô phỏng tấn công đầu-cuối kèm tài liệu phát hiện và ứng ph
 | [Tấn công Brute Force](use-cases/brute.md) | Truy cập thông tin xác thực — T1110 | Toàn bộ luồng: tấn công → cảnh báo → ứng phó |
 
 Mỗi kịch bản bao gồm:
-1. **Mô phỏng tấn công** — công cụ và lệnh sử dụng (Kali Linux)
+1. **Mô phỏng tấn công** — công cụ và lệnh sử dụng (Kali Linux `192.168.188.20`)
 2. **Bằng chứng log** — những gì Splunk ghi lại và phân tích được
 3. **Phát hiện** — truy vấn SPL và alert nào kích hoạt
 4. **Ứng phó** — các bước ngăn chặn và xử lý sự cố
@@ -128,18 +136,19 @@ Mỗi kịch bản bao gồm:
 
 ### Yêu cầu hệ thống
 
-- Phần mềm ảo hóa (VMware / VirtualBox / Proxmox)
+- **VMware Workstation** (khuyến nghị) hoặc VirtualBox / Proxmox
 - Tối thiểu **16 GB RAM**, khuyến nghị **200 GB ổ đĩa**
-- Kiến thức mạng cơ bản (subnetting, VLAN)
+- Kiến thức mạng cơ bản (subnetting, Host-Only Network)
 
 ### Khởi động nhanh
 
 1. Clone repository này:
    ```bash
-   git clone https://github.com/k0g4/SOC_HOME_LAB.git
+   git clone https://github.com/vinhkoo777/SOC_HOME_LAB.git
    ```
-2. Làm theo các hướng dẫn cài đặt theo thứ tự: pfSense → Splunk → AD → Endpoints
-3. Chạy một kịch bản tấn công trong `use-cases/` và kiểm tra phát hiện trên Splunk
+2. Cấu hình VMware Workstation với dải mạng Host-Only `192.168.188.0/24`
+3. Làm theo các hướng dẫn cài đặt theo thứ tự: pfSense → Splunk → AD → Endpoints
+4. Chạy một kịch bản tấn công trong `use-cases/` và kiểm tra phát hiện trên Splunk
 
 ---
 
@@ -148,5 +157,3 @@ Mỗi kịch bản bao gồm:
 Dự án này được cấp phép theo [MIT License](LICENSE).
 
 ---
-
-*Được xây dựng cho mục đích học tập — thực hành kỹ năng blue team và phát hiện mối đe dọa trong môi trường an toàn, cô lập.*
