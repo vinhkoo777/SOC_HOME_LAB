@@ -34,6 +34,20 @@ Tại **Specify Disk Capacity** tôi sẽ để là 90gb và nhấn next để t
 
 <img width="492" height="530" alt="image" src="https://github.com/user-attachments/assets/51a20a1d-fdee-4654-b2b6-c696fc33e025" />
 
+Bước này tui sẽ phải đổi network adapter sang VMnet1 (Host-Only) và chỉnh sửa thêm một vài thứ nữa. Nên ta tiến hành bấm vào Customize Hardware.
+
+<img width="492" height="528" alt="image" src="https://github.com/user-attachments/assets/82352e3b-526e-4863-a8fd-96c4c2a03fcf" />
+
+Khi cấu hình xong rồi ta nhấn vào Close để thoát ra. 
+
+<img width="890" height="900" alt="image" src="https://github.com/user-attachments/assets/c2dbd18b-a8bf-4250-8543-a36944c5a34b" />
+
+Và nhấn Finish để hoàn thành.
+
+<img width="490" height="532" alt="image" src="https://github.com/user-attachments/assets/98b082eb-6413-4f67-a491-c3c1217a1110" />
+
+
+
 
 ## Phase 2: Cài đặt Kali Linux 
 
