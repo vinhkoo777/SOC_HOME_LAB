@@ -2,15 +2,11 @@
 
 Trong lab này, tôi triển khai một **Domain Controller** sử dụng Windows Server để quản lý user và authentication trong môi trường doanh nghiệp mô phỏng. Đồng thời sử dụng **BadBlood** để populate AD với user, group, OU giả lập — nhằm tạo môi trường giống doanh nghiệp thật.
 
----
-
 ## Mục Lục
 
 - [Phase 1: Chuẩn bị môi trường](#phase-1-chuẩn-bị-môi-trường)
 - [Phase 2: Cài đặt Domain Controller](#phase-2-cài-đặt-domain-controller)
 - [Phase 3: Cài đặt BadBlood](#phase-3-cài-đặt-badblood)
-
----
 
 ## Phase 1: Chuẩn bị Môi Trường
 
@@ -23,8 +19,6 @@ Trong lab này, tôi triển khai một **Domain Controller** sử dụng Window
 Tải Windows Server 2025 [tại đây](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025). Chọn phiên bản theo đánh dấu trong hình.
 
 <img width="1575" height="852" alt="image" src="https://github.com/user-attachments/assets/7896cb52-8520-481a-bea7-023b203b7e63" />
-
----
 
 **Bước 2: Tạo máy ảo trên VMware**
 
@@ -56,8 +50,6 @@ Vào **CD/DVD (SATA)** → chọn mục 2 → browse đến file ISO Windows Ser
 
 <img width="886" height="376" alt="image" src="https://github.com/user-attachments/assets/7155dc78-8b8b-45d6-bb2a-41692ada6655" />
 
----
-
 **Bước 3: Cài đặt Windows Server**
 
 Khởi động máy ảo. Các bước đầu nhấn **Next** liên tục.
@@ -78,7 +70,6 @@ Cài đặt hoàn tất. *(Nên tạo snapshot ngay lúc này để phòng hờ.
 
 <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
 
----
 
 ### 1.2 — Cấu hình Static IP
 
@@ -97,8 +88,6 @@ Cấu hình:
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 192.168.188.2 |
 | DNS Server | 127.0.0.1 |
-
----
 
 ### 1.3 — Đổi Hostname thành DC01
 
@@ -161,8 +150,6 @@ Cấu hình:
 <img width="990" height="713" alt="image" src="https://github.com/user-attachments/assets/a72d1a9b-b5f1-4bd0-9bc4-5c07882e8293" />
 
 > Máy sẽ tự động khởi động lại sau khi cài đặt xong. Domain Controller đã sẵn sàng.
-
----
 
 ## Phase 3: Cài Đặt BadBlood
 
