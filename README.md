@@ -4,7 +4,6 @@
 
 ![Nền tảng](https://img.shields.io/badge/Nền_tảng-pfSense%20%7C%20Windows%20AD%20%7C%20Kali%20Linux-blue)
 ![SIEM](https://img.shields.io/badge/SIEM-Splunk-orange)
-![Mạng](https://img.shields.io/badge/Mạng-192.168.188.0%2F24-informational)
 ![Trạng thái](https://img.shields.io/badge/Trạng_thái-Đang_hoạt_động-brightgreen)
 ![Giấy phép](https://img.shields.io/badge/Giấy_phép-MIT-lightgrey)
 
