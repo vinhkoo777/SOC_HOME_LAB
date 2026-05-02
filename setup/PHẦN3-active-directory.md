@@ -8,47 +8,61 @@ Trong lab này, tôi triển khai một **Domain Controller** sử dụng Window
 - [Phase 2: Cài đặt Domain Controller](#phase-2-cài-đặt-domain-controller)
 - [Phase 3: Cài đặt BadBlood](#phase-3-cài-đặt-badblood)
 
-## Phase 1: Chuẩn bị Môi Trường
+## Phase 1: Chuẩn bị
 
-### 1.1 — Cài đặt Windows Server
+### Bước 1: Cài đặt ISO image Windows Server
 
 Phiên bản sử dụng: **Windows Server 2025**
-
-**Bước 1: Tải ISO image**
 
 Tải Windows Server 2025 [tại đây](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025). Chọn phiên bản theo đánh dấu trong hình.
 
 <img width="1575" height="852" alt="image" src="https://github.com/user-attachments/assets/7896cb52-8520-481a-bea7-023b203b7e63" />
 
-**Bước 2: Tạo máy ảo trên VMware**
+### Bước 2: Tạo máy ảo trên VMware
 
-Nhấn vào **New Virtual Machine** để tạo máy ảo mới.
+Ta chọn **File -> New Virtual Machine**
 
-<img width="943" height="560" alt="image" src="https://github.com/user-attachments/assets/7efb5d32-2a64-453c-b157-2b81342416e7" />
+<img width="341" height="342" alt="image" src="https://github.com/user-attachments/assets/473c1045-494c-4550-968a-473d735d1a52" />
 
 Chọn **Typical**.
 
 <img width="488" height="530" alt="image" src="https://github.com/user-attachments/assets/51f1442f-647e-476e-b3d1-af858d1c52bf" />
 
-Chọn vào mục thứ 3, sau đó cấu hình theo hình bên dưới.
+Tại đây tôi sẽ chọn **I will install the operating system later**. Nhấn next để tiếp tục.
 
-<img width="609" height="611" alt="image" src="https://github.com/user-attachments/assets/d893bf05-3ddf-4528-b5d0-3fa52ff80429" />
+<img width="492" height="530" alt="image" src="https://github.com/user-attachments/assets/e19d529a-d1fd-40b6-9e0d-eb755bc5564f" />
 
-Đặt tên cho máy ảo và chọn nơi lưu, sau đó nhấn **Next**.
+Phần **Guest operating system** tôi sẽ để là **Microsoft Windows** và **Version** là **Windows Server 2025** Xong rồi nhấn next để tiếp tục. 
 
-<img width="613" height="613" alt="image" src="https://github.com/user-attachments/assets/dd4faaa6-23ed-4643-b23c-959f46c4e877" />
+<img width="490" height="532" alt="image" src="https://github.com/user-attachments/assets/f021da40-aba1-41f2-bad8-50a79425da81" />
 
-Dung lượng ổ đĩa để **100 GB**.
+Tiếp đó ta đặt tên cho máy ảo và truyền đường dẫn nơi mà sẽ lưu máy ảo đó vào.
 
-<img width="688" height="622" alt="image" src="https://github.com/user-attachments/assets/570627bb-815e-4834-a4bb-4c05518db169" />
+<img width="498" height="535" alt="image" src="https://github.com/user-attachments/assets/e4aa4629-e51d-4739-b55d-be616a528754" />
 
-Nhấn **Customize Hardware** để cấu hình thêm. Đặt **Memory: 4.9 GB**, **Processors: 2**.
+Ở **Specify Disk Capacity** tôi sẽ để **disk size** là 100gb và nhấn next để tiếp tục.
 
-<img width="317" height="280" alt="image" src="https://github.com/user-attachments/assets/5c5d3183-96f8-47ae-83d2-b938101f9fd1" />
+<img width="495" height="531" alt="image" src="https://github.com/user-attachments/assets/1a534924-5d92-42ca-ab22-016cf413731f" />
 
-Vào **CD/DVD (SATA)** tiếp đó chọn mục 2 → browse đến file ISO Windows Server.
+Tại đây ta bấm vào **Customize Hardware**.
 
-<img width="886" height="376" alt="image" src="https://github.com/user-attachments/assets/7155dc78-8b8b-45d6-bb2a-41692ada6655" />
+<img width="498" height="532" alt="image" src="https://github.com/user-attachments/assets/6b59e773-04a4-4145-b84a-68885e986b0b" />
+
+Đầu tiên ta vào **CD/DVD (SATA)** và truyền đường dẫn file ISO image windows server vào.
+
+<img width="896" height="436" alt="image" src="https://github.com/user-attachments/assets/bfb5898f-bcce-479b-827b-035c038f38c0" />
+
+Tiếp đó ta sang Network Adapter. Đổi NAT sang VMnet1 (Host-only) vì tí nữa ta sẽ cấu hình IP tĩnh.
+
+<img width="886" height="542" alt="image" src="https://github.com/user-attachments/assets/c163630b-edf4-4a3e-a960-5c7b26aaefe6" />
+
+Cuối cùng là tôi sẽ chỉnh **memory** là 4gb và **processors** là 2 và nhấn close để hoàn thành.
+
+<img width="891" height="900" alt="image" src="https://github.com/user-attachments/assets/08a6beee-1288-4eb4-a171-9cdd5c0aa61b" />
+
+Cuối cùng là nhấn Finish.
+
+<img width="493" height="529" alt="image" src="https://github.com/user-attachments/assets/403300d6-33cb-472e-aa5f-4c12e050f493" />
 
 **Bước 3: Cài đặt Windows Server**
 
