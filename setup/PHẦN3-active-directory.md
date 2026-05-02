@@ -126,7 +126,7 @@ Xong rồi ta bấm vào **Ethernet0**
 
 <img width="357" height="462" alt="image" src="https://github.com/user-attachments/assets/bea6f572-c5ce-45b0-b615-af3150c4c311" />
 
-Cấu hình như ảnh dưới :
+Cấu hình như ảnh dưới
 
 <img width="392" height="417" alt="image" src="https://github.com/user-attachments/assets/c11a25af-604b-46e1-823e-3bc8d74cdc19" />
 
