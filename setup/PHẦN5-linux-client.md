@@ -130,7 +130,7 @@ network:
   ethernets:
     ens33:
       addresses:
-        - 192.168.188.10/24
+        - 192.168.188.50/24
       nameservers:
         addresses:
           - 8.8.8.8
@@ -153,13 +153,15 @@ Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đ
 ip adđr show ens33
 ```
 
-<img width="716" height="151" alt="image" src="https://github.com/user-attachments/assets/7b0d3cdd-6a55-4f99-a1e2-4a248dcdcb80" />
+<img width="832" height="130" alt="image" src="https://github.com/user-attachments/assets/561e9f16-8765-4d46-8558-4fe4f7f9945a" />
+
 
 Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
 ```bash
 ping -c 3 8.8.8.8
 ```
 
-Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc cấu hình IP tĩnh của chúng ta đã hoàn thành bây giờ ta sẽ qua phase tiếp theo.
+Thì như  hình thì ta đã thấy ta đã ping thành công. Và việc cấu hình IP tĩnh của chúng ta đã hoàn thành bây giờ ta sẽ qua phase tiếp theo.
 
-<img width="481" height="95" alt="image" src="https://github.com/user-attachments/assets/079a75d0-4c1d-4483-9580-bf023bae491d" />
+<img width="668" height="165" alt="image" src="https://github.com/user-attachments/assets/e94d84d6-07e4-47be-89c7-fdb8c052f4c3" />
+
