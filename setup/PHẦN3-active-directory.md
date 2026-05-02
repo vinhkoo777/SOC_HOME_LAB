@@ -100,11 +100,11 @@ Tại đây nhấn **install**
 
 <img width="913" height="661" alt="image" src="https://github.com/user-attachments/assets/7ef658c7-4ff3-4d3b-a438-acbb800d027b" />
 
-Sau khi cài đặt xong, nhập mật khẩu Administrator và nhấn **Next**.
+Sau khi cài đặt xong, Tại **Customize settings**, nhập mật khẩu Administrator và nhấn **Finish**.
 
-<img width="1261" height="879" alt="image" src="https://github.com/user-attachments/assets/68648a44-871c-4889-951e-48e3e4040658" />
+<img width="932" height="620" alt="image" src="https://github.com/user-attachments/assets/43a2fdd6-933e-42b9-b4d5-b0351d052811" />
 
-Cài đặt hoàn tất. (nên tạo snapshot để phòng hờ có chuyện gì đó xảy ra)
+Cài đặt hoàn tất. 
 
 <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
 
