@@ -74,19 +74,23 @@ Cài đặt hoàn tất. (nên tạo snapshot để phòng hờ có chuyện gì
 
 Domain Controller cần IP tĩnh để DNS và authentication hoạt động ổn định.
 
-1. Vào **Control Panel** → **Network and Sharing Center**
-2. Chọn **Change adapter settings**
-3. Chuột phải vào **Ethernet** → **Properties**
-4. Chọn **IPv4** → **Properties**
+1. Vào **Control Panel** -> **Network and Internet** -> **Network and Sharing Center**
 
-Cấu hình:
+Xong rồi ta bấm vào **Ethernet0**
 
-| Trường | Giá trị |
-|--------|---------|
-| IP Address | 192.168.188.30 |
-| Subnet Mask | 255.255.255.0 |
-| Default Gateway | 192.168.188.2 |
-| DNS Server | 8.8.8.8 |
+<img width="791" height="585" alt="image" src="https://github.com/user-attachments/assets/3539af3e-d980-4bcb-bda4-1610a1da0016" />
+
+2. Chọn **propertise**
+
+<img width="365" height="452" alt="image" src="https://github.com/user-attachments/assets/f2c8c41d-0590-4625-9246-2a6ffd316c8f" />
+
+3. Nhấn vào Internet Protocol Version 4 (TCP/IPv4)
+
+<img width="357" height="462" alt="image" src="https://github.com/user-attachments/assets/bea6f572-c5ce-45b0-b615-af3150c4c311" />
+
+Cấu hình như ảnh dưới :
+
+<img width="392" height="417" alt="image" src="https://github.com/user-attachments/assets/c11a25af-604b-46e1-823e-3bc8d74cdc19" />
 
 ### 1.3 — Đổi Hostname thành DC01
 
