@@ -32,12 +32,9 @@ Tại **Name The Virtual Machine** tôi sẽ đặt tên và chọn thư mục c
 
 <img width="500" height="528" alt="image" src="https://github.com/user-attachments/assets/2c22c75f-e28e-420f-96c8-cf52243cd1f8" />
 
-Tiếp đó tôi sẽ muốn **Customize Hardware** để chỉnh network adapter sang Vmnet1(host-only). Sau khi chỉnh xong ta nhấn close để tiếp tục.
+Tại đây tui sẽ để nguyên. **Ta sẽ chưa cần Customize hardware để đổi adapter sang VMnet1 (Host-only). Sau khi cài xong ta sẽ làm điều đó sau.**. Tiếp đó nhấn Finish để tiếp tục.
 
-<img width="882" height="899" alt="image" src="https://github.com/user-attachments/assets/ddc9f4bb-f9fb-493a-a6ef-8ff81d4d9186" />
+<img width="496" height="536" alt="image" src="https://github.com/user-attachments/assets/7aec2526-588a-4c89-8893-1b904be950b3" />
 
-Sau đó nhấn Finish để hoàn thành. 
-
-<img width="488" height="528" alt="image" src="https://github.com/user-attachments/assets/b113de5d-e9db-4266-b0d4-8937ed48d0b2" />
-
+## Phase 2: Cài đặt Ubuntu
 
