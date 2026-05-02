@@ -94,4 +94,4 @@ Sau khi cài xong ta nhấn restart để khởi động lại.
 
 <img width="1280" height="797" alt="image" src="https://github.com/user-attachments/assets/a4e2175a-f023-47e3-b863-f045424f4b9b" />
 
-
+## Phase 3: cấu hình IP tĩnh.
