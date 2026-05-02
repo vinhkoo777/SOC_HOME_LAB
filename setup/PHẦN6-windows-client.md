@@ -56,4 +56,11 @@ Nhấn finish để tiến hành vào máy ảo và cài đặt.
 
 ## Phase 2: Cài đặt windows 10 
 
-Khúc này chỉ đợi thôi VMWare đã tự cài cho ta hết rồi.
+Khúc này chỉ đợi thôi VMWare đã tự cài cho ta hết rồi. Và đã cài xong windows 10. 
+
+<img width="1914" height="912" alt="image" src="https://github.com/user-attachments/assets/8697025c-eb84-4923-8a3e-204720b1c8cd" />
+
+## Phase 3: Cấu hình IP tĩnh.
+
+
+
