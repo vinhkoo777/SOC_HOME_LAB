@@ -114,9 +114,7 @@ Xong rồi vào mục **Network Adapter** và đổi sang VMnet1 (Host-only). Nh
 
 <img width="882" height="921" alt="image" src="https://github.com/user-attachments/assets/897b32c3-b776-42d1-a7f6-2d9401c6f111" />
 
-Xong rồi ta sẽ tiến hành mở máy.
-
-Vào **Control Panel** -> **Network and Internet** -> **Network and Sharing Center**
+Ta mở máy rồi vào **Control Panel** -> **Network and Internet** -> **Network and Sharing Center**
 
 Xong rồi ta bấm vào **Ethernet0**
 
