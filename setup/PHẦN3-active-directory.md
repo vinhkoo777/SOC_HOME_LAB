@@ -207,17 +207,17 @@ Xong rồi ta khởi động lại máy.
 
 ## Phase 6: Cài Đặt BadBlood
 
-> **Snapshot trước khi bắt đầu phase này** để có thể rollback nếu có sự cố.
+**Snapshot trước khi bắt đầu phase này để có thể rollback nếu có sự cố.**
 
-BadBlood sẽ tự động tạo hàng trăm user, group, OU giả lập — giúp môi trường lab giống với thực tế doanh nghiệp hơn.
+BadBlood sẽ tự động tạo hàng trăm user, group, OU giả lập để giúp môi trường lab giống với thực tế doanh nghiệp hơn.
 
-**Bước 1:** Truy cập repo [BadBlood trên GitHub](https://github.com/davidprowe/badblood) → nhấn **Code** → **Download ZIP**.
+**Bước 1:** Truy cập repo [BadBlood trên GitHub](https://github.com/davidprowe/badblood) -> nhấn **Code** -> **Download ZIP**.
 
 <img width="1918" height="752" alt="image" src="https://github.com/user-attachments/assets/0887d3d0-3512-4b1a-93cc-3f476f80c3be" />
 
 **Bước 2:** Giải nén file ZIP. Mở **PowerShell** và di chuyển vào thư mục vừa giải nén.
 
-<img width="950" height="606" alt="image" src="https://github.com/user-attachments/assets/530f36d5-5098-4759-8956-09feaefc7f7e" />
+<img width="1182" height="757" alt="image" src="https://github.com/user-attachments/assets/09625d55-0020-4ed0-afe5-2b597e6e87d7" />
 
 **Bước 3:** Chạy lần lượt các lệnh sau:
 
@@ -235,11 +235,9 @@ Import-Module ActiveDirectory
 .\Invoke-BadBlood.ps1
 ```
 
-<img width="1315" height="571" alt="image" src="https://github.com/user-attachments/assets/61a0a5b3-589d-48e7-b8bf-f12c6b9adae9" />
+**Bước 4:** Khi được hỏi, gõ `badblood` và nhấn **enter**. Script sẽ bắt đầu chạy và populate AD.
 
-**Bước 4:** Khi được hỏi, nhấn **Enter** và gõ `badblood`. Script sẽ bắt đầu chạy và populate AD.
-
-<img width="1447" height="652" alt="image" src="https://github.com/user-attachments/assets/41953a61-aaff-471c-b631-b540217755b5" />
+<img width="1804" height="827" alt="image" src="https://github.com/user-attachments/assets/ccdd50f3-0afc-439c-8a23-431a0e7f794e" />
 
 > Sau khi hoàn tất, AD sẽ được populate với nhiều user, group và OU giả lập. Môi trường lab đã sẵn sàng để thực hành phát hiện tấn công.
 
