@@ -60,7 +60,28 @@ Khúc này chỉ đợi thôi VMWare đã tự cài cho ta hết rồi. Và đã
 
 <img width="1914" height="912" alt="image" src="https://github.com/user-attachments/assets/8697025c-eb84-4923-8a3e-204720b1c8cd" />
 
-## Phase 3: Cấu hình IP tĩnh.
+## Phase 3: Cấu hình IP tĩnh
 
+Đầu tiên Vào **Control Pannel -> Network and internet -> Network and sharing center**
 
+Tiếp đó nhấn vào **Ethernet0**
 
+<img width="792" height="595" alt="image" src="https://github.com/user-attachments/assets/7c201a59-8344-4bb1-9c66-fc8da55d0fa2" />
+
+Xong rồi chọn **Properties**. 
+
+<img width="362" height="448" alt="image" src="https://github.com/user-attachments/assets/ab7d429f-d478-4090-b099-a9a3e4afe918" />
+
+Rồi vào **Internet Protocol Version 4 (TCP/IPv4)** Xong rồi setting giống trong hình. Rồi nhấn **ok** để lưu lại.
+
+<img width="391" height="466" alt="image" src="https://github.com/user-attachments/assets/4488798f-65c1-47e2-b4c3-779159ac0eb4" />
+
+Giờ ta sẽ dùng ```ping 8.8.8.8``` và ```ping 192.168.188.2```.
+
+<img width="959" height="753" alt="image" src="https://github.com/user-attachments/assets/ff36ca1e-1526-43ba-9d6e-413dc93c09c4" />
+
+Và ta đã ping thành công.
+
+## Phase 4:
+
+Trước khi cài đặt (). Tui sẽ muốn bạn cập nhập bằng windows update xong rồi tắt máy ảo rồi tạo 1 bảng snapshot y như các phần trước.
