@@ -96,6 +96,6 @@ Sau khi cài xong ta nhấn restart để khởi động lại.
 
 ## Phase 3: cấu hình IP tĩnh.
 
-Đầu tiên ta sẽ cần tắt Ubuntu. Tiếp đó ta chuột phải vào máy ảo ubuntu -> chọn **setting** -> tiếp đó chọn **network adapter** -> Tiếp đỏ chỉnh sang VMnet1 (Host-only)
+Đầu tiên ta sẽ cần tắt Ubuntu. Tiếp đó ta chuột phải vào máy ảo ubuntu -> chọn **setting** -> tiếp đó chọn **network adapter** -> Tiếp đỏ chỉnh sang VMnet1 (Host-only). Tại bước setup IP tĩnh này ta cũng làm giống phần setup bên ubuntu server.
 
 <img width="857" height="242" alt="image" src="https://github.com/user-attachments/assets/cea6226f-a411-4286-8bd9-83ce59f2e6c6" />
