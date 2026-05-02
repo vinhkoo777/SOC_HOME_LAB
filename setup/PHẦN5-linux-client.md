@@ -4,6 +4,11 @@
 
 ## Mục lục 
 
+- [Phase 1: Chuẩn bị](#phase-1-chuẩn-bị)
+- [Phase 2: Cài đặt Ubuntu](#phase-2-cài-đặt-ubuntu)
+- [Phase 3: cấu hình IP tĩnh](#phase-3-cấu-hình-IP-tĩnh)
+- [Phase 4: Cài đặt Splunk Universal Forwarder](#phase-3-Cài-đặt-Splunk-Universal-Forwarder)
+
 ## Phase 1: Chuẩn bị
 
 ### Bước 1: Tải ISO image Ubuntu 26.04 LTS
