@@ -165,17 +165,17 @@ Tui sẽ ấn enter tiếp.
 
 Ở đây tui sẽ đợi pfSense check kết nối. Sau khi check xong thì sẽ có bản thông báo hiện ra. Ấn enter để tiếp tục.
 
-<img width="707" height="460" alt="image" src="https://github.com/user-attachments/assets/a94006e4-47d8-4992-93a7-57c3def1f33a" />
+<img width="878" height="493" alt="image" src="https://github.com/user-attachments/assets/99cbf0d0-31dd-4a1e-91a7-235fb0eb0313" />
 
 Tại **Installation Option** ta ấn enter tiếp
 
-<img width="690" height="475" alt="image" src="https://github.com/user-attachments/assets/518b74be-57b8-4254-a4b1-bedcdd5dabbc" />
+<img width="867" height="497" alt="image" src="https://github.com/user-attachments/assets/ab6f6ea0-19ec-433e-888d-4b87d5a9771b" />
 
 Ta sẽ enter cho đến khi tới bước Confirnmation rồi ta nhấn enter.
 
 <img width="710" height="547" alt="image" src="https://github.com/user-attachments/assets/8771db39-edde-4e48-bf67-115f35243535" />
 
-Tại đây ta sẽ chọn phiên bản mà ta muốn cài rồi ấn enter.
+Tại đây ta sẽ chọn phiên bản mà ta muốn cài rồi ấn enter. Ở đây tôi sẽ cài phiên bản mới nhất. 
 
 <img width="713" height="426" alt="image" src="https://github.com/user-attachments/assets/d6a5e916-e0c5-45a3-993c-89e487c9ec04" />
 
