@@ -4,8 +4,6 @@ Trong lab này, tôi triển khai một Domain Controller sử dụng Windows Se
 
 ## Mục Lục
 
-## Mục Lục
-
 - [Phase 1: Chuẩn bị](#phase-1-chuẩn-bị)
 - [Phase 2: Cài đặt Windows Server](#phase-2-cài-đặt-windows-server)
 - [Phase 3: Cấu hình IP tĩnh](#phase-3-cấu-hình-ip-tĩnh)
