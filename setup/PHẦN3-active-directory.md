@@ -1,6 +1,6 @@
 # Active Directory Setup
 
-Trong lab này, tôi triển khai một **Domain Controller** sử dụng Windows Server để quản lý user và authentication trong môi trường doanh nghiệp mô phỏng. Đồng thời sử dụng **BadBlood** để populate AD với user, group, OU giả lập — nhằm tạo môi trường giống doanh nghiệp thật.
+Trong lab này, tôi triển khai một Domain Controller sử dụng Windows Server để quản lý user và authentication trong môi trường doanh nghiệp mô phỏng. Đồng thời sử dụng BadBlood để populate AD với user, group, OU giả lập để nhằm tạo môi trường giống doanh nghiệp thật.
 
 ## Mục Lục
 
@@ -229,3 +229,10 @@ Import-Module ActiveDirectory
 <img width="1447" height="652" alt="image" src="https://github.com/user-attachments/assets/41953a61-aaff-471c-b631-b540217755b5" />
 
 > Sau khi hoàn tất, AD sẽ được populate với nhiều user, group và OU giả lập. Môi trường lab đã sẵn sàng để thực hành phát hiện tấn công.
+
+## Một số lỗi có thể xảy ra
+
+Trong quá trình mới khởi động lên tôi bắt gặp lỗi bị treo ở đây. Cách fix là bạn hãy tắt pfSense chừng nào tới bước cấu hình IP tĩnh rồi hẳng mở pfSense.
+
+<img width="1191" height="798" alt="Screenshot 2026-05-02 204806" src="https://github.com/user-attachments/assets/484a9b10-f88b-41e3-80ea-9462d15e22a7" />
+
