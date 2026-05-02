@@ -132,6 +132,8 @@ Cấu hình như ảnh dưới
 
 <img width="392" height="417" alt="image" src="https://github.com/user-attachments/assets/c11a25af-604b-46e1-823e-3bc8d74cdc19" />
 
+Xong rồi ta khởi động lại máy.
+
 ## Phase 4: Đổi Hostname
 
 **Bước 1:** Vào **Server Manager** -> chọn **Local Server**.
