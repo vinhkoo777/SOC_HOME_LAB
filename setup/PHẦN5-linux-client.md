@@ -99,3 +99,67 @@ Sau khi cài xong ta nhấn restart để khởi động lại.
 Đầu tiên ta sẽ cần tắt Ubuntu. Tiếp đó ta chuột phải vào máy ảo ubuntu -> chọn **setting** -> tiếp đó chọn **network adapter** -> Tiếp đỏ chỉnh sang VMnet1 (Host-only). Tại bước setup IP tĩnh này ta cũng làm giống phần setup bên ubuntu server.
 
 <img width="857" height="242" alt="image" src="https://github.com/user-attachments/assets/cea6226f-a411-4286-8bd9-83ce59f2e6c6" />
+
+### Bước 1: Check IP 
+
+Đầu tiên ta sẽ check ip hiện tại của ta.
+
+```bash
+ip addr show
+```
+
+<img width="661" height="477" alt="image" src="https://github.com/user-attachments/assets/00bc8e23-dfe6-436d-94d6-b2413b8e7d2b" />
+
+Do tui mới đổi sang VMnet1(Host-only) nên ta sẽ cần tự config IP tĩnh. Và interface của tui là ens33 như ta thấy trông ảnh thì nó đang chưa có IP.
+
+### Bước 2: edit netplan configuration.
+
+Tiếp theo đó sử nhập lệnh. Để edit netplan configuration.
+
+```bash
+sudo nano /etc/netplan/00-installer-config.yaml
+```
+
+### Bước 3: Thay đổi content trong config đó
+
+Tại đây ta sẽ nhập giống như vậy. 
+
+```bash
+network:
+  version: 2
+  ethernets:
+    ens33:
+      addresses:
+        - 192.168.188.10/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+      routes:
+        - to: default
+          via: 192.168.188.2
+```
+
+### Bước 4: Áp dụng config
+
+Xong rồi ta sẽ apply config trên bằng cách nhập.
+```bash
+sudo netplan apply
+```
+
+### Bước 5: Tiến hành confirm 
+Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đã được config đúng hay chưa.
+```bash
+ip adđr show ens33
+```
+
+<img width="716" height="151" alt="image" src="https://github.com/user-attachments/assets/7b0d3cdd-6a55-4f99-a1e2-4a248dcdcb80" />
+
+Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
+```bash
+ping -c 3 8.8.8.8
+```
+
+Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc cấu hình IP tĩnh của chúng ta đã hoàn thành bây giờ ta sẽ qua phase tiếp theo.
+
+<img width="481" height="95" alt="image" src="https://github.com/user-attachments/assets/079a75d0-4c1d-4483-9580-bf023bae491d" />
