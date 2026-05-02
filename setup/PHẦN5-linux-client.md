@@ -32,6 +32,12 @@ Tại **Name The Virtual Machine** tôi sẽ đặt tên và chọn thư mục c
 
 <img width="500" height="528" alt="image" src="https://github.com/user-attachments/assets/2c22c75f-e28e-420f-96c8-cf52243cd1f8" />
 
+Tiếp đó tôi sẽ muốn **Customize Hardware** để chỉnh network adapter sang Vmnet1(host-only). Sau khi chỉnh xong ta nhấn close để tiếp tục.
 
+<img width="882" height="899" alt="image" src="https://github.com/user-attachments/assets/ddc9f4bb-f9fb-493a-a6ef-8ff81d4d9186" />
+
+Sau đó nhấn Finish để hoàn thành. 
+
+<img width="488" height="528" alt="image" src="https://github.com/user-attachments/assets/b113de5d-e9db-4266-b0d4-8937ed48d0b2" />
 
 
