@@ -89,4 +89,4 @@ Và ta đã ping thành công.
 
 ## Phase 4: Cài đặt Splunk Universal Forwarder
 
-Trước khi cài đặt Splunk Universal Forwarder. Tui sẽ muốn bạn cập nhập bằng windows update xong rồi tắt máy ảo rồi tạo 1 bảng snapshot y như các phần trước.
+Trước khi cài đặt Splunk Universal Forwarder. Tui sẽ muốn bạn cập nhập bằng windows update. Khi cập nhập xong ta sẽ tắt máy ảo sau đó chuột phải vào máy ảo chọn Snapshot -> Take snapshot.
