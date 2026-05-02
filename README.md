@@ -77,6 +77,8 @@ Hướng dẫn từng bước để tái tạo môi trường lab từ đầu:
 | 5 | Máy đầu cuối Linux | [Thiết lập Linux Client](setup/PHẦN5-linux-client.md) |
 | 6 | Máy đầu cuối Windows | [Thiết lập Windows Client](setup/PHẦN6-windows-client.md) |
 
+> [!IMPORTANT] pfSense phải được khởi động trước khi cấu hình IP tĩnh trên bất kỳ máy nào trong lab.Lý do: pfSense đóng vai trò là default gateway của toàn bộ mạng nội bộ. Khi bạn gán IP tĩnh cho một máy, hệ thống sẽ ngay lập tức cố gắng liên lạc với gateway để xác nhận kết nối. Nếu pfSense chưa chạy, máy sẽ không thể kiểm tra được tính hợp lệ của cấu hình, dẫn đến việc khó phát hiện lỗi sai subnet, gateway, hoặc xung đột địa chỉ IP trong quá trình thiết lập.
+
 ---
 
 ## Quy Tắc Phát Hiện
