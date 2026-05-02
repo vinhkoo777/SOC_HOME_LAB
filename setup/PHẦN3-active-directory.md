@@ -4,10 +4,6 @@ Trong lab này, tôi triển khai một Domain Controller sử dụng Windows Se
 
 ## Mục Lục
 
-- [Phase 1: Chuẩn bị môi trường](#phase-1-chuẩn-bị-môi-trường)
-- [Phase 2: Cài đặt Domain Controller](#phase-2-cài-đặt-domain-controller)
-- [Phase 3: Cài đặt BadBlood](#phase-3-cài-đặt-badblood)
-
 ## Phase 1: Chuẩn bị
 
 ### Bước 1: Cài đặt ISO image Windows Server
@@ -104,25 +100,33 @@ Sau khi cài đặt xong, Tại **Customize settings**, nhập mật khẩu Admi
 
 <img width="932" height="620" alt="image" src="https://github.com/user-attachments/assets/43a2fdd6-933e-42b9-b4d5-b0351d052811" />
 
-Cài đặt hoàn tất. 
+Cài đặt hoàn tất. (Khi này nên tạo 1 bảng snapshot để phòng có chuyện gì xảy ra)
 
 <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
 
 ## Phase 3: Cấu hình IP tĩnh
 
-Domain Controller cần IP tĩnh để DNS và authentication hoạt động ổn định.
+Đầu tiên ta tắt máy đi xong rồi chuột phải vào máy ảo chọn **setting**
 
-1. Vào **Control Panel** -> **Network and Internet** -> **Network and Sharing Center**
+<img width="882" height="921" alt="image" src="https://github.com/user-attachments/assets/b7b5150e-c8f7-4e43-a8b5-63d52fe6d1e1" />
+
+Xong rồi vào mục **Network Adapter** và đổi sang VMnet1 (Host-only). Nhấn **ok** để lưu lại.
+
+<img width="882" height="921" alt="image" src="https://github.com/user-attachments/assets/897b32c3-b776-42d1-a7f6-2d9401c6f111" />
+
+Xong rồi ta sẽ tiến hành mở máy.
+
+Vào **Control Panel** -> **Network and Internet** -> **Network and Sharing Center**
 
 Xong rồi ta bấm vào **Ethernet0**
 
 <img width="791" height="585" alt="image" src="https://github.com/user-attachments/assets/3539af3e-d980-4bcb-bda4-1610a1da0016" />
 
-2. Chọn **propertise**
+Chọn **propertise**
 
 <img width="365" height="452" alt="image" src="https://github.com/user-attachments/assets/f2c8c41d-0590-4625-9246-2a6ffd316c8f" />
 
-3. Nhấn vào Internet Protocol Version 4 (TCP/IPv4)
+Nhấn vào Internet Protocol Version 4 (TCP/IPv4)
 
 <img width="357" height="462" alt="image" src="https://github.com/user-attachments/assets/bea6f572-c5ce-45b0-b615-af3150c4c311" />
 
