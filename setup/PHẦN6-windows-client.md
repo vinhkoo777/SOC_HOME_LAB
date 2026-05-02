@@ -4,6 +4,11 @@
 
 ## Mục lục 
 
+- [Phase 1: Chuẩn bị](#phase-1-chuẩn-bị)
+- [Phase 2: Cài đặt windows 10](#phase-2-cài-đặt-windows-10)
+- [Phase 3: cấu hình IP tĩnh](#phase-3-cấu-hình-IP-tĩnh)
+- [Phase 4: Cài đặt Splunk Universal Forwarder](#phase-4-Cài-đặt-Splunk-Universal-Forwarder)
+
 ## Phase 1: Chuẩn bị 
 
 ### Bước 1: Tải ISO image windows 10 
