@@ -234,6 +234,8 @@ Import-Module ActiveDirectory
 
 > Sau khi hoàn tất, AD sẽ được populate với nhiều user, group và OU giả lập. Môi trường lab đã sẵn sàng để thực hành phát hiện tấn công.
 
+## Phase 7: Cài đặt Splunk Universal Forwarder
+
 ## Một số lỗi có thể xảy ra
 
 Trong quá trình mới khởi động lên tôi bắt gặp lỗi bị treo ở đây. Cách fix là bạn hãy tắt pfSense chừng nào tới bước cấu hình IP tĩnh rồi hẳng mở pfSense.
