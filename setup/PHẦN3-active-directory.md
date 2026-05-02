@@ -108,7 +108,7 @@ Cài đặt hoàn tất. (nên tạo snapshot để phòng hờ có chuyện gì
 
 <img width="1027" height="763" alt="image" src="https://github.com/user-attachments/assets/61cd3755-faf7-459d-b4e9-e22ad5fedc64" />
 
-### 1.2 — Cấu hình Static IP
+## Phase 3: Cấu hình IP tĩnh
 
 Domain Controller cần IP tĩnh để DNS và authentication hoạt động ổn định.
 
@@ -130,7 +130,7 @@ Cấu hình như ảnh dưới :
 
 <img width="392" height="417" alt="image" src="https://github.com/user-attachments/assets/c11a25af-604b-46e1-823e-3bc8d74cdc19" />
 
-### 1.3 — Đổi Hostname thành DC01
+## Phase 4: Đổi Hostname
 
 **Bước 1:** Vào **Server Manager** -> chọn **Local Server**.
 
@@ -150,7 +150,7 @@ Cấu hình như ảnh dưới :
 
 ---
 
-## Phase 2: Cài Đặt Domain Controller
+## Phase 5: Cài Đặt Domain Controller
 
 **Bước 1:** Tại màn hình chính Server Manager, chọn **Add roles and features**.
 
@@ -192,7 +192,7 @@ Cấu hình như ảnh dưới :
 
 > Máy sẽ tự động khởi động lại sau khi cài đặt xong. Domain Controller đã sẵn sàng.
 
-## Phase 3: Cài Đặt BadBlood
+## Phase 6: Cài Đặt BadBlood
 
 > **Snapshot trước khi bắt đầu phase này** để có thể rollback nếu có sự cố.
 
