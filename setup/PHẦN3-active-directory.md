@@ -181,7 +181,7 @@ Xong rồi ta khởi động lại máy.
 
 **Bước 4:** Nhấn **Next** để tiếp tục.
 
-<img width="1142" height="786" alt="image" src="https://github.com/user-attachments/assets/0893c5c0-9d02-4d16-a6a5-fe793b0a4915" />
+<img width="596" height="487" alt="image" src="https://github.com/user-attachments/assets/58ad7715-1059-4a5f-a865-4aca9ec2fdac" />
 
 **Bước 5:** Tick vào **Active Directory Domain Services** → nhấn **Add Features** → nhấn **Next** cho đến bước Confirm.
 
