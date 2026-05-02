@@ -18,7 +18,7 @@ Tải Windows Server 2025 [tại đây](https://www.microsoft.com/en-us/evalcent
 
 <img width="1575" height="852" alt="image" src="https://github.com/user-attachments/assets/7896cb52-8520-481a-bea7-023b203b7e63" />
 
-### Bước 2: Tạo máy ảo trên VMware
+### Bước 2: Tạo máy ảo windows server 
 
 Ta chọn **File -> New Virtual Machine**
 
@@ -52,29 +52,53 @@ Tại đây ta bấm vào **Customize Hardware**.
 
 <img width="896" height="436" alt="image" src="https://github.com/user-attachments/assets/bfb5898f-bcce-479b-827b-035c038f38c0" />
 
-Tiếp đó ta sang Network Adapter. Đổi NAT sang VMnet1 (Host-only) vì tí nữa ta sẽ cấu hình IP tĩnh.
+Tiếp đó tui sẽ chỉnh **Memory** là 4gb và **Processors** là 2
 
-<img width="886" height="542" alt="image" src="https://github.com/user-attachments/assets/c163630b-edf4-4a3e-a960-5c7b26aaefe6" />
+<img width="890" height="895" alt="image" src="https://github.com/user-attachments/assets/79bbc33a-d9a5-4fd5-aeca-44f401f20cde" />
 
-Cuối cùng là tôi sẽ chỉnh **memory** là 4gb và **processors** là 2 và nhấn close để hoàn thành.
+Ta nhấn close để hoàn thành. 
 
-<img width="891" height="900" alt="image" src="https://github.com/user-attachments/assets/08a6beee-1288-4eb4-a171-9cdd5c0aa61b" />
+<img width="505" height="536" alt="image" src="https://github.com/user-attachments/assets/0c515610-6c7b-4e0b-a49e-452a6e1c0b5f" />
 
-Cuối cùng là nhấn Finish.
+Và nhấn finish để hoàn tất quá trình tạo máy ảo.
 
-<img width="493" height="529" alt="image" src="https://github.com/user-attachments/assets/403300d6-33cb-472e-aa5f-4c12e050f493" />
+## Phase 3: Cài đặt Windows server 
 
-**Bước 3: Cài đặt Windows Server**
+Khởi động máy ảo. 
 
-Khởi động máy ảo. Các bước đầu nhấn **Next** liên tục.
+<img width="1632" height="872" alt="image" src="https://github.com/user-attachments/assets/0afc067f-1ed9-404e-a261-10bba93f8536" />
+
+Tại đây tui sẽ để mặc định và nhấn **Next** để tiếp tục
+
+<img width="952" height="756" alt="image" src="https://github.com/user-attachments/assets/48288917-63dd-4785-9289-27e22805ea7d" />
+
+Mục **Keyboard settings** tôi sẽ để là US và nhấn **Next**.
+
+<img width="726" height="566" alt="image" src="https://github.com/user-attachments/assets/1de1d3de-12e4-48ed-b9c5-d5550369b20b" />
+
+Ở **Select setup option** chọn **Install Windows Server** và tick dấu tick vào và nhấn **Next** để tiếp tục. 
+
+<img width="727" height="567" alt="image" src="https://github.com/user-attachments/assets/d764fbcc-5c69-4080-8090-e157f78592d9" />
 
 Tại mục **Select Image** chọn phiên bản thứ 4 -> sau đó nhấn **Next** -> và Accept điều khoản.
 
 <img width="1222" height="852" alt="image" src="https://github.com/user-attachments/assets/9a220331-f4c3-49d8-bc28-e2e916a49303" />
 
-Tạo partition và nhấn **Next** để tiến hành cài đặt.
+Nhấn vào **Create Partition** để tạo phân vùng mới.
 
-<img width="1274" height="820" alt="image" src="https://github.com/user-attachments/assets/5dd01ba5-29af-4ca0-9409-e8d5fb31ad1d" />
+<img width="837" height="650" alt="image" src="https://github.com/user-attachments/assets/4847394a-1150-4f62-8604-3cb7e639529a" />
+
+Tiếp đó nhấn **Apply**
+
+<img width="760" height="610" alt="image" src="https://github.com/user-attachments/assets/4e4bc25b-8b2b-4dd5-a577-fe5b19839c01" />
+
+Xong rồi chọn partition có type là **Primary**. Rồi nhấn **next** 
+
+<img width="712" height="557" alt="image" src="https://github.com/user-attachments/assets/2ecdffc3-1369-45a4-b934-d5907fbafc58" />
+
+Tại đây nhấn **install**
+
+<img width="913" height="661" alt="image" src="https://github.com/user-attachments/assets/7ef658c7-4ff3-4d3b-a438-acbb800d027b" />
 
 Sau khi cài đặt xong, nhập mật khẩu Administrator và nhấn **Next**.
 
