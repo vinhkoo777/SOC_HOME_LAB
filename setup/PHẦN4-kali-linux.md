@@ -6,7 +6,8 @@
 
 - [Phase 1: Chuẩn bị](#phase-1-chuẩn-bị)
 - [Phase 2: Cài đặt Kali Linux](#phase-2-cài-đặt-kali-linux)
-- [Phase 3: Sau khi cài đặt Kali Linux](#phase-3-sau-khi-cài-đặt)
+- [Phase 3: Cấu hình IP tĩnh](#phase-3-cấu-hình-IP-tĩnh)
+- [Phase 4: Cập nhập và tạo snapshot](#phase-4-cập-nhập-và-tạo-snapshot)
 
 
 ## Phase 1: Chuẩn bị 
@@ -162,59 +163,74 @@ Sau khi xong nhấn continue để reboot lại máy.
 
 <img width="861" height="647" alt="image" src="https://github.com/user-attachments/assets/11e1eb3e-d506-4cf1-a47a-a132c6f177b8" />
 
-## Phase 3: Sau khi cài đặt
+## Phase 3: Cấu hình IP tĩnh
 
-### Bước 1: Cấu hình IP tĩnh
+### Bước 1: Check IP 
 
-Đầu tiên ta dùng lệnh dưới để kiểm tra xem liệu file interfacs có tồn tại hay không.
-
-```bash
-cat /etc/network/interfaces
-```
-<img width="647" height="523" alt="image" src="https://github.com/user-attachments/assets/95735707-f2cd-468f-a3d7-b22f1e2bc540" />
-
-Tiếp đó tôi sẽ sử dụng lệnh dưới để check xem liệu máy kali tui đang sử dụng interface nào. 
-```bash
-ifconfig
-```
-
-<img width="575" height="147" alt="image" src="https://github.com/user-attachments/assets/6111ed74-c2cd-44c8-afc2-d5a1d6b2419a" />
-
-Thì ta thấy rằng kali đang sử dụng eth0 nên ta sẽ cấu hình IP tĩnh trên interface đó. Bằng cách sử dụng lệnh.
-```bash
-sudo nano /etc/network/interfaces
-```
-Xong rồi ta sẽ thêm nội dung dưới vào.
+Đầu tiên ta sẽ check ip hiện tại của ta.
 
 ```bash
-auto eth0
-iface eth0 inet static
-  address 192.168.188.20
-  netmask 255.255.255.0
-  gateway 119.168.188.2
-  dns-nameservers 8.8.8.8 8.8.4.4
+ip addr show
 ```
-<img width="627" height="410" alt="image" src="https://github.com/user-attachments/assets/558763db-079f-438e-af21-2e187fbe3b09" />
 
-Tiếp đó sử dụng.
-```bash
-sudo systemctl restart networking
-```
-Bây giờ tui sẽ kiểm tra bằng lệnh ```ifconfig``` và ```ping 8.8.8.8```
+<img width="661" height="477" alt="image" src="https://github.com/user-attachments/assets/00bc8e23-dfe6-436d-94d6-b2413b8e7d2b" />
 
-<img width="832" height="566" alt="image" src="https://github.com/user-attachments/assets/184d3f15-abaf-4037-8860-787b4216433e" />
+Do tui mới đổi sang VMnet1(Host-only) nên ta sẽ cần tự config IP tĩnh. Và interface của tui là ens33 như ta thấy trông ảnh thì nó đang chưa có IP.
 
-Thì tui đã thành công trong việc cấu hình IP tĩnh
+### Bước 2: edit netplan configuration.
 
-### Bước 2: Cập nhập hệ thống 
+Tiếp theo đó sử nhập lệnh. Để edit netplan configuration.
 
 ```bash
-sudo apt update && sudo apt upgrade -y
+sudo nano /etc/netplan/00-installer-config.yaml
 ```
 
-<img width="947" height="233" alt="image" src="https://github.com/user-attachments/assets/dc9c8368-ce0d-4921-b7af-323e4bfae80a" />
+### Bước 3: Thay đổi content trong config đó
 
-### Bước 3: Tạo snapshot
+Tại đây ta sẽ nhập giống như vậy. 
+
+```bash
+network:
+  version: 2
+  ethernets:
+    ens33:
+      addresses:
+        - 192.168.188.50/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+      routes:
+        - to: default
+          via: 192.168.188.2
+```
+
+### Bước 4: Áp dụng config
+
+Xong rồi ta sẽ apply config trên bằng cách nhập.
+```bash
+sudo netplan apply
+```
+
+### Bước 5: Tiến hành confirm 
+Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đã được config đúng hay chưa.
+```bash
+ip adđr show ens33
+```
+
+<img width="832" height="130" alt="image" src="https://github.com/user-attachments/assets/561e9f16-8765-4d46-8558-4fe4f7f9945a" />
+
+
+Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
+```bash
+ping -c 3 8.8.8.8
+```
+
+Thì như  hình thì ta đã thấy ta đã ping thành công. Và việc cấu hình IP tĩnh của chúng ta đã hoàn thành bây giờ ta sẽ qua phase tiếp theo.
+
+<img width="668" height="165" alt="image" src="https://github.com/user-attachments/assets/e94d84d6-07e4-47be-89c7-fdb8c052f4c3" />
+
+### Phase 4: Cập nhập và tạo snapshot
 
 Sao khi cập nhập xong ta nên tạo 1 bảng snapshot để có thể backup khi cần thiết. Bằng cách chuột phỉa vào máy ảo. Tiếp đó nhấn Take snapshot và đặt tên theo ta muốn và nhấn Take snapshot
 
