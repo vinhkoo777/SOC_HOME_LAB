@@ -4,6 +4,17 @@ Trong lab này, tôi triển khai một Domain Controller sử dụng Windows Se
 
 ## Mục Lục
 
+## Mục Lục
+
+- [Phase 1: Chuẩn bị](#phase-1-chuẩn-bị)
+- [Phase 2: Cài đặt Windows Server](#phase-2-cài-đặt-windows-server)
+- [Phase 3: Cấu hình IP tĩnh](#phase-3-cấu-hình-ip-tĩnh)
+- [Phase 4: Đổi Hostname](#phase-4-đổi-hostname)
+- [Phase 5: Cài đặt Domain Controller](#phase-5-cài-đặt-domain-controller)
+- [Phase 6: Cài đặt BadBlood](#phase-6-cài-đặt-badblood)
+- [Phase 7: Cài đặt Splunk Universal Forwarder](#phase-7-cài-đặt-splunk-universal-forwarder)
+- [Một số lỗi có thể xảy ra](#một-số-lỗi-có-thể-xảy-ra)
+
 ## Phase 1: Chuẩn bị
 
 ### Bước 1: Cài đặt ISO image Windows Server
