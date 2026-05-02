@@ -165,3 +165,13 @@ Thì như  hình thì ta đã thấy ta đã ping thành công. Và việc cấu
 
 <img width="668" height="165" alt="image" src="https://github.com/user-attachments/assets/e94d84d6-07e4-47be-89c7-fdb8c052f4c3" />
 
+> **NOTE Bạn nên tạo một bản snapshit trước khi qua giai đoạn tiếp theo**
+
+## Phase 4: Cài đặt Splunk Universal Forwarder
+
+Đầu tiên tôi sẽ cần phải update hệ thống bằng lệnh.
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
