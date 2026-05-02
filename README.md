@@ -77,7 +77,7 @@ Hướng dẫn từng bước để tái tạo môi trường lab từ đầu:
 | 5 | Máy đầu cuối Linux | [Thiết lập Linux Client](setup/PHẦN5-linux-client.md) |
 | 6 | Máy đầu cuối Windows | [Thiết lập Windows Client](setup/PHẦN6-windows-client.md) |
 
-> **NOTE QUAN TRỌNG:** pfSense phải được khởi động trước khi cấu hình IP tĩnh trên bất kỳ máy nào trong lab. Lý do: DHCP của VMware đã bị tắt và pfSense tại `192.168.188.2` là gateway duy nhất của mạng và nếu nó chưa chạy,Ta sẽ không thể kiểm tra xem IP tĩnh vừa gán có thực sự hoạt động hay không.
+> **NOTE QUAN TRỌNG:** pfSense phải luôn được khởi động trước khi cấu hình IP tĩnh trên bất kỳ máy nào trong lab. Lý do: DHCP của VMware đã bị tắt và pfSense tại `192.168.188.2` là gateway duy nhất của mạng và nếu nó chưa chạy,Ta sẽ không thể kiểm tra xem IP tĩnh vừa gán có thực sự hoạt động hay không.
 ---
 
 ## Quy Tắc Phát Hiện
