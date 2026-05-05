@@ -160,3 +160,11 @@ Bây giờ ta sẽ quay lại với phần cài đặt. Ở đây tui sẽ nhấ
 Cuối cùng là nhấn **install** để tải. 
 
 <img width="602" height="522" alt="image" src="https://github.com/user-attachments/assets/e32462bb-bf65-4d40-b4c0-6d455d8460a5" />
+
+## Bước 3: Cấu hình inputs.conf để gửi log về Splunk
+
+Đầu tiên ta vào `C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local` khi này ta tạo một file mới đặt tên là inputs.conf. Với nội dung.
+
+```
+
+```
