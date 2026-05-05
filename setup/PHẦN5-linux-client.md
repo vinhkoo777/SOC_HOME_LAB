@@ -180,3 +180,29 @@ Thì như  hình thì ta đã thấy ta đã ping thành công. Và việc cấu
 sudo apt update && sudo apt upgrade -y
 ```
 
+Tiếp đó tui tiến hành tải file .deb của Splunk Universal Forwarder thông qua lệnh dưới
+
+```bash
+wget -O splunkforwarder-10.2.3-4d61cf8a5c0c-linux-amd64.deb "https://download.splunk.com/products/universalforwarder/releases/10.2.3/linux/splunkforwarder-10.2.3-4d61cf8a5c0c-linux-amd64.deb"
+```
+
+Xong rồi tôi sẽ tiến hành cài
+
+```bash
+sudo apt install ./splunkforwarder-10.2.3-4d61cf8a5c0c-linux-amd64.deb
+```
+
+Tiếp theo đó ta sẽ thực hiện lệnh dưới và nhấn y để chấp nhận điểu khoản.
+
+```bash
+/opt/splunkforwarder/bin/splunk start
+```
+
+Ở đây bạn sẽ cần phải nhập **Username**. Tiếp đó ấn enter.
+
+<img width="842" height="161" alt="image" src="https://github.com/user-attachments/assets/4ab9b239-ce37-411b-a57f-69120425c357" />
+
+Tiếp đó là nhập **Password** sau khi nhập xong nhấn enter để tiếp tục.
+
+<img width="1326" height="89" alt="image" src="https://github.com/user-attachments/assets/a5118443-ad61-4969-bd8e-122137510083" />
+
