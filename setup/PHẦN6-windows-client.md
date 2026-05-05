@@ -157,6 +157,6 @@ Bây giờ ta sẽ quay lại với phần cài đặt. Ở đây tui sẽ nhấ
 
 <img width="666" height="573" alt="image" src="https://github.com/user-attachments/assets/b1145060-d869-4f32-b0a0-a78c8a0f0d27" />
 
-Cuối cùng là nhấn install để tải. 
+Cuối cùng là nhấn **install** để tải. 
 
 <img width="602" height="522" alt="image" src="https://github.com/user-attachments/assets/e32462bb-bf65-4d40-b4c0-6d455d8460a5" />
