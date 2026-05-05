@@ -279,6 +279,8 @@ index = main
 sourcetype = XmlWinEventLog:Sysmon
 renderXml = 1
 checkpointInterval = 5
+start_from = newest
+current_only = 0
 
 # ==============================
 # FILE MONITOR 
