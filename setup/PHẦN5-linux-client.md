@@ -174,6 +174,8 @@ Thì như  hình thì ta đã thấy ta đã ping thành công. Và việc cấu
 
 ## Phase 4: Cài đặt Splunk Universal Forwarder
 
+### Bước 1: Cài đặt
+
 Đầu tiên tôi sẽ cần phải update hệ thống bằng lệnh.
 
 ```bash
@@ -202,7 +204,156 @@ Tiếp theo đó ta sẽ thực hiện lệnh dưới và nhấn y để chấp 
 
 <img width="842" height="161" alt="image" src="https://github.com/user-attachments/assets/4ab9b239-ce37-411b-a57f-69120425c357" />
 
-Tiếp đó là nhập **Password** sau khi nhập xong nhấn enter để tiếp tục.
+Tiếp đó là nhập **Password** sau khi nhập xong nhấn enter để tiếp tục. 
 
 <img width="1326" height="89" alt="image" src="https://github.com/user-attachments/assets/a5118443-ad61-4969-bd8e-122137510083" />
+
+Bây giờ ta sẽ cần mở splunk trong ubuntu server ra. Đầu tiên vào **Setting** -> Tiếp đó **Forwarding and receiving**  (nếu đã làm xong bước này thì không càn nữa)
+
+<img width="1906" height="847" alt="image" src="https://github.com/user-attachments/assets/e8fc3bb1-616e-475a-9f4d-766535e62ca7" />
+
+Tại **Configure Receiving** ta bấm vào **Add New**. Nhập Port là 9997 và ấn **Save**  (nếu đã làm xong bước này thì không càn nữa)
+
+<img width="1916" height="867" alt="image" src="https://github.com/user-attachments/assets/b17f5d81-a8bc-4761-8f1e-1f6a2152ab12" />
+
+Sau đó thực hiện lệnh. Rồi ta sẽ cần nhập **Username** và **Password** ở trên. Và như đã thấy lệnh đã thực hiện thành công. 
+
+```bash
+sudo ./bin/splunk add forward-server 192.168.188.10:9997
+```
+
+<img width="855" height="116" alt="image" src="https://github.com/user-attachments/assets/cb0e0e1b-26d8-4d54-b7f6-19a388b3b34f" />
+
+### Bước 2: Cấu hình inputs.conf để gửi log về Splunk
+
+Đầu tiên ta duy chuyển vào `/opt/splunkforwarder/etc/system/local` xong rồi tạo file `inputs.conf`
+
+```
+cd /opt/splunkforwarder/etc/system/local
+sudo nano inputs.conf
+```
+
+Với nội dung là 
+
+```
+# ==============================
+# SYSTEM LOGS
+# ==============================
+
+[monitor:///var/log/syslog]
+disabled = 0
+sourcetype = syslog
+
+[monitor:///var/log/messages]
+disabled = 0
+sourcetype = syslog
+
+# ==============================
+# AUTHENTICATION 
+# ==============================
+
+[monitor:///var/log/auth.log]
+disabled = 0
+sourcetype = linux_secure
+
+[monitor:///var/log/secure]
+disabled = 0
+sourcetype = linux_secure
+
+# ==============================
+# SSH
+# ==============================
+
+[monitor:///var/log/auth.log]
+disabled = 0
+sourcetype = ssh
+
+# ==============================
+# SUDO / PRIV ESC
+# ==============================
+
+[monitor:///var/log/sudo.log]
+disabled = 0
+sourcetype = sudo
+
+# ==============================
+# CRON 
+# ==============================
+
+[monitor:///var/log/cron]
+disabled = 0
+sourcetype = cron
+
+# ==============================
+# KERNEL / SYSTEM EVENTS
+# ==============================
+
+[monitor:///var/log/kern.log]
+disabled = 0
+sourcetype = kernel
+
+[monitor:///var/log/dmesg]
+disabled = 0
+sourcetype = kernel
+
+# ==============================
+# PACKAGE / INSTALL ACTIVITY
+# ==============================
+
+[monitor:///var/log/dpkg.log]
+disabled = 0
+sourcetype = package
+
+[monitor:///var/log/yum.log]
+disabled = 0
+sourcetype = package
+
+# ==============================
+# DNS 
+# ==============================
+
+[monitor:///var/log/syslog]
+disabled = 0
+sourcetype = dns
+
+# ==============================
+# FILE MONITORING 
+# ==============================
+
+[monitor:///etc/passwd]
+disabled = 0
+sourcetype = file_integrity
+
+[monitor:///etc/shadow]
+disabled = 0
+sourcetype = file_integrity
+
+[monitor:///etc/hosts]
+disabled = 0
+sourcetype = file_integrity
+
+# ==============================
+# SPLUNK INTERNAL LOGS
+# ==============================
+
+[monitor://$SPLUNK_HOME/var/log/splunk/splunkd.log]
+disabled = 0
+index = _internal
+
+[monitor://$SPLUNK_HOME/var/log/splunk/metrics.log]
+disabled = 0
+index = _internal
+```
+
+Xong rồi ta tiến hành khởi động lại Splunk Universal Forwarder bằng cách 
+
+```
+cd /opt/splunkforwarder/bin
+sudo ./splunk restart
+```
+
+Bây giờ khi ta dùng splunk và query thử `index=main` ta đã thấy 2 host.
+
+<img width="1907" height="890" alt="image" src="https://github.com/user-attachments/assets/bbee097c-9c00-4389-bf62-7a9cd3ce58a8" />
+
 
