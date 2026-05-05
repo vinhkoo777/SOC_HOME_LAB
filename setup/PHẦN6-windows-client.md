@@ -330,7 +330,6 @@ Khi này sẽ cần phải restart lại Splunk Universal Forwarder. Ta sẽ m�
 cd "C:\Program Files\SplunkUniversalForwarder\bin"
 ./splunk restart
 ```
-
 <img width="530" height="41" alt="image" src="https://github.com/user-attachments/assets/dbe11bec-33fe-4b41-9e6b-3bf3023af7a8" />
 
 ## Bước 4: Kiểm tra lại 
