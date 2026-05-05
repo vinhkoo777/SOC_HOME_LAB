@@ -163,7 +163,7 @@ Cuối cùng là nhấn **install** để tải.
 
 ## Bước 3: Cấu hình inputs.conf để gửi log về Splunk
 
-Đầu tiên ta vào `C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local` khi này ta tạo một file mới đặt tên là inputs.conf. Với nội dung.
+Đầu tiên ta vào `C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local` khi này ta tạo một file mới đặt tên là `inputs.conf`. Với nội dung.
 
 ```
 # ==============================
@@ -172,7 +172,7 @@ Cuối cùng là nhấn **install** để tải.
 
 [WinEventLog://Security]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:Security
 renderXml = 1
 checkpointInterval = 5
@@ -181,14 +181,14 @@ start_from = oldest
 
 [WinEventLog://System]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:System
 renderXml = 1
 checkpointInterval = 5
 
 [WinEventLog://Application]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:Application
 renderXml = 1
 
@@ -198,18 +198,18 @@ renderXml = 1
 
 [WinEventLog://Microsoft-Windows-PowerShell/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:PowerShell
 renderXml = 1
 
 [WinEventLog://Microsoft-Windows-TaskScheduler/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:TaskScheduler
 
 [WinEventLog://Microsoft-Windows-WMI-Activity/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:WMI-Activity
 
 # ==============================
@@ -218,12 +218,12 @@ sourcetype = WinEventLog:WMI-Activity
 
 [WinEventLog://Microsoft-Windows-AppLocker/EXE and DLL]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:AppLocker
 
 [WinEventLog://Microsoft-Windows-Windows Defender/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:Defender
 
 # ==============================
@@ -232,22 +232,22 @@ sourcetype = WinEventLog:Defender
 
 [WinEventLog://Microsoft-Windows-Windows Firewall With Advanced Security/Firewall]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:Firewall
 
 [WinEventLog://Microsoft-Windows-TerminalServices-LocalSessionManager/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:RDP
 
 [WinEventLog://Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:RDP
 
 [WinEventLog://Microsoft-Windows-DNS-Client/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:DNS
 
 # ==============================
@@ -256,17 +256,17 @@ sourcetype = WinEventLog:DNS
 
 [WinEventLog://Directory Service]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:DirectoryService
 
 [WinEventLog://Microsoft-Windows-Kerberos/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:Kerberos
 
 [WinEventLog://Microsoft-Windows-Kerberos-Key-Distribution-Center/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = WinEventLog:KDC
 
 # ==============================
@@ -275,7 +275,7 @@ sourcetype = WinEventLog:KDC
 
 [WinEventLog://Microsoft-Windows-Sysmon/Operational]
 disabled = 0
-index = wineventlog
+index = main
 sourcetype = XmlWinEventLog:Sysmon
 renderXml = 1
 checkpointInterval = 5
@@ -286,7 +286,7 @@ checkpointInterval = 5
 
 [monitor://C:\Windows\System32\drivers\etc\hosts]
 disabled = 0
-index = file_monitor
+index = main
 sourcetype = WinFile:hosts
 followTail = 1
 
@@ -309,18 +309,30 @@ object = Processor
 counters = % Processor Time
 instances = _Total
 interval = 60
-index = perfmon
+index = main
 
 [perfmon://Memory]
 object = Memory
 counters = Available MBytes
 interval = 60
-index = perfmon
+index = main
 
 [perfmon://LogicalDisk]
 object = LogicalDisk
 counters = % Free Space
 instances = *
 interval = 60
-index = perfmon
+index = main
 ```
+Khi này sẽ cần phải restart lại Splunk Universal Forwarder. Ta sẽ mở **Powershell** với quyền admin. Rồi ta thực hiện các lệnh.
+
+```
+cd "C:\Program Files\SplunkUniversalForwarder\bin"
+./splunk restart
+```
+
+<img width="530" height="41" alt="image" src="https://github.com/user-attachments/assets/dbe11bec-33fe-4b41-9e6b-3bf3023af7a8" />
+
+## Bước 4: Kiểm tra lại 
+
+
