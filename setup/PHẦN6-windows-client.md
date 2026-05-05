@@ -90,3 +90,73 @@ Và ta đã ping thành công.
 ## Phase 4: Cài đặt Splunk Universal Forwarder
 
 Trước khi cài đặt Splunk Universal Forwarder. Tui sẽ muốn bạn cập nhập bằng windows update. Khi cập nhập xong ta sẽ tắt máy ảo sau đó chuột phải vào máy ảo chọn Snapshot -> Take snapshot. (Để ta có thể quay lại thời điểm trước khi cài đặt Splunk Universal Forwarder)
+
+**Bonus:** Các bước tới sẽ có 1 bước sẽ cần dùng sysmon nên ta tiến hành cài sysmon [tại đây](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+
+**Bước 1: Tải file cài đặt Splunk Universal Forwarder** 
+
+Tải file Splunk Universal Forwarder [ở đây](https://www.splunk.com/en_us/download/universal-forwarder.html?locale=en_us).( Sẽ cần phải đăng kí và đăng nhập tài khoản ). Xong rồi nhấn vào **Download Now** (ở đây tui dùng host để tải)
+
+<img width="1439" height="598" alt="image" src="https://github.com/user-attachments/assets/b6f6470d-cb2c-4b63-b942-20c7d9744f7c" />
+
+Sao khi download xong rồi ta sẽ copy file đó vào trong máy ảo.
+
+**Bước 2: Cài đặt Splunk Universal Forwarder vào máy** 
+
+Đầu tiên ta sẽ tick vào **check this box to accecpt the Liense Argeement**. Rồi nhấn **Next**.
+
+<img width="802" height="536" alt="image" src="https://github.com/user-attachments/assets/e087d863-7b0b-4ea0-9672-1bd22bc2b53d" />
+
+Ở đây tôi sẽ để **Username** là conmeo và tôi sẽ để mật khẩu được tạo random. Tiếp đó nhấn Next.
+
+<img width="848" height="529" alt="image" src="https://github.com/user-attachments/assets/cabfe348-9ac5-4380-bc13-11f39314177c" />
+
+Tại **Deployment Server** do tôi không có nên tôi sẽ để trống ở phần này.
+
+<img width="733" height="535" alt="image" src="https://github.com/user-attachments/assets/625b7076-bb7c-4cd7-ab2f-a7315dcffa88" />
+
+**Receiving Indexer** là phần quan trọng nhất. Tại đây tui sẽ để IP là 192.168.188.10 sẽ là IP của máy ảo Ubuntu Server đang cài splunk. Và port là 9997. Trước khi nhấn **Next**. Ta sẽ cần phải cấu hình vài thứ trong firewall rule và trên splunk.
+
+<img width="666" height="573" alt="image" src="https://github.com/user-attachments/assets/e76e5fe2-77d9-4286-87bf-7c4e7f6d618b" />
+
+Đầu tiên trên firewall trước. Ta vào **Windows Defender Firewall** -> **Advanced Settings**
+
+<img width="702" height="594" alt="image" src="https://github.com/user-attachments/assets/5accdd70-2395-4612-bc10-fdd6b62a1fc6" />
+
+Ta bấm vào **Outbounds Rules**. Xong rồi ấn tiếp **New Rule...**
+
+<img width="704" height="652" alt="image" src="https://github.com/user-attachments/assets/cc71949f-d4a0-479f-b095-9f59730ea0df" />
+
+Ở đây ta sẽ thêm rule theo chương trình. Xong rồi ấn **Next**
+
+<img width="700" height="636" alt="image" src="https://github.com/user-attachments/assets/86e506e8-f2c0-45c2-8aec-e1e45e1fb617" />
+
+Tại đây để `C:\Program Files\SplunkUniversalForwarder\bin\splunkd.exe`. Rồi **Next**.
+
+Chọn **Allow the connection** rồi nhấn next. 
+
+<img width="700" height="575" alt="image" src="https://github.com/user-attachments/assets/a62ba5b5-f1e6-4c4b-93da-cbfccd85847e" />
+
+Tick hết cả 3. Và nhấn **Next**.
+
+<img width="703" height="584" alt="image" src="https://github.com/user-attachments/assets/57e6f614-1bf0-4843-ba9b-38d76a669404" />
+
+Cuối dùng là đặt tên role và Nhấn **Finish** Để hoàn thành.
+
+<img width="694" height="583" alt="image" src="https://github.com/user-attachments/assets/9d1fd713-b7fe-4d83-85e3-82a2168d3827" />
+
+Sau khi xong bước trên ta vào Splunk trên Ubuntu Server. Đầu tiên vào **Setting** -> Tiếp đó **Forwarding and receiving**
+
+<img width="1906" height="847" alt="image" src="https://github.com/user-attachments/assets/e8fc3bb1-616e-475a-9f4d-766535e62ca7" />
+
+Tại **Configure Receiving** ta bấm vào **Add New**. Nhập Port là 9997 và ấn **Save**
+
+<img width="1916" height="867" alt="image" src="https://github.com/user-attachments/assets/b17f5d81-a8bc-4761-8f1e-1f6a2152ab12" />
+
+Bây giờ ta sẽ quay lại với phần cài đặt. Ở đây tui sẽ nhấn next để tiếp tục ( **Phải xong ở trên trước khi nhấn next** )
+
+<img width="666" height="573" alt="image" src="https://github.com/user-attachments/assets/b1145060-d869-4f32-b0a0-a78c8a0f0d27" />
+
+Cuối cùng là nhấn install để tải. 
+
+<img width="602" height="522" alt="image" src="https://github.com/user-attachments/assets/e32462bb-bf65-4d40-b4c0-6d455d8460a5" />
