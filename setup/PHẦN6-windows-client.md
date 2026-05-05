@@ -330,8 +330,11 @@ Khi này sẽ cần phải restart lại Splunk Universal Forwarder. Ta sẽ m�
 cd "C:\Program Files\SplunkUniversalForwarder\bin"
 ./splunk restart
 ```
-<img width="530" height="41" alt="image" src="https://github.com/user-attachments/assets/dbe11bec-33fe-4b41-9e6b-3bf3023af7a8" />
+<img width="843" height="367" alt="image" src="https://github.com/user-attachments/assets/fd82bc36-a315-4e86-9387-b9713b73d960" />
 
 ## Bước 4: Kiểm tra lại 
 
+Tui sẽ SPL thử. Và như ta đã thấy ta đã thành công.
+
+<img width="1917" height="882" alt="image" src="https://github.com/user-attachments/assets/c2328a1e-3107-402d-818c-71126a548dfe" />
 
