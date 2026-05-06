@@ -1,19 +1,12 @@
-# Use Case: [Tên Kịch Bản]
+# Use Case: Brute Force
 
 ## Metadata
 
 | Trường | Giá trị |
 |--------|---------|
-| **Use Case ID** | UC-[LNX/WIN]-[000] |
-| **Tên** | <!-- Tên đầy đủ của kịch bản --> |
-| **Danh mục** | <!-- Brute Force / Privilege Escalation / Lateral Movement / ... --> |
-| **Nền tảng** | <!-- Linux / Windows / AD --> |
+| **Use Case ID** | UC-WIN-000 |
+| **Nền tảng** | linux |
 | **Mức độ nghiêm trọng** | <!-- Critical / High / Medium / Low --> |
-| **Trạng thái** | <!-- Active / In Review / Deprecated --> |
-| **Phiên bản** | 1.0 |
-| **Ngày tạo** | YYYY-MM-DD |
-| **Cập nhật lần cuối** | YYYY-MM-DD |
-| **Tác giả** | <!-- Tên --> |
 
 ---
 
@@ -39,7 +32,7 @@
 | Vai trò | IP | Ghi chú |
 |---------|----|---------|
 | **Attacker** | 192.168.188.20 | Kali Linux |
-| **Target** | <!-- 192.168.188.XX --> | <!-- Tên máy, OS --> |
+| **Target** | 192.168.188.50 | Ubuntu Linux |
 | **SIEM** | 192.168.188.10 | Splunk |
 
 ---
