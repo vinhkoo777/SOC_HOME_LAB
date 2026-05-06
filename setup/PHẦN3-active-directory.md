@@ -181,7 +181,7 @@ Xong rồi ta khởi động lại máy.
 
 <img width="596" height="487" alt="image" src="https://github.com/user-attachments/assets/58ad7715-1059-4a5f-a865-4aca9ec2fdac" />
 
-**Bước 5:** Tick vào **Active Directory Domain Services** → nhấn **Add Features** → nhấn **Next** cho đến bước Confirm.
+**Bước 5:** Tick vào **Active Directory Domain Services** -> nhấn **Add Features** -> nhấn **Next** cho đến bước Confirm.
 
 <img width="1190" height="788" alt="image" src="https://github.com/user-attachments/assets/4283f171-90d5-4fea-859e-1751770412e0" />
 
@@ -199,15 +199,15 @@ Xong rồi ta khởi động lại máy.
 
 <img width="1075" height="722" alt="image" src="https://github.com/user-attachments/assets/f3dc246b-9311-48e2-94df-1eef35fc65ab" />
 
-**Bước 8:** Sau khi cài xong, nhấn vào **biểu tượng cờ** → chọn **Promote this server to a domain controller**.
+**Bước 8:** Sau khi cài xong, nhấn vào **biểu tượng cờ** -> chọn **Promote this server to a domain controller**.
 
 <img width="1286" height="561" alt="image" src="https://github.com/user-attachments/assets/5dd63c59-d56e-4665-8aac-b1ace2cbc226" />
 
-**Bước 9:** Chọn **Add a new forest** → nhập Root domain name là `siem.lab` → nhấn **Next**.
+**Bước 9:** Chọn **Add a new forest** -> nhập Root domain name là `siem.lab` -> nhấn **Next**.
 
 <img width="940" height="527" alt="image" src="https://github.com/user-attachments/assets/a93231d6-6c2f-42d7-90f7-aec361febeaa" />
 
-**Bước 10:** Đặt mật khẩu DSRM (ví dụ: `conmeo@1234`) → nhấn **Next** → giữ mặc định các bước còn lại → nhấn **Install**.
+**Bước 10:** Đặt mật khẩu DSRM (ví dụ: `conmeo@1234`) -> nhấn **Next** -> giữ mặc định các bước còn lại -> nhấn **Install**.
 
 <img width="990" height="713" alt="image" src="https://github.com/user-attachments/assets/a72d1a9b-b5f1-4bd0-9bc4-5c07882e8293" />
 
