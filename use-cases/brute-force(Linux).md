@@ -6,13 +6,14 @@
 |--------|---------|
 | **Use Case ID** | UC-WIN-000 |
 | **Nền tảng** | linux |
-| **Mức độ nghiêm trọng** | <!-- Critical / High / Medium / Low --> |
 
 ---
 
 ## 1. Mô Tả Kịch Bản
 
-<!-- Mô tả ngắn gọn: kẻ tấn công làm gì, mục tiêu là gì, tại sao nguy hiểm -->
+Kẻ tấn công sử dụng **Brute Force** để truy cập vào tài khoản khi không biết mật khẩu là gì hoặc khi đã thu được các giá trị hash của mật khẩu. Khi không có thông tin về mật khẩu của nhiều tài khoản, kẻ tấn công có thể đoán mật khẩu một cách có hệ thống bằng cách lập lại và thử nghiệm liên tục.
+
+Trong **Use Case** này attack đang muốn tìm cách vào tài khoản users conmeo của máy Ubuntu Linux. Và kẻ tấn công sử dụng hydra (công cụ brute force mật khẩu.)
 
 ---
 
@@ -20,9 +21,8 @@
 
 | Trường | Giá trị |
 |--------|---------|
-| **Tactic** | <!-- Credential Access / Privilege Escalation / ... --> |
-| **Technique** | <!-- T1XXX – Tên technique --> |
-| **Sub-technique** | <!-- T1XXX.00X – Tên sub-technique (nếu có) --> |
+| **Tactic** | Credential Access |
+| **Technique** | T1110 |
 | **Tham khảo** | https://attack.mitre.org/techniques/TXXXX/ |
 
 ---
