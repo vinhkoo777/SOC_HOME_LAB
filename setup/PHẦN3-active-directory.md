@@ -334,16 +334,23 @@ Cuối cùng là nhấn **install** để tải.
 disabled = 0
 index = main
 sourcetype = WinEventLog:Security
+renderXml = 1
+checkpointInterval = 5
+evt_resolve_ad_obj = 1
+start_from = oldest
 
 [WinEventLog://System]
 disabled = 0
 index = main
 sourcetype = WinEventLog:System
+renderXml = 1
+checkpointInterval = 5
 
 [WinEventLog://Application]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Application
+renderXml = 1
 
 # ==============================
 # POWERSHELL AND EXECUTION
@@ -353,6 +360,7 @@ sourcetype = WinEventLog:Application
 disabled = 0
 index = main
 sourcetype = WinEventLog:PowerShell
+renderXml = 1
 
 [WinEventLog://Microsoft-Windows-TaskScheduler/Operational]
 disabled = 0
@@ -429,6 +437,10 @@ sourcetype = WinEventLog:KDC
 disabled = 0
 index = main
 sourcetype = XmlWinEventLog:Sysmon
+renderXml = 1
+checkpointInterval = 5
+start_from = newest
+current_only = 0
 
 # ==============================
 # FILE MONITOR 
@@ -438,6 +450,7 @@ sourcetype = XmlWinEventLog:Sysmon
 disabled = 0
 index = main
 sourcetype = WinFile:hosts
+followTail = 1
 
 # ==============================
 # SPLUNK INTERNAL 
@@ -450,31 +463,28 @@ index = _internal
 index = _internal
 
 # ==============================
-# PERFORMANCE METRICS (DISABLED FOR UF)
+# PERFORMANCE METRICS
 # ==============================
 
-# Universal Forwarder không support perfmon input
-# Nếu cần → dùng Splunk Add-on for Windows hoặc Heavy Forwarder
+[perfmon://CPU]
+object = Processor
+counters = % Processor Time
+instances = _Total
+interval = 60
+index = main
 
-#[perfmon://CPU]
-#object = Processor
-#counters = % Processor Time
-#instances = _Total
-#interval = 60
-#index = main
+[perfmon://Memory]
+object = Memory
+counters = Available MBytes
+interval = 60
+index = main
 
-#[perfmon://Memory]
-#object = Memory
-#counters = Available MBytes
-#interval = 60
-#index = main
-
-#[perfmon://LogicalDisk]
-#object = LogicalDisk
-#counters = % Free Space
-#instances = *
-#interval = 60
-#index = main
+[perfmon://LogicalDisk]
+object = LogicalDisk
+counters = % Free Space
+instances = *
+interval = 60
+index = main
 ```
 Khi này sẽ cần phải restart lại Splunk Universal Forwarder. Ta sẽ mở **Powershell** với quyền admin. Rồi ta thực hiện các lệnh.
 
