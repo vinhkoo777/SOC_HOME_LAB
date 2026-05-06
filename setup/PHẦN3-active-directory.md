@@ -245,7 +245,7 @@ Import-Module ActiveDirectory
 
 **Bonus:** Các bước tới sẽ có 1 bước sẽ cần dùng sysmon nên ta tiến hành cài sysmon [tại đây](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
 
-**Bước 1: Tải file cài đặt Splunk Universal Forwarder** 
+## Bước 1: Tải file cài đặt Splunk Universal Forwarder
 
 Tải file Splunk Universal Forwarder [ở đây](https://www.splunk.com/en_us/download/universal-forwarder.html?locale=en_us).( Sẽ cần phải đăng kí và đăng nhập tài khoản ). Xong rồi nhấn vào **Download Now** (ở đây tui dùng host để tải)
 
@@ -253,7 +253,7 @@ Tải file Splunk Universal Forwarder [ở đây](https://www.splunk.com/en_us/d
 
 Sao khi download xong rồi ta sẽ copy file đó vào trong máy ảo.
 
-**Bước 2: Cài đặt Splunk Universal Forwarder vào máy** 
+### Bước 2: Cài đặt Splunk Universal Forwarder vào máy
 
 Đầu tiên ta sẽ tick vào **check this box to accecpt the Liense Argeement**. Rồi nhấn **Next**.
 
@@ -313,7 +313,7 @@ Cuối cùng là nhấn **install** để tải.
 
 <img width="602" height="522" alt="image" src="https://github.com/user-attachments/assets/e32462bb-bf65-4d40-b4c0-6d455d8460a5" />
 
-## Bước 3: Cấu hình inputs.conf để gửi log về Splunk
+### Bước 3: Cấu hình inputs.conf để gửi log về Splunk
 
 Đầu tiên ta vào `C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local` khi này ta tạo một file mới đặt tên là `inputs.conf`. Với nội dung.
 
@@ -486,7 +486,7 @@ cd "C:\Program Files\SplunkUniversalForwarder\bin"
 ```
 <img width="843" height="367" alt="image" src="https://github.com/user-attachments/assets/fd82bc36-a315-4e86-9387-b9713b73d960" />
 
-## Bước 4: Kiểm tra lại 
+### Bước 4: Kiểm tra lại 
 
 Tui sẽ SPL thử. Và như ta đã thấy ta đã thành công.
 
