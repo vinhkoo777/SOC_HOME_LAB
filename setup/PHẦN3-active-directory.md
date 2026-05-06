@@ -185,7 +185,15 @@ Xong rồi ta khởi động lại máy.
 
 <img width="1190" height="788" alt="image" src="https://github.com/user-attachments/assets/4283f171-90d5-4fea-859e-1751770412e0" />
 
-**Bước 6:** Kiểm tra lại cấu hình, sau đó nhấn **Install**.
+**Bước 6:** Tại **Feature** để nguyên và nhấn **Next** để tiếp tục.
+
+<img width="1014" height="709" alt="image" src="https://github.com/user-attachments/assets/86f4ca55-2855-4eec-bd0f-c5badc921a27" />
+
+**Bước 7:** Tại AD DS ta nhấn **Next**
+
+<img width="1011" height="653" alt="image" src="https://github.com/user-attachments/assets/dab35684-0885-4e8d-807b-9cf9a96fdfa8" />
+
+**Bước 7:** Kiểm tra lại cấu hình, sau đó nhấn **Install**.
 
 <img width="1100" height="744" alt="image" src="https://github.com/user-attachments/assets/224597be-9127-407e-b190-91ff47824e7f" />
 
