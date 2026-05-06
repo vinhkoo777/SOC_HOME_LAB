@@ -145,11 +145,11 @@ Cuối dùng là đặt tên role và Nhấn **Finish** Để hoàn thành.
 
 <img width="694" height="583" alt="image" src="https://github.com/user-attachments/assets/9d1fd713-b7fe-4d83-85e3-82a2168d3827" />
 
-Sau khi xong bước trên ta vào Splunk trên Ubuntu Server. Đầu tiên vào **Setting** -> Tiếp đó **Forwarding and receiving**
+Sau khi xong bước trên ta vào Splunk trên Ubuntu Server. Đầu tiên vào **Setting** -> Tiếp đó **Forwarding and receiving** (nếu đã làm xong bước này thì không cần nữa)
 
 <img width="1906" height="847" alt="image" src="https://github.com/user-attachments/assets/e8fc3bb1-616e-475a-9f4d-766535e62ca7" />
 
-Tại **Configure Receiving** ta bấm vào **Add New**. Nhập Port là 9997 và ấn **Save**
+Tại **Configure Receiving** ta bấm vào **Add New**. Nhập Port là 9997 và ấn **Save** (nếu đã làm xong bước này thì không cần nữa)
 
 <img width="1916" height="867" alt="image" src="https://github.com/user-attachments/assets/b17f5d81-a8bc-4761-8f1e-1f6a2152ab12" />
 
