@@ -208,11 +208,11 @@ Tiếp đó là nhập **Password** sau khi nhập xong nhấn enter để tiế
 
 <img width="1326" height="89" alt="image" src="https://github.com/user-attachments/assets/a5118443-ad61-4969-bd8e-122137510083" />
 
-Bây giờ ta sẽ cần mở splunk trong ubuntu server ra. Đầu tiên vào **Setting** -> Tiếp đó **Forwarding and receiving**  (nếu đã làm xong bước này thì không càn nữa)
+Bây giờ ta sẽ cần mở splunk trong ubuntu server ra. Đầu tiên vào **Setting** -> Tiếp đó **Forwarding and receiving**  (nếu đã làm xong bước này thì không cần nữa)
 
 <img width="1906" height="847" alt="image" src="https://github.com/user-attachments/assets/e8fc3bb1-616e-475a-9f4d-766535e62ca7" />
 
-Tại **Configure Receiving** ta bấm vào **Add New**. Nhập Port là 9997 và ấn **Save**  (nếu đã làm xong bước này thì không càn nữa)
+Tại **Configure Receiving** ta bấm vào **Add New**. Nhập Port là 9997 và ấn **Save**  (nếu đã làm xong bước này thì không cần nữa)
 
 <img width="1916" height="867" alt="image" src="https://github.com/user-attachments/assets/b17f5d81-a8bc-4761-8f1e-1f6a2152ab12" />
 
