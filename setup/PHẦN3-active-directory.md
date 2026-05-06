@@ -265,19 +265,19 @@ Sao khi download xong rồi ta sẽ copy file đó vào trong máy ảo.
 
 Đầu tiên ta sẽ tick vào **check this box to accecpt the Liense Argeement**. Rồi nhấn **Next**.
 
-<img width="802" height="536" alt="image" src="https://github.com/user-attachments/assets/e087d863-7b0b-4ea0-9672-1bd22bc2b53d" />
+<img width="675" height="489" alt="image" src="https://github.com/user-attachments/assets/374c1c52-719d-40db-8f7e-2887f77ef9a5" />
 
 Ở đây tôi sẽ để **Username** là conmeo và tôi sẽ để mật khẩu được tạo random. Tiếp đó nhấn Next.
 
-<img width="848" height="529" alt="image" src="https://github.com/user-attachments/assets/cabfe348-9ac5-4380-bc13-11f39314177c" />
+<img width="799" height="639" alt="image" src="https://github.com/user-attachments/assets/051a4a56-babe-4443-b595-3b27f2f60bc8" />
 
 Tại **Deployment Server** do tôi không có nên tôi sẽ để trống ở phần này.
 
-<img width="733" height="535" alt="image" src="https://github.com/user-attachments/assets/625b7076-bb7c-4cd7-ab2f-a7315dcffa88" />
+<img width="800" height="589" alt="image" src="https://github.com/user-attachments/assets/4131d106-9897-4c58-9e6d-c52319765599" />
 
 **Receiving Indexer** là phần quan trọng nhất. Tại đây tui sẽ để IP là 192.168.188.10 sẽ là IP của máy ảo Ubuntu Server đang cài splunk. Và port là 9997. Trước khi nhấn **Next**. Ta sẽ cần phải cấu hình vài thứ trong firewall rule và trên splunk.
 
-<img width="666" height="573" alt="image" src="https://github.com/user-attachments/assets/e76e5fe2-77d9-4286-87bf-7c4e7f6d618b" />
+<img width="830" height="529" alt="image" src="https://github.com/user-attachments/assets/337b21b4-6cb4-426f-8be3-c53cf79f6de6" />
 
 Đầu tiên trên firewall trước. Ta vào **Windows Defender Firewall** -> **Advanced Settings**
 
@@ -319,7 +319,7 @@ Bây giờ ta sẽ quay lại với phần cài đặt. Ở đây tui sẽ nhấ
 
 Cuối cùng là nhấn **install** để tải. 
 
-<img width="602" height="522" alt="image" src="https://github.com/user-attachments/assets/e32462bb-bf65-4d40-b4c0-6d455d8460a5" />
+<img width="697" height="573" alt="image" src="https://github.com/user-attachments/assets/b14ba601-299d-4d67-a6e5-c1a6e87eab80" />
 
 ### Bước 3: Cấu hình inputs.conf để gửi log về Splunk
 
