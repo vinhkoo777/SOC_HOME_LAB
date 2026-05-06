@@ -488,7 +488,7 @@ cd "C:\Program Files\SplunkUniversalForwarder\bin"
 
 Tui sẽ SPL thử. Và như ta đã thấy ta đã thành công.
 
-<img width="1917" height="882" alt="image" src="https://github.com/user-attachments/assets/c2328a1e-3107-402d-818c-71126a548dfe" />
+<img width="1902" height="966" alt="image" src="https://github.com/user-attachments/assets/147c78f5-0f59-4297-8885-f096917b55aa" />
 
 ## Một số lỗi có thể xảy ra
 
