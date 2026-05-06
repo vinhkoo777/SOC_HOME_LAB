@@ -243,7 +243,7 @@ Import-Module ActiveDirectory
 .\Invoke-BadBlood.ps1
 ```
 
-**Bước 4:** Khi được hỏi, gõ `badblood` và nhấn **enter**. Script sẽ bắt đầu chạy và populate AD.
+**Bước 4:** Nhấn **enter**. Khi được hỏi, gõ `badblood` và nhấn **enter**. Script sẽ bắt đầu chạy và populate AD.
 
 <img width="1804" height="827" alt="image" src="https://github.com/user-attachments/assets/ccdd50f3-0afc-439c-8a23-431a0e7f794e" />
 
