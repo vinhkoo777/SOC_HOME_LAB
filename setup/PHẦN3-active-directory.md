@@ -251,7 +251,7 @@ Import-Module ActiveDirectory
 
 ## Phase 7: Cài đặt Splunk Universal Forwarder
 
-**Bonus:** Các bước tới sẽ có 1 bước sẽ cần dùng sysmon nên ta tiến hành cài sysmon [tại đây](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+**Bonus:** Các bước tới sẽ có 1 bước sẽ cần dùng sysmon nên ta tiến hành cài sysmon [tại đây](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) và [template](https://github.com/swiftonsecurity/sysmon-config)
 
 ## Bước 1: Tải file cài đặt Splunk Universal Forwarder
 
