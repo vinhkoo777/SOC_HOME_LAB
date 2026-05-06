@@ -91,7 +91,7 @@ Và ta đã ping thành công.
 
 Trước khi cài đặt Splunk Universal Forwarder. Tui sẽ muốn bạn cập nhập bằng windows update. Khi cập nhập xong ta sẽ tắt máy ảo sau đó chuột phải vào máy ảo chọn Snapshot -> Take snapshot. (Để ta có thể quay lại thời điểm trước khi cài đặt Splunk Universal Forwarder)
 
-**Bonus:** Các bước tới sẽ có 1 bước sẽ cần dùng sysmon nên ta tiến hành cài sysmon [tại đây](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+**Bonus:** Các bước tới sẽ có 1 bước sẽ cần dùng sysmon nên ta tiến hành cài sysmon [tại đây](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) và [template](https://github.com/swiftonsecurity/sysmon-config)
 
 ### Bước 1: Tải file cài đặt Splunk Universal Forwarder
 
