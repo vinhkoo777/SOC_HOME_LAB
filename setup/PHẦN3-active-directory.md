@@ -155,7 +155,7 @@ Xong rồi ta khởi động lại máy.
 
 **Bước 3:** Đổi tên thành `DC01` -> nhấn **OK**. Máy sẽ yêu cầu khởi động lại để áp dụng.
 
-<img width="537" height="571" alt="image" src="https://github.com/user-attachments/assets/ec7c708e-68ba-4ab1-951b-2be6a7fd54eb" />
+<img width="531" height="563" alt="image" src="https://github.com/user-attachments/assets/8684feeb-0d55-4a67-bdf1-b3329932b414" />
 
 **Bước 4:** Sau khi restart, kiểm tra lại hostname đã được cập nhật thành công.
 
