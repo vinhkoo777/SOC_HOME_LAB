@@ -76,8 +76,6 @@ Thì như ta đã thấy ta đã thành công trong việc khai thác.
 
 ## 5. Log Evidence
 
-> Những gì Splunk thu thập được sau khi tấn công xảy ra
-
 ### 5.1 Nguồn Log
 
 | Nguồn | Máy | Vị trí |
