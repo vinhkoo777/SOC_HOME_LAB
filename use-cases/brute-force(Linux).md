@@ -51,24 +51,28 @@ hydra -l conmeo -P '/usr/share/wordlists/rockyou.txt' ssh://192.168.188.50
 ```
 
 Giải thích về các flag được sài 
-- `-l` : Thử login với user được truyền vào flag
-- `-P` : Sử dụng một list mật khẩu có sẳn
-- 
+- `-l` : Thử login với user được truyền vào flag.
+- `-P` : Sử dụng một list mật khẩu có sẳn. Ở đây tôi sử dụng rockyou.txt đây là một list password có sẳng trên kali.
+
 Và truyền vào một ssh server đã chuẩn bị sẳn. Ở đây tôi sẽ chuẩn bị máy Ubuntu của tôi có up là 192.168.188.50
 
-### Bước 2: <!-- Tên bước -->
+### Bước 2: Chạy câu lệnh.
 
-```bash
-# Mô tả ngắn bước này làm gì
-<lệnh thực tế>
+<img width="950" height="250" alt="image" src="https://github.com/user-attachments/assets/8cf27781-e044-4986-b9a0-dda7fd8f64ad" />
+
+Thì **Hydra** đã cho ta kết quả **mật khẩu** là: 12345678
+
+### Bước 3: Đăng nhập thông qua ssh 
+
+Tại bước này tôi sẽ đăng nhập thông qua ssh để kiểm tra xem liệu tôi có thể đăng nhập với user conmeo thông qua IP đó không.
+
+```bash 
+ssh conmeo@192.168.188.50 
 ```
 
-### Bước 3: <!-- Tên bước -->
+<img width="957" height="332" alt="image" src="https://github.com/user-attachments/assets/2e7d1f99-b1fb-42d3-a92b-e5f12178863f" />
 
-```bash
-# Mô tả ngắn bước này làm gì
-<lệnh thực tế>
-```
+Thì như ta đã thấy ta đã thành công trong việc khai thác.
 
 ## 5. Log Evidence
 
