@@ -4,7 +4,7 @@
 
 | Trường | Giá trị |
 |--------|---------|
-| **Use Case ID** | UC-WIN-000 |
+| **Use Case ID** | UC-LINUX-000 |
 | **Nền tảng** | linux |
 
 ---
@@ -34,6 +34,7 @@ Trong **Use Case** này attack đang muốn tìm cách vào tài khoản users c
 | **Attacker** | 192.168.188.20 | Kali Linux |
 | **Target** | 192.168.188.50 | Ubuntu Linux |
 | **SIEM** | 192.168.188.10 | Splunk |
+| **Firewall/Router** | 192.168.188.2 | pfSense |
 
 ---
 
