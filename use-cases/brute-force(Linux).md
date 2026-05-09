@@ -72,22 +72,22 @@ ssh conmeo@192.168.188.50
 
 <img width="957" height="332" alt="image" src="https://github.com/user-attachments/assets/2e7d1f99-b1fb-42d3-a92b-e5f12178863f" />
 
-Thì như ta đã thấy ta đã thành công trong việc khai thác.
+Thì như ta đã thấy ở hình trên. Ta đã thành công trong việc khai thác.
 
 ## 5. Log Evidence
 
 ### 5.1 Nguồn Log
 
-| Nguồn | Máy | Vị trí |
+| Máy | IP | Vị trí |
 |-------|-----|--------|
-| <!-- vd. linux_secure --> | <!-- 192.168.188.50 --> | <!-- /var/log/auth.log --> |
-| <!-- vd. wineventlog --> | <!-- 192.168.188.40 --> | <!-- Windows Security Log --> |
+| Linux_Client | 192.168.188.50 | /var/log/auth.log |
+
 
 ### 5.2 Log Mẫu
 
-```
-(Dán log thực tế thu được từ Splunk vào đây)
-```
+<img width="1546" height="435" alt="image" src="https://github.com/user-attachments/assets/314dc9bb-a991-450c-83ea-9ef62b759b30" />
+
+Như trên hình ta thấy số lượng lớn lần đăng nhập mật khẩu thất bại đến từ IP: `192.168.188.20` 
 
 ### 5.3 Các Trường Quan Trọng
 
