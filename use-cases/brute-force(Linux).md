@@ -38,16 +38,23 @@ Trong **Use Case** này attack đang muốn tìm cách vào tài khoản users c
 
 ---
 
-## 4. Mô Phỏng Tấn Công (Attack Simulation)
+## 4. Mô Phỏng Tấn Công 
 
-> Thực hiện trên máy Kali Linux `192.168.188.20`
+Bây giờ tôi sẽ thực hiện tấn công brute force. Máy thực hiện là kali linux có ip là `192.168.188.20`
 
-### Bước 1: <!-- Tên bước -->
+### Bước 1: Hydra 
+
+**Hydra** là một phần mềm cho phép tôi thực hiện brute force tốc độ cao 
 
 ```bash
-# Mô tả ngắn bước này làm gì
-<lệnh thực tế>
+hydra -l conmeo -P '/usr/share/wordlists/rockyou.txt' ssh://192.168.188.50
 ```
+
+Giải thích về các flag được sài 
+- `-l` : Thử login với user được truyền vào flag
+- `-P` : Sử dụng một list mật khẩu có sẳn
+- 
+Và truyền vào một ssh server đã chuẩn bị sẳn. Ở đây tôi sẽ chuẩn bị máy Ubuntu của tôi có up là 192.168.188.50
 
 ### Bước 2: <!-- Tên bước -->
 
@@ -62,10 +69,6 @@ Trong **Use Case** này attack đang muốn tìm cách vào tài khoản users c
 # Mô tả ngắn bước này làm gì
 <lệnh thực tế>
 ```
-
-> Thêm/bớt bước tùy kịch bản
-
----
 
 ## 5. Log Evidence
 
