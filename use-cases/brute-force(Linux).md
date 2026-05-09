@@ -23,7 +23,7 @@ Trong **Use Case** này attack đang muốn tìm cách vào tài khoản users c
 |--------|---------|
 | **Tactic** | Credential Access |
 | **Technique** | T1110 |
-| **Tham khảo** | https://attack.mitre.org/techniques/TXXXX/ |
+| **Tham khảo** | https://attack.mitre.org/techniques/T1110/ |
 
 ---
 
