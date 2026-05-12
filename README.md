@@ -7,8 +7,6 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
----
-
 ## Mục Lục
 
 - [Tổng quan](#tổng-quan)
@@ -17,8 +15,6 @@
 - [Use Cases](#use-cases)
 - [Kỹ năng thể hiện](#kỹ-năng-thể-hiện)
 - [Bắt đầu sử dụng](#bắt-đầu-sử-dụng)
-
----
 
 ## Tổng Quan
 
@@ -30,8 +26,6 @@ SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồ
 - Mô phỏng tấn công thực tế: brute-force, leo thang đặc quyền, di chuyển ngang
 - Viết và tinh chỉnh detection rule tùy chỉnh bằng SPL (Splunk Processing Language)
 - Xây dựng quy trình ứng phó sự cố bảo mật
-
----
 
 ## Kiến Trúc Hệ Thống
 
@@ -62,8 +56,6 @@ SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồ
 | **Windows Client** | 192.168.188.40 | Máy đầu cuối Windows + Splunk Universal Forwarder |
 | **Linux Client** | 192.168.188.50 | Máy đầu cuối Linux + Splunk Universal Forwarder |
 
----
-
 ## Thiết Lập Môi Trường
 
 Hướng dẫn từng bước để tái tạo lab từ đầu:
@@ -78,8 +70,6 @@ Hướng dẫn từng bước để tái tạo lab từ đầu:
 | 6 | Máy đầu cuối Windows | [Thiết lập Windows Client](setup/PHẦN6-windows-client.md) |
 
 > **Lưu ý:** pfSense phải được khởi động **trước tiên** trước khi cấu hình IP tĩnh trên bất kỳ máy nào. DHCP của VMware đã bị tắt — pfSense tại `192.168.188.2` là gateway duy nhất của mạng.
-
----
 
 ## Use Cases
 
@@ -99,8 +89,6 @@ Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rul
 4. **Dashboard** — screenshot trực quan hóa
 5. **Response** — các bước ngăn chặn và xử lý
 
----
-
 ## Kỹ Năng Thể Hiện
 
 - **Network Security** — Cấu hình tường lửa, phân vùng mạng với pfSense
@@ -109,8 +97,6 @@ Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rul
 - **Penetration Testing** — Mô phỏng tấn công có kiểm soát với Kali Linux
 - **Incident Response** — Thu thập bằng chứng, phân loại và ngăn chặn sự cố
 - **Linux & Windows Administration** — Cấu hình và hardening endpoint
-
----
 
 ## Bắt Đầu Sử Dụng
 
