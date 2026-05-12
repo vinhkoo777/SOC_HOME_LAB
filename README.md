@@ -23,7 +23,7 @@ SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồ
 **Mục tiêu thực hành:**
 
 - Thu thập, tương quan và cảnh báo log bằng Splunk
-- Mô phỏng tấn công thực tế: brute-force, leo thang đặc quyền, di chuyển ngang
+- Mô phỏng tấn công thực tế
 - Viết và tinh chỉnh detection rule tùy chỉnh bằng SPL (Splunk Processing Language)
 - Xây dựng quy trình ứng phó sự cố bảo mật
 
@@ -97,25 +97,3 @@ Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rul
 - **Penetration Testing** — Mô phỏng tấn công có kiểm soát với Kali Linux
 - **Incident Response** — Thu thập bằng chứng, phân loại và ngăn chặn sự cố
 - **Linux & Windows Administration** — Cấu hình và hardening endpoint
-
-## Bắt Đầu Sử Dụng
-
-### Yêu cầu hệ thống
-
-- **VMware Workstation** (khuyến nghị) hoặc VirtualBox / Proxmox
-- Tối thiểu **16 GB RAM** và **200 GB ổ đĩa**
-
-### Khởi động nhanh
-
-```bash
-# 1. Clone repo
-git clone https://github.com/vinhkoo777/SOC_HOME_LAB.git
-
-# 2. Cấu hình VMware với dải mạng Host-Only: 192.168.188.0/24
-
-# 3. Cài đặt theo thứ tự: pfSense → Splunk → AD → Endpoints
-
-# 4. Chọn một use case trong use-cases/ và chạy thử trên Splunk
-```
-
----
