@@ -1,120 +1,28 @@
-# Use Case: Brute Force
+# Brute Force - SSH (Linux)
 
-## Metadata
+## Attack Scenario
+Attacker dùng Hydra từ Kali Linux để brute-force SSH vào Linux client.
 
-| Trường | Giá trị |
-|--------|---------|
-| **Use Case ID** | UC-LINUX-000 |
-| **Nền tảng** | linux |
+## MITRE ATT&CK
+- Tactic: Credential Access
+- Technique: T1110.001 - Brute Force: Password Guessing
 
----
+## Log Sources
+- Linux syslog (`/var/log/auth.log`)
+- Splunk Universal Forwarder → index=linux
 
-## 1. Mô Tả Kịch Bản
+## Detection Query (SPL)
+\```spl
+index=linux sourcetype=syslog "Failed password"
+| stats count by src_ip, user
+| where count > 5
+\```
 
-Kẻ tấn công sử dụng **Brute Force** để truy cập vào tài khoản khi không biết mật khẩu là gì hoặc khi đã thu được các giá trị hash của mật khẩu. Khi không có thông tin về mật khẩu của nhiều tài khoản, kẻ tấn công có thể đoán mật khẩu một cách có hệ thống bằng cách lập lại và thử nghiệm liên tục.
+## Alert Condition
+> 5 failed attempts trong vòng 1 phút từ cùng 1 IP
 
-Trong **Use Case** này attack đang muốn tìm cách vào tài khoản users conmeo của máy Ubuntu Linux. Và kẻ tấn công sử dụng hydra (công cụ brute force mật khẩu.)
+## Dashboard
+[Screenshot hoặc link dashboard Splunk]
 
----
-
-## 2. MITRE ATT&CK
-
-| Trường | Giá trị |
-|--------|---------|
-| **Tactic** | Credential Access |
-| **Technique** | T1110 |
-| **Tham khảo** | https://attack.mitre.org/techniques/T1110/ |
-
----
-
-## 3. Môi Trường Lab
-
-| Vai trò | IP | Ghi chú |
-|---------|----|---------|
-| **Attacker** | 192.168.188.20 | Kali Linux |
-| **Target** | 192.168.188.50 | Ubuntu Linux |
-| **SIEM** | 192.168.188.10 | Splunk |
-| **Firewall/Router** | 192.168.188.2 | pfSense |
-
----
-
-## 4. Mô Phỏng Tấn Công 
-
-Bây giờ tôi sẽ thực hiện tấn công brute force. Máy thực hiện là kali linux có ip là `192.168.188.20`
-
-### Bước 1: Hydra 
-
-**Hydra** là một phần mềm cho phép tôi thực hiện brute force tốc độ cao 
-
-```bash
-hydra -l conmeo -P '/usr/share/wordlists/rockyou.txt' ssh://192.168.188.50
-```
-
-Giải thích về các flag được sài 
-- `-l` : Thử login với user được truyền vào flag.
-- `-P` : Sử dụng một list mật khẩu có sẳn. Ở đây tôi sử dụng rockyou.txt đây là một list password có sẳng trên kali.
-
-Và truyền vào một ssh server đã chuẩn bị sẳn. Ở đây tôi sẽ chuẩn bị máy Ubuntu của tôi có up là 192.168.188.50
-
-### Bước 2: Chạy câu lệnh.
-
-<img width="950" height="250" alt="image" src="https://github.com/user-attachments/assets/8cf27781-e044-4986-b9a0-dda7fd8f64ad" />
-
-Thì **Hydra** đã cho ta kết quả **mật khẩu** là: 12345678
-
-### Bước 3: Đăng nhập thông qua ssh 
-
-Tại bước này tôi sẽ đăng nhập thông qua ssh để kiểm tra xem liệu tôi có thể đăng nhập với user conmeo thông qua IP đó không.
-
-```bash 
-ssh conmeo@192.168.188.50 
-```
-
-<img width="957" height="332" alt="image" src="https://github.com/user-attachments/assets/2e7d1f99-b1fb-42d3-a92b-e5f12178863f" />
-
-Thì như ta đã thấy ở hình trên. Ta đã thành công trong việc khai thác.
-
-## 5. Log Evidence
-
-### 5.1 Nguồn Log
-
-| Máy | IP | Vị trí |
-|-------|-----|--------|
-| Linux_Client | 192.168.188.50 | /var/log/auth.log |
-
-
-### 5.2 Log Mẫu
-
-<img width="1546" height="435" alt="image" src="https://github.com/user-attachments/assets/314dc9bb-a991-450c-83ea-9ef62b759b30" />
-
-Như trên hình ta thấy số lượng lớn lần đăng nhập mật khẩu thất bại đến từ IP: `192.168.188.20` 
-
-### 5.3 Các Trường Quan Trọng
-
-| Trường | Giá trị | Ý nghĩa |
-|--------|---------|---------|
-| `field_1` | `...` | <!-- Mô tả --> |
-| `field_2` | `...` | <!-- Mô tả --> |
-| `field_3` | `...` | <!-- Mô tả --> |
-
----
-
-## 6. Phát Hiện (Detection)
-
-### 6.1 SPL Query
-
-```spl
-(Dán SPL query phát hiện kịch bản này vào đây)
-```
-
-### 6.2 Alert Kích Hoạt
-
-| Tên Alert | Rule ID | Thời điểm kích hoạt |
-|-----------|---------|-------------------|
-| <!-- Tên alert trong Splunk --> | <!-- DR-XXX-000 --> | <!-- Mô tả khi nào alert bắn --> |
-
-### 6.3 Kết Quả Trên Splunk
-
-<!-- Mô tả hoặc screenshot những gì hiển thị trên Splunk dashboard sau khi tấn công -->
-
----
+## Result
+Detected X attempts từ IP 192.168.x.x, triggered alert thành công.
