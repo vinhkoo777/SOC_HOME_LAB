@@ -2,11 +2,6 @@
 
 **Lab an ninh mạng thực hành, mô phỏng các kịch bản tấn công thực tế và phát hiện tự động bằng hệ thống SIEM tự triển khai.**
 
-![Platform](https://img.shields.io/badge/Platform-pfSense%20%7C%20Windows%20AD%20%7C%20Kali%20Linux-blue)
-![SIEM](https://img.shields.io/badge/SIEM-Splunk-orange)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
 ## Mục Lục
 
 - [Tổng quan](#tổng-quan)
