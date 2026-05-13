@@ -55,3 +55,7 @@ Tài khoản `ALEXANDRA_PUGH@SIEM.LAB` đã yêu cầu Kerberos service tickets 
 
 ## 4. Dashboard
 
+Dưới đây là Dashboard của tôi.
+
+<img width="1905" height="790" alt="image" src="https://github.com/user-attachments/assets/98dc6f68-87ef-425c-a763-22c7ae32abc0" />
+
