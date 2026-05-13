@@ -16,7 +16,7 @@ Bây giờ giả sử attacker chạy lệnh dưới. Bây giờ ở đây tôi 
 nmap -sC -sV -F -v 192.168.188.40
 ```
 
-kết quả trong hình cho ta thấy rằng là Nmap đã scan được port 3389 thì đó là chính là port của RDP đang mở. Việc này giúp cho attacker có thể thử brute force để chiếm quền điều khiển máy. Và Nmap cũng cung cấp cho ta các thông tin khác nữa.
+kết quả trong hình cho ta thấy rằng là Nmap đã scan được port 3389 thì đó là chính là port của **RDP** đang mở. Việc này giúp cho attacker có thể thử brute force để chiếm quền điều khiển máy. Và Nmap cũng cung cấp cho ta các thông tin khác nữa.
 
 <img width="1012" height="781" alt="image" src="https://github.com/user-attachments/assets/1f40b157-524f-412f-b164-f6861e185397" />
 
@@ -26,7 +26,7 @@ kết quả trong hình cho ta thấy rằng là Nmap đã scan được port 33
 nmap -sC -sV -F -v 192.168.188.50
 ```
 
-Kết quả dưới hình này thì cho ta thấy Ubuntu đang mở port 22. Attacker cũng có thể dùng hydra để brute force thử.
+Kết quả dưới hình này thì cho ta thấy Ubuntu đang mở port 22 thì port đó chính là port của dịch vụ **ssh**. Attacker cũng có thể dùng hydra để brute force thử.
 
 <img width="1095" height="788" alt="image" src="https://github.com/user-attachments/assets/7b043115-0f12-446d-9f5f-64d9fffdaee4" />
 
