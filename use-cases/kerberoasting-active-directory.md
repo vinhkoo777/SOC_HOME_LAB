@@ -1,13 +1,10 @@
-
-# Brute Force SSH 
+# Kerberoasting Active Directory
 
 **MITRE ATT&CK:** T1558.003 - Steal or Forge Kerberos Tickets: Kerberoasting
 **Tool:**   
-**Target:** 
+**Target:**   
 
 ## 1. Attack Scenario
-
-**Giả sử attacker đã có được username của Ubuntu_Client**
 
 ```bash
 sudo hydra -l conmeo -P /usr/share/wordlists/rockyou.txt ssh://192.168.188.50  
