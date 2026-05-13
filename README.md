@@ -8,8 +8,6 @@
 - [Kiến trúc hệ thống](#kiến-trúc-hệ-thống)
 - [Thiết lập môi trường](#thiết-lập-môi-trường)
 - [Use Cases](#use-cases)
-- [Kỹ năng thể hiện](#kỹ-năng-thể-hiện)
-- [Bắt đầu sử dụng](#bắt-đầu-sử-dụng)
 
 ## Tổng Quan
 
@@ -80,4 +78,3 @@ Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rul
 2. **Detection Rule (SPL):** truy vấn Splunk, ngưỡng cảnh báo
 3. **Log Evidence:** những gì Splunk ghi lại được
 4. **Dashboard:** screenshot trực quan hóa
-5. **Response:** các bước ngăn chặn và xử lý
