@@ -5,8 +5,11 @@
 **Target:** Linux Client (192.168.188.50)
 
 ## 1. Attack Scenario
-Attacker dùng Hydra từ Kali Linux (192.168.188.20) brute-force SSH 
-vào Linux Client, thử nhiều password từ wordlist rockyou.txt.
+Attacker dùng Hydra từ Kali Linux (192.168.188.20) brute-force SSH vào Linux Client, thử nhiều password từ wordlist rockyou.txt. 
+
+> (Với điều kiện là trên Ubuntu Client phải có OpenSSH. Ta qua máy ubuntu client dùng lệnh `ssh -v` để kiểm tra thử nếu chưa có thì sử dụng `sudo apt install openssh-client` để cài đặt)
+
+
 
 ```bash
 hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.188.50 -t 4
@@ -26,7 +29,7 @@ index=linux sourcetype=syslog "Failed password"
 ## 3. Log Evidence
 
 ## 4. Dashboard
-[Screenshot Splunk dashboard]
+
 
 ## 5. Response
 1. Block IP `192.168.188.20` trên pfSense Firewall
