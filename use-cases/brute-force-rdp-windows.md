@@ -1,18 +1,23 @@
 # Brute Force RDP (Windows)
 
 **MITRE ATT&CK:** T1110.003: Password Spraying  
-**Tool:** Crowbar  
+**Tool:** hydra
 **Target:** Windows Client (192.168.188.40)  
 
 ## 1. Attack Scenario
 
-Attacker sử dụng Crowbar brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với username là alex và list password , sử dựng 1 thread.
+Attacker sử dụng hydra brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với username là alex và list password , sử dựng 1 thread.
 
 **Trong đây giả sử attacker đã thu được username**
 
 ```bash
 sudo hydra -t 1 -V -f -l alex -P '/home/kuga/Desktop/common_pass.txt' rdp://192.168.188.40:3389  
 ```
+
+Sau khi thực hiện xong lệnh trên Hydra sẽ bắt đầu thử từng mật khẩu cho đến khi kiếm được password khớp với password của user alex.
+
+<img width="1246" height="223" alt="image" src="https://github.com/user-attachments/assets/5340836f-4e59-4d87-8075-f7ee07319150" />
+
 
 ## 2. Detection Rule (SPL)
 
