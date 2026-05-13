@@ -13,9 +13,9 @@ impacket-GetUserSPNs siem.lab/ALEXANDRA_PUGH:'Password123!' -dc-ip 192.168.188.3
 ```
 **Trong đó**
 
-`siem.lab/john:'Password123!'`
+siem.lab/ALEXANDRA_PUGH:'Password123!'
 
-- Sử dụng tài khoản domain john để authenticate vào Active Directory.
+- Sử dụng tài khoản domain ALEXANDRA_PUGH để authenticate vào Active Directory.
 
 `-dc-ip 192.168.188.30`
 
@@ -34,9 +34,9 @@ Và attacker đã thực hiện thành công. Khi này Domain Controller sinh ra
 ```spl
 index=* host="DC01" "<EventID>4769</EventID>" 
 | rex field=_raw "<Data Name='IpAddress'>::ffff:(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
-| rex field=_raw "<Data Name='ServiceName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
+| rex field=_raw "<Data Name='ServiceName'>(?<service_name>[a-zA-Z0-9._/-]+)</Data>"
 | rex field=_raw "<Data Name='TicketEncryptionType'>(?<type>0x[0-9A-Fa-f]+)</Data>"
-| stats count by src_ip user type
+| stats count by src_ip service_name type
 ```
 
 ## 3. Log Evidence
