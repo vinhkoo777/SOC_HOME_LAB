@@ -1,7 +1,7 @@
 # Brute Force RDP 
 
 **MITRE ATT&CK:** T1110.003: Password Spraying  
-**Tool:** hydra  
+**Tool:** Hydra  
 **Target:** Windows Client (192.168.188.40)  
 
 ## 1. Attack Scenario
