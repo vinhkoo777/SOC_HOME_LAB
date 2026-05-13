@@ -47,6 +47,6 @@ Tiếp theo đó tôi sẽ Query EventID 4624 với logon type là 10. Thì ý n
 
 ## 4. Dashboard
 
-<img width="1908" height="639" alt="image" src="https://github.com/user-attachments/assets/792cdd52-93b4-4c01-af45-a80bc7d88977" />
+<img width="1909" height="719" alt="image" src="https://github.com/user-attachments/assets/3257993e-fafa-4b2f-8d11-76fa7f3abfb6" />
 
 Trên đây là Dashboard theo dỗi số lần đăng nhập thành công và thất bại. Cũng như là khoảng thời gian của các lần đăng nhập thất bại.
