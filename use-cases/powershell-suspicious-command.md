@@ -48,20 +48,6 @@ index=* host="DC01" "<EventID>4769</EventID>"
 
 ## 3. Log Evidence
 
-<img width="1893" height="885" alt="image" src="https://github.com/user-attachments/assets/116ad50c-ff75-4fcf-b4b4-8678ae1f713f" />
-
-Kết quả log cho thấy nhiều Event ID 4769 được sinh ra liên tục từ địa chỉ IP `192.168.188.20`.
-
-Tài khoản `ALEXANDRA_PUGH@SIEM.LAB` đã yêu cầu Kerberos service tickets cho nhiều service accounts như:
-
-- OTIS_FAULKNER
-- RON_SCHWARTZ
-- MARGO_BOOTH
-
-Điều này cho thấy dấu hiệu SPN enumeration và Kerberoasting activity trong Active Directory environment.\
 
 ## 4. Dashboard
 
-Dưới đây là Dashboard của tôi.
-
-<img width="1909" height="757" alt="image" src="https://github.com/user-attachments/assets/69088425-d113-4939-a4ec-30553b05239e" />
