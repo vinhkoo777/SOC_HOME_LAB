@@ -1,4 +1,4 @@
-<img width="1573" height="800" alt="image" src="https://github.com/user-attachments/assets/238aec06-7832-4abc-9e50-cd7e15cdc7f1" /># Brute Force RDP (Windows)
+# Brute Force RDP 
 
 **MITRE ATT&CK:** T1110.003: Password Spraying  
 **Tool:** hydra  
