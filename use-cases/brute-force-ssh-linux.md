@@ -4,8 +4,6 @@
 **Tool:** Hydra  
 **Target:** Linux Client (192.168.188.50)
 
----
-
 ## 1. Attack Scenario
 Attacker dùng Hydra từ Kali Linux (192.168.188.20) brute-force SSH 
 vào Linux Client, thử nhiều password từ wordlist rockyou.txt.
