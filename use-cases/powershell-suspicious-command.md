@@ -17,7 +17,7 @@ Và nhưu hình dưới ta đã vào được máy của user alex
 
 (Dưới đây là đoạn payload mà tôi đã chuẩn bị sẳn)
 
-```
+```powershell
 powershell -nop -w hidden -c "
 whoami;
 hostname;
@@ -39,11 +39,7 @@ Get-ChildItem C:\Users;
 ## 2. Detection Rule (SPL)
 
 ```spl
-index=* host="DC01" "<EventID>4769</EventID>" 
-| rex field=_raw "<Data Name='IpAddress'>::ffff:(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
-| rex field=_raw "<Data Name='ServiceName'>(?<service_name>[a-zA-Z0-9._/-]+)</Data>"
-| rex field=_raw "<Data Name='TicketEncryptionType'>(?<type>0x[0-9A-Fa-f]+)</Data>"
-| stats count by src_ip service_name type
+
 ```
 
 ## 3. Log Evidence
