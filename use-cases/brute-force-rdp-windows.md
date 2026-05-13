@@ -1,8 +1,8 @@
 # Brute Force RDP (Windows)
 
-**MITRE ATT&CK:** T1110.003: Password Spraying 
-**Tool:** crowbar  
-**Target:** Windows Client (192.168.188.40)
+**MITRE ATT&CK:** T1110.003: Password Spraying  
+**Tool:** Crowbar  
+**Target:** Windows Client (192.168.188.40)  
 
 ## 1. Attack Scenario
 Attacker dùng Hydra từ Kali Linux (192.168.188.20) brute-force SSH vào Linux Client, thử nhiều password từ wordlist rockyou.txt. 
