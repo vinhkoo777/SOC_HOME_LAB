@@ -1,6 +1,6 @@
-# Brute Force – SSH (Linux)
+# Brute Force SSH (Linux)
 
-**MITRE ATT&CK:** T1110.001 – Password Guessing  
+**MITRE ATT&CK:** T1110.001: Password Guessing  
 **Tool:** Hydra  
 **Target:** Linux Client (192.168.188.50)
 
