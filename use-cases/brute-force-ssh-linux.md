@@ -33,18 +33,24 @@ Và attacker đã chiếm quyền hệ thống bây giờ attacker có thể là
 ## 2. Detection Rule (SPL)
 
 ```spl
-index=linux sourcetype=syslog "Failed password"
+index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
 | rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
 | stats count by src_ip, user
-| where count > 5
-| sort -count
+| Where count > 5
+| sort - count
 ```
 **Alert condition:** > 5 failed attempts trong vòng 1 phút từ cùng 1 IP
 
 ## 3. Log Evidence
 
+Dưới đây là log thu được trong Splunk.
+
+<img width="1630" height="435" alt="image" src="https://github.com/user-attachments/assets/6160da65-580f-4ff9-94d6-5adf155df518" />
+
 ## 4. Dashboard
 
+<img width="1908" height="622" alt="image" src="https://github.com/user-attachments/assets/208bb9d0-7284-404b-8b2d-cf45d9b7ff17" />
 
 ## 5. Response
 1. Block IP `192.168.188.20` trên pfSense Firewall
