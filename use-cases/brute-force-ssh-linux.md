@@ -58,9 +58,4 @@ Thì như ta thấy Attacker đã đăng nhập thành công.
 
 <img width="1905" height="711" alt="image" src="https://github.com/user-attachments/assets/912c0fe6-5ee1-4938-8365-b1154d362ad1" />
 
-## 5. Response
-1. Block IP `192.168.188.20` trên pfSense Firewall
-2. Kiểm tra có login thành công nào không (`Accepted password`)
-3. Reset password + bật key-based authentication
-4. Review lại SSH config (`/etc/ssh/sshd_config`)
 
