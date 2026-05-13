@@ -1,4 +1,4 @@
-# Brute Force SSH (Linux)
+# Brute Force SSH 
 
 **MITRE ATT&CK:** T1110.001: Password Guessing  
 **Tool:** Hydra  
