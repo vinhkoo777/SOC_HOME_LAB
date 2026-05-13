@@ -11,7 +11,7 @@ Attacker sử dụng Crowbar brute force dịch vụ RDP trên 1 host dưới đ
 **Trong đây giả sử attacker đã thu được username**
 
 ```bash
-sudo crowbar -b rdp -s 192.168.188.40/32 -u alex -C /usr/share/wordlists/rockyou.txt -n 1
+sudo crowbar -b rdp -s 192.168.188.40/32 -u alex -C '/home/kuga/rockyou.txt'  -n 1
 ```
 
 <img width="1602" height="289" alt="image" src="https://github.com/user-attachments/assets/cc284351-0723-476c-9f2c-6f36573abf19" />
