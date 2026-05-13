@@ -72,23 +72,12 @@ Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rul
 
 | Use Case | MITRE ATT&CK | Tài liệu |
 |---|---|---|
-| Brute Force – Linux (SSH) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-linux.md) |
-| Brute Force – Windows (RDP/SMB) | T1110.003 – Password Spraying | [Xem chi tiết](use-cases/brute-force-windows.md) |
-| Leo Thang Đặc Quyền – Windows | T1078 – Valid Accounts | [Xem chi tiết](use-cases/privilege-escalation-windows.md) |
+
 
 **Cấu trúc mỗi use case:**
 
-1. **Attack Scenario** — mô tả kịch bản, công cụ sử dụng 
-2. **Detection Rule (SPL)** — truy vấn Splunk, ngưỡng cảnh báo
-3. **Log Evidence** — những gì Splunk ghi lại được
-4. **Dashboard** — screenshot trực quan hóa
-5. **Response** — các bước ngăn chặn và xử lý
-
-## Kỹ Năng Thể Hiện
-
-- **Network Security** — Cấu hình tường lửa, phân vùng mạng với pfSense
-- **Splunk Administration** — Triển khai Splunk, cấu hình Universal Forwarder, viết SPL
-- **Threat Detection** — Viết detection rule theo khung MITRE ATT&CK
-- **Penetration Testing** — Mô phỏng tấn công có kiểm soát với Kali Linux
-- **Incident Response** — Thu thập bằng chứng, phân loại và ngăn chặn sự cố
-- **Linux & Windows Administration** — Cấu hình và hardening endpoint
+1. **Attack Scenario:** mô tả kịch bản, công cụ sử dụng 
+2. **Detection Rule (SPL):** truy vấn Splunk, ngưỡng cảnh báo
+3. **Log Evidence:** những gì Splunk ghi lại được
+4. **Dashboard:** screenshot trực quan hóa
+5. **Response:** các bước ngăn chặn và xử lý
