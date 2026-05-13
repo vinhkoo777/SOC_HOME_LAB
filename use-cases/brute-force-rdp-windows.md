@@ -11,13 +11,16 @@ Attacker sử dụng hydra brute force dịch vụ RDP trên 1 host dưới đâ
 **Trong đây giả sử attacker đã thu được username**
 
 ```bash
-sudo hydra -V -f -l alex -P '/home/kuga/rockyou.txt' rdp://192.168.188.40:3389 
+sudo hydra -V -f -l alex -P '/home/kuga/rockyou.txt' rdp://192.168.188.40:3389  
 ```
 
 Sau khi thực hiện xong lệnh trên Hydra sẽ bắt đầu thử từng mật khẩu cho đến khi kiếm được password khớp với password của user alex.
 
-<img width="1246" height="223" alt="image" src="https://github.com/user-attachments/assets/5340836f-4e59-4d87-8075-f7ee07319150" />
+<img width="879" height="537" alt="image" src="https://github.com/user-attachments/assets/724d1604-db6a-411f-9ed7-2fa034dafb0d" />
 
+Và như hình dưới cho ta thấy Hydra đã thành công trong việc tìm thấy được password khớp với password của alex.
+
+<img width="845" height="118" alt="image" src="https://github.com/user-attachments/assets/fdd9861b-ada5-49a7-ba01-2c429489f628" />
 
 ## 2. Detection Rule (SPL)
 
@@ -29,6 +32,7 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 | Where count > 5 
 | sort - count
 ```
+
 **Alert condition:** > 5 failed attempts trong vòng 1 phút từ cùng 1 IP
 
 ## 3. Log Evidence
