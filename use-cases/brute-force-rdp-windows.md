@@ -1,7 +1,9 @@
 # Brute Force RDP (Windows)
 
 **MITRE ATT&CK:** T1110.003: Password Spraying
+
 **Tool:** crowbar  
+
 **Target:** Windows Client (192.168.188.40)
 
 ## 1. Attack Scenario
