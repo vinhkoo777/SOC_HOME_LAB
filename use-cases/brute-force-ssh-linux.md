@@ -56,7 +56,7 @@ Thì như ta thấy Attacker đã đăng nhập thành công.
 
 ## 4. Dashboard
 
-<img width="1911" height="567" alt="image" src="https://github.com/user-attachments/assets/11c3e250-9a27-4b78-9de5-a5e87c03c9d5" />
+<img width="1905" height="711" alt="image" src="https://github.com/user-attachments/assets/912c0fe6-5ee1-4938-8365-b1154d362ad1" />
 
 ## 5. Response
 1. Block IP `192.168.188.20` trên pfSense Firewall
