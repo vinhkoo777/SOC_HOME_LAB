@@ -6,13 +6,26 @@
 
 ## 1. Attack Scenario
 
-Giả sử kẻ tấn công thực hiện đoạn lệnh dưới. Giải thích lệnh là nó sẽ dùng tài khoản john đăng nhập vào domain corp.local, tìm các service account có SPN, rồi yêu cầu Kerberos service tickets từ DC, và xuất hash để phục vụ Kerberoasting attack.
+Trong kịch bản này, attacker sử dụng tài khoản domain hợp lệ để enumerate các service account có SPN (Service Principal Name) trong Active Directory. Sau đó attacker yêu cầu Kerberos TGS (Ticket Granting Service) tickets từ Domain Controller nhằm trích xuất Kerberos ticket hashes phục vụ cho quá trình offline password cracking.
 
 ```bash
-impacket-GetUserSPNs siem.lab/john:'Password123!' -dc-ip 192.168.188.30 -request
+impacket-GetUserSPNs siem.lab/ALEXANDRA_PUGH:'Password123!' -dc-ip 192.168.188.30 -request
 ```
+**Trong đó**
 
-Và attacker đã thực hiện thành công.
+`siem.lab/john:'Password123!'`
+
+- Sử dụng tài khoản domain john để authenticate vào Active Directory.
+
+`-dc-ip 192.168.188.30`
+
+- Chỉ định Domain Controller mục tiêu.
+
+`-request`
+
+- Yêu cầu Kerberos TGS tickets cho các service account có SPN và xuất Kerberos ticket hashes phục vụ Kerberoasting.
+
+Và attacker đã thực hiện thành công. Khi này Domain Controller sinh ra nhiều sự kiện Event ID 4769 từ địa chỉ IP `192.168.188.20` tức là máy attacker.
 
 <img width="1166" height="811" alt="image" src="https://github.com/user-attachments/assets/37fa6717-7617-454e-b13e-34cbf4c5d12b" />
 
@@ -26,8 +39,17 @@ index=* host="DC01" "<EventID>4769</EventID>"
 
 ## 3. Log Evidence
 
+<img width="1893" height="885" alt="image" src="https://github.com/user-attachments/assets/116ad50c-ff75-4fcf-b4b4-8678ae1f713f" />
+
+Kết quả log cho thấy nhiều Event ID 4769 được sinh ra liên tục từ địa chỉ IP `192.168.188.20`.
+
+Tài khoản `ALEXANDRA_PUGH@SIEM.LAB` đã yêu cầu Kerberos service tickets cho nhiều service accounts như:
+
+- OTIS_FAULKNER
+- RON_SCHWARTZ
+- MARGO_BOOTH
+
+Điều này cho thấy dấu hiệu SPN enumeration và Kerberoasting activity trong Active Directory environment.\
 
 ## 4. Dashboard
 
-
-## 5. Response
