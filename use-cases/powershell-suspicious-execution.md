@@ -1,8 +1,8 @@
 # Kerberoasting Active Directory
 
 **MITRE ATT&CK:** T1558.003 - Steal or Forge Kerberos Tickets: Kerberoasting  
-**Tool:** python3-impacket
-**Target:**  Windows AD (192.168.188.30)
+**Tool:** python3-impacket  
+**Target:**  Windows AD (192.168.188.30)  
 
 ## 1. Attack Scenario
 
@@ -12,17 +12,17 @@ Giả sử kẻ tấn công thực hiện đoạn lệnh dưới. Giải thích 
 impacket-GetUserSPNs siem.lab/john:'Password123!' -dc-ip 192.168.188.30 -request
 ```
 
+Và attacker đã thực hiện thành công.
+
+<img width="1166" height="811" alt="image" src="https://github.com/user-attachments/assets/37fa6717-7617-454e-b13e-34cbf4c5d12b" />
+
 ## 2. Detection Rule (SPL)
 
 ```spl
-index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
-| rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
-| rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
-| stats count by src_ip user
-| Where count > 5
-| sort - count
+index=* host="DC01" "<EventID>4769</EventID>" 
+| rex field=_raw "<Data Name='IpAddress'>::ffff:(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
+| stats count by src_ip
 ```
-**Alert condition:** > 5 failed attempts trong vòng 1 phút từ cùng 1 IP
 
 ## 3. Log Evidence
 
