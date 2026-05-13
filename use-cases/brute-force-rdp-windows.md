@@ -11,7 +11,7 @@ Attacker sử dụng Crowbar brute force dịch vụ RDP trên 1 host dưới đ
 **Trong đây giả sử attacker đã thu được username**
 
 ```bash
-sudo crowbar -b rdp -s 192.168.188.40/32 -u alex -C '/home/kuga/rockyou.txt' 
+sudo hydra -l alex -P '/home/kuga/Desktop/common_pass.txt'  rdp://192.168.188.40:3389  
 ```
 
 ## 2. Detection Rule (SPL)
