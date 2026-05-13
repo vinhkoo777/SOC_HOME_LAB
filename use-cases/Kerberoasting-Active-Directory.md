@@ -35,8 +35,8 @@ Và attacker đã thực hiện thành công. Khi này Domain Controller sinh ra
 index=* host="DC01" "<EventID>4769</EventID>" 
 | rex field=_raw "<Data Name='IpAddress'>::ffff:(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
 | rex field=_raw "<Data Name='ServiceName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
-| rex field=_raw "<Data Name='TicketEncryptionType'>0x(?<type>[0-9A-Fa-f]+)</Data>"
-| stats count by src_ip user TicketEncryptionType
+| rex field=_raw "<Data Name='TicketEncryptionType'>(?<type>0x[0-9A-Fa-f]+)</Data>"
+| stats count by src_ip user type
 ```
 
 ## 3. Log Evidence
@@ -57,5 +57,6 @@ Tài khoản `ALEXANDRA_PUGH@SIEM.LAB` đã yêu cầu Kerberos service tickets 
 
 Dưới đây là Dashboard của tôi.
 
-<img width="1905" height="790" alt="image" src="https://github.com/user-attachments/assets/98dc6f68-87ef-425c-a763-22c7ae32abc0" />
+<img width="1915" height="725" alt="image" src="https://github.com/user-attachments/assets/db3b4983-47db-4dfd-bbd0-be67d18f5f8b" />
+
 
