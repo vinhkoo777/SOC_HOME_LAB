@@ -50,7 +50,7 @@ Dưới đây là log thu được trong Splunk.
 
 ## 4. Dashboard
 
-<img width="1908" height="622" alt="image" src="https://github.com/user-attachments/assets/208bb9d0-7284-404b-8b2d-cf45d9b7ff17" />
+<img width="1908" height="735" alt="image" src="https://github.com/user-attachments/assets/3feb14b4-f616-4b45-8316-bb539dfc3b6f" />
 
 ## 5. Response
 1. Block IP `192.168.188.20` trên pfSense Firewall
