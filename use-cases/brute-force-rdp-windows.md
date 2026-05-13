@@ -1,4 +1,4 @@
-# Brute Force RDP (Windows)
+<img width="1573" height="800" alt="image" src="https://github.com/user-attachments/assets/238aec06-7832-4abc-9e50-cd7e15cdc7f1" /># Brute Force RDP (Windows)
 
 **MITRE ATT&CK:** T1110.003: Password Spraying  
 **Tool:** hydra  
@@ -6,7 +6,7 @@
 
 ## 1. Attack Scenario
 
-Attacker sử dụng hydra brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với username là alex và list password , sử dựng 1 thread.
+Attacker sử dụng hydra brute force dịch vụ RDP trên 1 host dưới đây là windows client. Với username là alex và list password đã chuẩn bị sẳng.
 
 **Trong đây giả sử attacker đã thu được username**
 
@@ -37,6 +37,13 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 
 ## 3. Log Evidence
 
+Thì như ta thấy trong hình dưới. Đây là EventID 4625 nghĩa là khi có lượt đăng nhập thất bại thì Event này sẽ được gọi lên. Ta cũng thấy nó cũng chứa IP là `192.168.188.20` thì đây là IP của máy kali của ta.
+
+<img width="1573" height="800" alt="image" src="https://github.com/user-attachments/assets/b9c0dc4a-9d5a-43f5-a8ab-b2d3ea0257bf" />
+
+Tiếp theo đó tôi sẽ Query EventID 4624 với logon type là 10. Thì ý nghĩa là lượt đăng nhập thành công trong RDP. Mục đích của tôi là xem liệu attacker có đăng nhập thành công hay chưa. Thì như trong hình ta đã thấy IP của máy kali nghĩa là attacker đã đăng nhập thành công.
+
+<img width="1916" height="938" alt="image" src="https://github.com/user-attachments/assets/7d5b41b2-b421-4aae-b2db-98eaa79288d4" />
 
 ## 4. Dashboard
 
