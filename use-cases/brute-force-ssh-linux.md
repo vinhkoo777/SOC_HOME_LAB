@@ -44,9 +44,15 @@ index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
 
 ## 3. Log Evidence
 
-Dưới đây là log thu được trong Splunk.
+Dưới đây là log thu được trong Splunk. Thì ta IP đang cố đăng nhập user `conmeo` là `192.168.188.20` nghĩa là máy kali của ta.
 
 <img width="1630" height="435" alt="image" src="https://github.com/user-attachments/assets/6160da65-580f-4ff9-94d6-5adf155df518" />
+
+Bây giờ tôi sẽ thử query thử liệu attacker đã nhập vào nhập vào người dùng `conmeo` chưa.
+
+<img width="1522" height="537" alt="image" src="https://github.com/user-attachments/assets/f7c6c5a1-66ca-4996-afcc-8da30d54fe7d" />
+
+Thì như ta thấy Attacker đã đăng nhập thành công.
 
 ## 4. Dashboard
 
