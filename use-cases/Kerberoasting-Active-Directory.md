@@ -35,6 +35,7 @@ Và attacker đã thực hiện thành công. Khi này Domain Controller sinh ra
 index=* host="DC01" "<EventID>4769</EventID>" 
 | rex field=_raw "<Data Name='IpAddress'>::ffff:(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
 | stats count by src_ip
+| sort - count 
 ```
 
 ## 3. Log Evidence
