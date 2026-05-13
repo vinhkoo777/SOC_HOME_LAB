@@ -50,8 +50,3 @@ Tiếp theo đó tôi sẽ Query EventID 4624 với logon type là 10. Thì ý n
 <img width="1908" height="639" alt="image" src="https://github.com/user-attachments/assets/792cdd52-93b4-4c01-af45-a80bc7d88977" />
 
 Trên đây là Dashboard theo dỗi số lần đăng nhập thành công và thất bại. Cũng như là khoảng thời gian của các lần đăng nhập thất bại.
-
-## 5. Response
-1. Block IP `192.168.188.20` trên pfSense Firewall
-2. Kiểm tra có login thành công nào không (`Accepted password`)
-3. Reset password + bật key-based authentication
