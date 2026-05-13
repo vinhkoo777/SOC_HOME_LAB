@@ -32,6 +32,8 @@ Kết quả dưới hình này thì cho ta thấy Ubuntu đang mở port 22 thì
 
 ## 2. Detection Rule (SPL)
 
+### Windows Cilent
+
 ```spl
 index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</EventID>"
 | rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
@@ -40,6 +42,8 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 | Where count > 5 
 | sort - count
 ```
+
+### Ubuntu Client
 
 **Alert condition:** 
 
