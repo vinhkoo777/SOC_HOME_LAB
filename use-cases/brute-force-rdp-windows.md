@@ -25,7 +25,7 @@ Và như hình dưới cho ta thấy Hydra đã thành công trong việc tìm t
 ## 2. Detection Rule (SPL)
 
 ```spl
-index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</EventID>"
+index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4624</EventID>"
 | rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
 | rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
 | stats count by src_ip user 
