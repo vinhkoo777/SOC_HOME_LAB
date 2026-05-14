@@ -1,6 +1,6 @@
 # Brute Force RDP 
 
-**MITRE ATT&CK:** T1110.001: Password Guessing
+**MITRE ATT&CK:** T1110.001: Password Guessing  
 **Tool:** Hydra  
 **Target:** Windows Client (192.168.188.40)  
 
