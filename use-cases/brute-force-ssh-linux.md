@@ -37,10 +37,8 @@ index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
 | rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 | rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
 | stats count by src_ip user
-| Where count > 5
 | sort - count
 ```
-**Alert condition:** > 5 failed attempts trong vòng 1 phút từ cùng 1 IP
 
 ## 3. Log Evidence
 
