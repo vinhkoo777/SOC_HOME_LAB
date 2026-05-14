@@ -35,7 +35,7 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 | stats count by src_ip, user, host
 ```
 
-**Xác minh định rằng attacker đã login thành công**
+**Xác định rằng attacker đã login thành công**
 
 
 ```spl
