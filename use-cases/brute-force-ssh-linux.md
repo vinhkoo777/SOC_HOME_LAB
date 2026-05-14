@@ -32,12 +32,23 @@ Và attacker đã chiếm quyền hệ thống bây giờ attacker có thể là
 
 ## 2. Detection Rule (SPL)
 
+**Detect brute force**
+
 ```spl
 index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
 | rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 | rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
-| stats count by src_ip user
+| stats count by src_ip user host
 | sort - count
+```
+
+**Xác định attacker đã đăng nhập thành công**
+
+```spl
+index=* host="ubuntu" source="/var/log/auth.log" "Accepted"
+| rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
+| stats count by src_ip user host
 ```
 
 ## 3. Log Evidence
