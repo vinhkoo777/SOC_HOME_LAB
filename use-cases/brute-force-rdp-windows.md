@@ -34,7 +34,7 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 | sort - count
 ```
 
-**Xác minh định rằng attacker đã login thành công (logontype 10 = RPD)**
+**Xác minh định rằng attacker đã login thành công**
 
 
 ```spl
