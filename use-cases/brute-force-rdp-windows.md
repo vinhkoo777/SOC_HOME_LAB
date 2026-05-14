@@ -59,3 +59,4 @@ Tiếp theo đó tôi sẽ Query EventID 4624 với logon type là 10. Thì ý n
 
 ## 4. Dashboard
 
+<img width="1903" height="852" alt="image" src="https://github.com/user-attachments/assets/60097dd4-a41c-4816-a127-767dff3011f9" />
