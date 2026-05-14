@@ -70,11 +70,12 @@ Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rul
 
 | Use Case | MITRE ATT&CK | Tài liệu |
 |---|---|---|
-
+| Brute Force – SSH (Linux) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-ssh-linux.md) |
+| Brute Force – RDP (Windows) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-rdp-windows.md) |
 
 **Cấu trúc mỗi use case:**
 
-1. **Attack Scenario:** mô tả kịch bản, công cụ sử dụng 
-2. **Detection Rule (SPL):** truy vấn Splunk, ngưỡng cảnh báo
-3. **Log Evidence:** những gì Splunk ghi lại được
-4. **Dashboard:** screenshot trực quan hóa
+1. **Attack Scenario** mô tả kịch bản, công cụ sử dụng
+2. **Detection Rule (SPL)** truy vấn Splunk
+3. **Log Evidence** những gì Splunk ghi lại được
+4. **Dashboard** screenshot trực quan hóa
