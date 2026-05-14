@@ -66,8 +66,6 @@ Hướng dẫn từng bước để tái tạo lab từ đầu:
 
 ## Use Cases
 
-Mỗi use case bao gồm đầy đủ: mô phỏng tấn công → detection rule (SPL) → bằng chứng log → ứng phó sự cố.
-
 | Use Case | MITRE ATT&CK | Tài liệu |
 |---|---|---|
 | Brute Force – SSH (Linux) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-ssh-linux.md) |
