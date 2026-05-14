@@ -49,6 +49,7 @@ index=* host="ubuntu" source="/var/log/auth.log" "Accepted"
 | rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 | rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
 | stats count by src_ip user host
+| sort - count
 ```
 
 ## 3. Log Evidence
