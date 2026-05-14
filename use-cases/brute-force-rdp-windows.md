@@ -32,7 +32,7 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 | rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
 | rex field=_raw "<Data Name='LogonType'>(?<logontype>\d+)</Data>"
 | where logontype=10 OR logontype=3 
-| stats count by src_ip, user
+| stats count by src_ip, user, host
 ```
 
 **Xác minh định rằng attacker đã login thành công**
@@ -44,7 +44,7 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4624</Eve
 | rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
 | rex field=_raw "<Data Name='LogonType'>(?<logontype>\d+)</Data>"
 | where logontype=10 OR logontype=3 
-| stats count by src_ip, user
+| stats count by src_ip, user, host
 ```
 
 ## 3. Log Evidence
