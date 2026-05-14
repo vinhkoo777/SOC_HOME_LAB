@@ -66,6 +66,7 @@ Thì như ta thấy Attacker đã đăng nhập thành công.
 
 ## 4. Dashboard
 
-<img width="1905" height="711" alt="image" src="https://github.com/user-attachments/assets/912c0fe6-5ee1-4938-8365-b1154d362ad1" />
+<img width="1902" height="831" alt="image" src="https://github.com/user-attachments/assets/da2a79a1-002a-47d7-ac17-ce103dedc20c" />
+
 
 
