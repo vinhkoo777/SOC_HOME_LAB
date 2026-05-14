@@ -27,7 +27,7 @@ Và như hình dưới cho ta thấy Hydra đã thành công trong việc tìm t
 **Xác định Brute Force (Failed Login)**
 
 ```spl
-index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</EventID>" "<Data Name='LogonType'>10</Data>" OR "<Data Name='LogonType'>3</Data>"
+index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</EventID>" "<Data Name='LogonType'>10</Data>" 
 | rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
 | rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
 | stats count by src_ip user
@@ -38,7 +38,7 @@ index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</Eve
 
 
 ```spl
-index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4624</EventID>" "<Data Name='LogonType'>10</Data>" OR "<Data Name='LogonType'>3</Data>"
+index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4624</EventID>" "<Data Name='LogonType'>10</Data>"
 | rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
 | rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
 | stats count by src_ip user
