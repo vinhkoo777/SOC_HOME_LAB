@@ -24,8 +24,21 @@ Và như hình dưới cho ta thấy Hydra đã thành công trong việc tìm t
 
 ## 2. Detection Rule (SPL)
 
+**Xác định Brute Force (Failed Login)**
+
 ```spl
-index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4624</EventID>"
+index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</EventID>"
+| rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
+| rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
+| stats count by src_ip user 
+| sort - count
+```
+
+**Xác minh định rằng attacker đã login thành công (logontype 10 = RPD)**
+
+
+```spl
+index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4624</EventID>" "<Data Name='LogonType'>10</Data>"
 | rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
 | rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
 | stats count by src_ip user 
