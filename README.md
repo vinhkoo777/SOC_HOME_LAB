@@ -1,5 +1,5 @@
 # SOC Home Lab
-> Make by K0g4 with love <3333
+> Make by K0g4 with love <3333  
 **Lab an ninh mạng thực hành, mô phỏng các kịch bản tấn công thực tế và phát hiện tự động bằng hệ thống SIEM tự triển khai.**
 
 ## Mục Lục
