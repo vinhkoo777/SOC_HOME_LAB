@@ -1,5 +1,5 @@
 # SOC Home Lab
-
+> Make by K0g4 with love <3333
 **Lab an ninh mạng thực hành, mô phỏng các kịch bản tấn công thực tế và phát hiện tự động bằng hệ thống SIEM tự triển khai.**
 
 ## Mục Lục
@@ -55,12 +55,12 @@ Hướng dẫn từng bước để tái tạo lab từ đầu:
 
 | # | Thành phần | Hướng dẫn |
 |---|---|---|
-| 1 | Tường lửa | [Thiết lập pfSense](setup/PHẦN1-pfsense.md) |
+| 1 | Firewall | [Thiết lập pfSense](setup/PHẦN1-pfsense.md) |
 | 2 | Hệ thống SIEM | [Thiết lập Splunk](setup/PHẦN2-siem-setup.md) |
-| 3 | Máy chủ tên miền | [Thiết lập Active Directory](setup/PHẦN3-active-directory.md) |
+| 3 | AD Domain | [Thiết lập Active Directory](setup/PHẦN3-active-directory.md) |
 | 4 | Máy tấn công | [Thiết lập Kali Linux](setup/PHẦN4-kali-linux.md) |
-| 5 | Máy đầu cuối Linux | [Thiết lập Linux Client](setup/PHẦN5-linux-client.md) |
-| 6 | Máy đầu cuối Windows | [Thiết lập Windows Client](setup/PHẦN6-windows-client.md) |
+| 5 | Linux Endpoint | [Thiết lập Linux Client](setup/PHẦN5-linux-client.md) |
+| 6 | Windows Endpoint | [Thiết lập Windows Client](setup/PHẦN6-windows-client.md) |
 
 > **Lưu ý:** pfSense phải được khởi động **trước tiên** trước khi cấu hình IP tĩnh trên bất kỳ máy nào. DHCP của VMware đã bị tắt. PfSense tại `192.168.188.2` là gateway duy nhất của mạng.
 
