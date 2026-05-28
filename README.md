@@ -12,7 +12,7 @@
 
 ## Tổng Quan
 
-SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồm tường lửa, miền Active Directory, các máy đầu cuối Linux/Windows và máy tấn công — tất cả chạy trên **VMware Workstation (Host-Only Network)**.
+SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồm tường lửa, miền Active Directory, các máy đầu cuối Linux/Windows và máy tấn công tất cả chạy trên **VMware Workstation (Host-Only Network)**.
 
 **Mục tiêu thực hành:**
 
