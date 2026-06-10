@@ -43,12 +43,12 @@ SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồ
 
 | Thành phần | IP | Vai trò |
 |---|---|---|
-| **pfSense Firewall** | 192.168.188.2 | Tường lửa, phân vùng mạng, giám sát lưu lượng |
-| **Splunk SIEM** | 192.168.188.10 | Thu thập log, tìm kiếm SPL, cảnh báo, dashboard |
-| **Kali Linux** | 192.168.188.20 | Máy tấn công để mô phỏng các mối đe dọa |
-| **AD Domain Controller** | 192.168.188.30 | Active Directory + Splunk Universal Forwarder |
-| **Windows Client** | 192.168.188.40 | Máy đầu cuối Windows + Splunk Universal Forwarder |
-| **Linux Client** | 192.168.188.50 | Máy đầu cuối Linux + Splunk Universal Forwarder |
+| pfSense Firewall | 192.168.188.2 | Tường lửa, phân vùng mạng, giám sát lưu lượng |
+| Splunk SIEM| 192.168.188.10 | Thu thập log, tìm kiếm SPL, cảnh báo, dashboard |
+| Kali Linux | 192.168.188.20 | Máy tấn công để mô phỏng các mối đe dọa |
+| AD Domain Controller | 192.168.188.30 | Active Directory + Splunk Universal Forwarder |
+| Windows Client | 192.168.188.40 | Máy đầu cuối Windows + Splunk Universal Forwarder |
+| Linux Client | 192.168.188.50 | Máy đầu cuối Linux + Splunk Universal Forwarder |
 
 ## Thiết Lập Môi Trường
 
@@ -72,9 +72,3 @@ Hướng dẫn từng bước để tái tạo lab từ đầu:
 | Brute Force – SSH (Linux) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-ssh-linux.md) |
 | Brute Force – RDP (Windows) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-rdp-windows.md) |
 
-**Cấu trúc mỗi use case:**
-
-1. **Attack Scenario** mô tả kịch bản, công cụ sử dụng
-2. **Detection Rule (SPL)** truy vấn Splunk
-3. **Log Evidence** những gì Splunk ghi lại được
-4. **Dashboard** screenshot trực quan hóa
