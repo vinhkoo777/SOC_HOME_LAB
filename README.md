@@ -69,6 +69,6 @@ Hướng dẫn từng bước để tái tạo lab từ đầu:
 
 | Use Case | MITRE ATT&CK | Tài liệu |
 |---|---|---|
-| Brute Force – SSH (Linux) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-ssh-linux.md) |
-| Brute Force – RDP (Windows) | T1110.001 – Password Guessing | [Xem chi tiết](use-cases/brute-force-rdp-windows.md) |
+| Brute Force - SSH (Linux) | T1110.001: Password Guessing | [Xem chi tiết](use-cases/brute-force-ssh-linux.md) |
+| Brute Force - RDP (Windows) | T1110.001: Password Guessing | [Xem chi tiết](use-cases/brute-force-rdp-windows.md) |
 
