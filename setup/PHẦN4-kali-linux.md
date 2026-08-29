@@ -168,25 +168,25 @@ Sau khi xong nhấn continue để reboot lại máy.
 
 Đầu tiên ta dùng lệnh dưới để kiểm tra xem liệu file interfacs có tồn tại hay không.
 
-```bash
+```
 cat /etc/network/interfaces
 ```
 <img width="647" height="523" alt="image" src="https://github.com/user-attachments/assets/95735707-f2cd-468f-a3d7-b22f1e2bc540" />
 
 Tiếp đó tôi sẽ sử dụng lệnh dưới để check xem liệu máy kali tui đang sử dụng interface nào. 
-```bash
+```
 ifconfig
 ```
 
 <img width="575" height="147" alt="image" src="https://github.com/user-attachments/assets/6111ed74-c2cd-44c8-afc2-d5a1d6b2419a" />
 
 Thì ta thấy rằng kali đang sử dụng eth0 nên ta sẽ cấu hình IP tĩnh trên interface đó. Bằng cách sử dụng lệnh.
-```bash
+```
 sudo nano /etc/network/interfaces
 ```
 Xong rồi ta sẽ thêm nội dung dưới vào.
 
-```bash
+```
 auto eth0
 iface eth0 inet static
   address 192.168.188.20
@@ -197,7 +197,7 @@ iface eth0 inet static
 <img width="627" height="410" alt="image" src="https://github.com/user-attachments/assets/558763db-079f-438e-af21-2e187fbe3b09" />
 
 Tiếp đó sử dụng.
-```bash
+```
 sudo systemctl restart networking
 ```
 Bây giờ tui sẽ kiểm tra bằng lệnh ```ifconfig``` và ```ping 8.8.8.8```
@@ -208,7 +208,7 @@ Thì tui đã thành công trong việc cấu hình IP tĩnh
 
 ### Bước 2: Cập nhập hệ thống 
 
-```bash
+```
 sudo apt update && sudo apt upgrade -y
 ```
 

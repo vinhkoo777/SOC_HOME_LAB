@@ -229,7 +229,7 @@ BadBlood sẽ tự động tạo hàng trăm user, group, OU giả lập để g
 
 **Bước 3:** Chạy lần lượt các lệnh sau:
 
-```powershell
+```
 # Cấp quyền thực thi script
 Set-ExecutionPolicy Unrestricted -Scope Process -Force
 
@@ -326,18 +326,14 @@ Cuối cùng là nhấn **install** để tải.
 Đầu tiên ta vào `C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local` khi này ta tạo một file mới đặt tên là `inputs.conf`. Với nội dung.
 
 ```
-# ==============================
-#     WINDOWS EVENT LOGS
-# ==============================
-
 [WinEventLog://Security]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Security
 renderXml = 1
 checkpointInterval = 5
+current_only = 0
 evt_resolve_ad_obj = 1
-start_from = oldest
 
 [WinEventLog://System]
 disabled = 0
@@ -345,93 +341,103 @@ index = main
 sourcetype = WinEventLog:System
 renderXml = 1
 checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Application]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Application
 renderXml = 1
-
-# ==============================
-# POWERSHELL AND EXECUTION
-# ==============================
-
-[WinEventLog://Microsoft-Windows-PowerShell/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:PowerShell
-renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-TaskScheduler/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:TaskScheduler
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-WMI-Activity/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:WMI-Activity
-
-# ==============================
-# SECURITY CONTROLS
-# ==============================
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-AppLocker/EXE and DLL]
 disabled = 0
 index = main
 sourcetype = WinEventLog:AppLocker
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-Windows Defender/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Defender
-
-# ==============================
-# NETWORK AND ACCESS
-# ==============================
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-Windows Firewall With Advanced Security/Firewall]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Firewall
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-TerminalServices-LocalSessionManager/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:RDP
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:RDP
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-DNS-Client/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:DNS
-
-# ==============================
-# ACTIVE DIRECTORY 
-# ==============================
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Directory Service]
 disabled = 0
 index = main
 sourcetype = WinEventLog:DirectoryService
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-Kerberos/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Kerberos
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-Kerberos-Key-Distribution-Center/Operational]
 disabled = 0
 index = main
 sourcetype = WinEventLog:KDC
-
-# ==============================
-# SYSMON 
-# ==============================
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-Sysmon/Operational]
 disabled = 0
@@ -439,12 +445,7 @@ index = main
 sourcetype = XmlWinEventLog:Sysmon
 renderXml = 1
 checkpointInterval = 5
-start_from = newest
 current_only = 0
-
-# ==============================
-# FILE MONITOR 
-# ==============================
 
 [monitor://C:\Windows\System32\drivers\etc\hosts]
 disabled = 0
@@ -452,21 +453,8 @@ index = main
 sourcetype = WinFile:hosts
 followTail = 1
 
-# ==============================
-# SPLUNK INTERNAL 
-# ==============================
-
-[monitor://$SPLUNK_HOME\var\log\splunk\splunkd.log]
-index = _internal
-
-[monitor://$SPLUNK_HOME\var\log\splunk\metrics.log]
-index = _internal
-
-# ==============================
-# PERFORMANCE METRICS
-# ==============================
-
 [perfmon://CPU]
+disabled = 0
 object = Processor
 counters = % Processor Time
 instances = _Total
@@ -474,17 +462,20 @@ interval = 60
 index = main
 
 [perfmon://Memory]
+disabled = 0
 object = Memory
 counters = Available MBytes
 interval = 60
 index = main
 
 [perfmon://LogicalDisk]
+disabled = 0
 object = LogicalDisk
 counters = % Free Space
 instances = *
 interval = 60
 index = main
+
 ```
 Khi này sẽ cần phải restart lại Splunk Universal Forwarder. Ta sẽ mở **Powershell** với quyền admin. Rồi ta thực hiện các lệnh.
 

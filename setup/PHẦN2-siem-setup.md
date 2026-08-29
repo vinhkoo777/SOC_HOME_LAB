@@ -112,7 +112,7 @@ Tại đây ta sẽ cần chuột phải vào máy ảo Ubuntu Server chọn set
 
 Đầu tiên ta sẽ check ip hiện tại của ta
 
-```bash
+```
 ip addr show
 ```
 
@@ -124,7 +124,7 @@ Do tui mới đổi sang VMnet1(Host-only) nên ta sẽ cần tự config IP tĩ
 
 Tiếp theo đó sử nhập lệnh. Để edit netplan configuration.
 
-```bash
+```
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
 
@@ -132,7 +132,7 @@ sudo nano /etc/netplan/00-installer-config.yaml
 
 Tại đây ta sẽ nhập giống như vậy. 
 
-```bash
+```
 network:
   version: 2
   ethernets:
@@ -151,20 +151,20 @@ network:
 ### Bước 4: Áp dụng config
 
 Xong rồi ta sẽ apply config trên bằng cách nhập.
-```bash
+```
 sudo netplan apply
 ```
 
 ### Bước 5: Tiến hành confirm 
 Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đã được config đúng hay chưa.
-```bash
+```
 ip adđr show ens33
 ```
 
 <img width="716" height="151" alt="image" src="https://github.com/user-attachments/assets/7b0d3cdd-6a55-4f99-a1e2-4a248dcdcb80" />
 
 Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
-```bash
+```
 ping -c 3 8.8.8.8
 ```
 
@@ -176,7 +176,7 @@ Thì như trên hình thì ta đã thấy ta đã ping thành công. Và việc 
 
 ### Bước 1: Update hệ thống
 
-```bash
+```
 sudo apt update && sudo apt upgrade -y
 ```
 
@@ -184,7 +184,7 @@ sudo apt update && sudo apt upgrade -y
 
 Đầu tiên ta sẽ cần tải file .deb về.
 
-```bash
+```
 wget -O splunk-10.2.2-80b90d638de6-linux-amd64.deb "https://download.splunk.com/products/splunk/releases/10.2.2/linux/splunk-10.2.2-80b90d638de6-linux-amd64.deb"
 ```
 
@@ -192,12 +192,12 @@ wget -O splunk-10.2.2-80b90d638de6-linux-amd64.deb "https://download.splunk.com/
 
 Xong rồi ta tiến hành nhập lệnh dưới để tiến hành cài đặt.
 
-```bash
+```
 sudo apt install ./splunk-10.2.2-80b90d638de6-linux-amd64.deb
 ```
 
 ### Bước 3: Chạy splunk 
-```bash
+```
 sudo chown -R socadmin:socadmin /opt/splunk
 /opt/splunk/bin/splunk start --accept-license
 ```
@@ -205,12 +205,12 @@ sudo chown -R socadmin:socadmin /opt/splunk
 - Username: admin
 - Password: [chọn mật khẩu mạnh]
 ### Bước 5: Tự động bật khi khởi động 
-```bash
+```
 sudo /opt/splunk/bin/splunk enable boot-start -user socadmin 
 ```
 ### Bước 6: Truy cập splunk 
 Có thể dùng lệnh này để kiểm tra trạng thái liệu splunk đã lên hay chưa
-```bash
+```
 /opt/splunk/bin/splunk status
 ```
 Truy cập thông qua browers của host http://192.168.188.10:8000. Xong rồi đăng nhập vào tài khoản admin.

@@ -109,7 +109,7 @@ Sau khi cài xong ta nhấn restart để khởi động lại.
 
 Đầu tiên ta sẽ check ip hiện tại của ta.
 
-```bash
+```
 ip addr show
 ```
 
@@ -121,7 +121,7 @@ Do tui mới đổi sang VMnet1(Host-only) nên ta sẽ cần tự config IP tĩ
 
 Tiếp theo đó sử nhập lệnh. Để edit netplan configuration.
 
-```bash
+```
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
 
@@ -129,7 +129,7 @@ sudo nano /etc/netplan/00-installer-config.yaml
 
 Tại đây ta sẽ nhập giống như vậy. 
 
-```bash
+```
 network:
   version: 2
   ethernets:
@@ -148,13 +148,13 @@ network:
 ### Bước 4: Áp dụng config
 
 Xong rồi ta sẽ apply config trên bằng cách nhập.
-```bash
+```
 sudo netplan apply
 ```
 
 ### Bước 5: Tiến hành confirm 
 Tại đây tui sẽ sử dụng lệnh dưới để kiểm tra IP của tui đã được config đúng hay chưa.
-```bash
+```
 ip adđr show ens33
 ```
 
@@ -162,7 +162,7 @@ ip adđr show ens33
 
 
 Thì ta thấy đó là những gì tui muốn. Tiến hành sử dụng tiếp lệnh ping. 
-```bash
+```
 ping -c 3 8.8.8.8
 ```
 
@@ -170,7 +170,7 @@ Thì như  hình thì ta đã thấy ta đã ping thành công. Và việc cấu
 
 <img width="668" height="165" alt="image" src="https://github.com/user-attachments/assets/e94d84d6-07e4-47be-89c7-fdb8c052f4c3" />
 
-> **NOTE Bạn nên tạo một bản snapshit trước khi qua giai đoạn tiếp theo**
+> **NOTE Bạn nên tạo một bản snapshot trước khi qua giai đoạn tiếp theo**
 
 ## Phase 4: Cài đặt Splunk Universal Forwarder
 
@@ -236,93 +236,29 @@ sudo nano inputs.conf
 Với nội dung là 
 
 ```
-# ==============================
-# SYSTEM LOGS
-# ==============================
-
 [monitor:///var/log/syslog]
 disabled = 0
 sourcetype = syslog
 
-[monitor:///var/log/messages]
-disabled = 0
-sourcetype = syslog
-
-# ==============================
-# AUTHENTICATION / SSH
-# ==============================
-
 [monitor:///var/log/auth.log]
 disabled = 0
-sourcetype = linux_secure
-
-[monitor:///var/log/secure]
-disabled = 0
-sourcetype = linux_secure
-
-# ==============================
-# SUDO / PRIV ESC
-# ==============================
-
-[monitor:///var/log/sudo.log]
-disabled = 0
-sourcetype = sudo
-
-# ==============================
-# CRON 
-# ==============================
-
-[monitor:///var/log/cron]
-disabled = 0
-sourcetype = cron
-
-# ==============================
-# KERNEL / SYSTEM EVENTS
-# ==============================
+sourcetype = auth_log
 
 [monitor:///var/log/kern.log]
 disabled = 0
-sourcetype = kernel
-
-[monitor:///var/log/dmesg]
-disabled = 0
-sourcetype = kernel
-
-# ==============================
-# PACKAGE / INSTALL ACTIVITY
-# ==============================
+sourcetype = kern_log
 
 [monitor:///var/log/dpkg.log]
 disabled = 0
-sourcetype = package
-
-[monitor:///var/log/yum.log]
-disabled = 0
-sourcetype = package
-
-# ==============================
-# DNS
-# ==============================
-
-# ==============================
-# FILE MONITORING 
-# ==============================
+sourcetype = dpkg_log
 
 [monitor:///etc/passwd]
 disabled = 0
-sourcetype = file_integrity
-
-[monitor:///etc/shadow]
-disabled = 0
-sourcetype = file_integrity
+sourcetype = passwd_file
 
 [monitor:///etc/hosts]
 disabled = 0
-sourcetype = file_integrity
-
-# ==============================
-# SPLUNK INTERNAL LOGS
-# ==============================
+sourcetype = hosts_file
 
 [monitor://$SPLUNK_HOME/var/log/splunk/splunkd.log]
 disabled = 0
@@ -343,5 +279,3 @@ sudo ./splunk restart
 Bây giờ khi ta dùng splunk và query thử `index=main` ta đã thấy 2 host.
 
 <img width="1907" height="890" alt="image" src="https://github.com/user-attachments/assets/bbee097c-9c00-4389-bf62-7a9cd3ce58a8" />
-
-

@@ -1,0 +1,9 @@
+index=main source="WinEventLog:Security" "<EventID>4768</EventID>"
+| rex field=_raw "<Data Name='TargetUserName'>(?<user>[^<]+)</Data>"
+| rex field=_raw "<Data Name='IpAddress'>(?<src_ip>[^<]+)</Data>"
+| rex field=_raw "<Data Name='PreAuthType'>(?<preauth_type>[^<]+)</Data>"
+| rex field=_raw "<Data Name='TicketEncryptionType'>(?<ticket_encryption_type>[^<]+)</Data>"
+| where preauth_type="0" AND ticket_encryption_type="0x17"
+| table host src_ip user preauth_type ticket_encryption_type
+| sort - _time
+

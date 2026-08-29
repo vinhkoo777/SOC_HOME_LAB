@@ -1,74 +1,59 @@
 # SOC Home Lab
-> Make by K0g4 with love <3333
 
-**Lab an ninh mạng thực hành, mô phỏng các kịch bản tấn công thực tế và phát hiện tự động bằng hệ thống SIEM tự triển khai.**
+> Made by **K0g4** with love <3333
 
-## Mục Lục
+Project thực hành SOC/Blue Team trong môi trường lab, sử dụng Splunk để thu thập và phân tích log, xây dựng detection rule, mô phỏng các kỹ thuật tấn công và thực hành điều tra, xây dựng playbook.
 
-- [Tổng quan](#tổng-quan)
-- [Kiến trúc hệ thống](#kiến-trúc-hệ-thống)
-- [Thiết lập môi trường](#thiết-lập-môi-trường)
-- [Use Cases](#use-cases)
+## Mô hình lab
 
-## Tổng Quan
-
-SOC home lab mô phỏng môi trường doanh nghiệp vừa và nhỏ, bao gồm tường lửa, miền Active Directory, các máy đầu cuối Linux/Windows và máy tấn công tất cả chạy trên **VMware Workstation (Host-Only Network)**.
-
-**Mục tiêu thực hành:**
-
-- Thu thập, tương quan và cảnh báo log bằng Splunk
-- Mô phỏng tấn công thực tế
-- Viết và tinh chỉnh detection rule tùy chỉnh bằng SPL (Splunk Processing Language)
-- Xây dựng quy trình ứng phó sự cố bảo mật
-
-## Kiến Trúc Hệ Thống
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                                  Host Computer                                           │
-│  ┌────────────────────────────────────────────────────────────────────────────────────┐  │
-│  │                    VM Workstation Host-Only Network                                │  │
-│  │                          192.168.188.0/24                                          │  │
-│  │                                                                                    │  │
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌────────┐  ┌────────────┐│  │
-│  │  │ pfSense  │  │  Splunk  │  │   Kali   │  │    AD    │  │Windows │  │   Linux    ││  │
-│  │  │ Firewall │  │   SIEM   │  │ Attacker │  │  Domain  │  │ Client │  │   Client   ││  │
-│  │  │ .188.2   │  │ .188.10  │  │ .188.20  │  │ .188.30  │  │ .188.40│  │  .188.50   ││  │
-│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └────────┘  └────────────┘│  │
-│  │                                                                                    │  │
-│  └────────────────────────────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────────────────────────────┘
-
-```
-
-| Thành phần | IP | Vai trò |
+| Máy | IP | Vai trò |
 |---|---|---|
-| pfSense Firewall | 192.168.188.2 | Tường lửa, phân vùng mạng, giám sát lưu lượng |
-| Splunk SIEM| 192.168.188.10 | Thu thập log, tìm kiếm SPL, cảnh báo, dashboard |
-| Kali Linux | 192.168.188.20 | Máy tấn công để mô phỏng các mối đe dọa |
-| AD Domain Controller | 192.168.188.30 | Active Directory + Splunk Universal Forwarder |
-| Windows Client | 192.168.188.40 | Máy đầu cuối Windows + Splunk Universal Forwarder |
-| Linux Client | 192.168.188.50 | Máy đầu cuối Linux + Splunk Universal Forwarder |
+| pfSense | `192.168.188.2` | Gateway, Firewall |
+| Splunk | `192.168.188.10` | SIEM |
+| Kali Linux | `192.168.188.20` | Máy mô phỏng tấn công |
+| Domain Controller | `192.168.188.30` | Active Directory |
+| Windows Client | `192.168.188.40` | Windows Endpoint |
+| Linux Client | `192.168.188.50` | Linux Endpoint |
 
-## Thiết Lập Môi Trường
+Mạng lab sử dụng VMware Host-Only `192.168.188.0/24`
 
-Hướng dẫn từng bước để tái tạo lab từ đầu:
+## Detection hiện có
 
-| # | Thành phần | Hướng dẫn |
-|---|---|---|
-| 1 | Firewall | [Thiết lập pfSense](setup/PHẦN1-pfsense.md) |
-| 2 | Hệ thống SIEM | [Thiết lập Splunk](setup/PHẦN2-siem-setup.md) |
-| 3 | AD Domain | [Thiết lập Active Directory](setup/PHẦN3-active-directory.md) |
-| 4 | Máy tấn công | [Thiết lập Kali Linux](setup/PHẦN4-kali-linux.md) |
-| 5 | Linux Endpoint | [Thiết lập Linux Client](setup/PHẦN5-linux-client.md) |
-| 6 | Windows Endpoint | [Thiết lập Windows Client](setup/PHẦN6-windows-client.md) |
+Các SPL rule nằm trong [`detections/`](detections/README.md).
 
-> **Lưu ý:** pfSense phải được khởi động **trước tiên** trước khi cấu hình IP tĩnh trên bất kỳ máy nào. DHCP của VMware đã bị tắt. PfSense tại `192.168.188.2` là gateway duy nhất của mạng.
+| Detection | MITRE ATT&CK | 
+|---|---|
+| SSH Brute Force | T1110.001 |
+| RDP Brute Force | T1110.001 |
+| Suspicious PowerShell | T1059.001 |
+| AS-REP Roasting | T1558.004 | 
 
-## Use Cases
+## Use Case
 
-| Use Case | MITRE ATT&CK | Tài liệu |
-|---|---|---|
-| Brute Force - SSH (Linux) | T1110.001: Password Guessing | [Xem chi tiết](use-cases/brute-force-ssh-linux.md) |
-| Brute Force - RDP (Windows) | T1110.001: Password Guessing | [Xem chi tiết](use-cases/brute-force-rdp-windows.md) |
+| Use Case | Mô tả | 
+|---|---|
+| [SSH Brute Force trên Linux](use-cases/brute-force-ssh-linux.md) | Phát hiện nhiều lần đăng nhập SSH thất bại |
+| [RDP Brute Force trên Windows](use-cases/brute-force-rdp-windows.md) | Phát hiện brute force RDP bằng Windows Event Log |
+| [Suspicious PowerShell](use-cases/suspicious-powershell.md) | Phát hiện PowerShell có dấu hiệu đáng ngờ |
+| [AS-REP Roasting](use-cases/as-rep-roasting.md) | Hunt yêu cầu TGT bất thường trên Domain Controller |
 
+
+## Incident Response Playbook
+
+Các playbook sử dụng cùng một cấu trúc xử lý. Xem [playbook](playbooks/README.md).
+
+| Playbook | Nội dung |
+|---|---|
+| [Brute Force](playbooks/brute-force-response.md) | Điều tra và xử lý brute force |
+| [Suspicious PowerShell](playbooks/suspicious-powershell-response.md) | Điều tra PowerShell đáng ngờ |
+| [AS-REP Roasting](playbooks/as-rep-roasting-response.md) | Điều tra AS-REP Roasting |
+
+## Cài đặt lab
+
+1. [pfSense](setup/PHẦN1-pfsense.md)
+2. [Splunk SIEM](setup/PHẦN2-siem-setup.md)
+3. [Active Directory](setup/PHẦN3-active-directory.md)
+4. [Kali Linux](setup/PHẦN4-kali-linux.md)
+5. [Linux Client](setup/PHẦN5-linux-client.md)
+6. [Windows Client](setup/PHẦN6-windows-client.md)
+7. [Domain And Log](setup/PHẦN7-Domain-And-Log.md)

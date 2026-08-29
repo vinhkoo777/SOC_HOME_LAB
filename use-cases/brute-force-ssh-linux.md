@@ -11,7 +11,7 @@ Attacker dùng Hydra từ Kali Linux (192.168.188.20) brute-force SSH vào Linux
 
 **Giả sử attacker đã có được username của Ubuntu_Client**
 
-```bash
+```
 sudo hydra -l conmeo -P /usr/share/wordlists/rockyou.txt ssh://192.168.188.50  
 ```
 
@@ -19,7 +19,7 @@ sudo hydra -l conmeo -P /usr/share/wordlists/rockyou.txt ssh://192.168.188.50
 
 Thì như ta thấy kẻ tấn công đã thu được passwotd của user conmeo là `12345678`. Khi này attacker sẻ sử dụng `ssh` để login vào. 
 
-```bash
+```
 ssh conmeo@192.168.188.50 
 ```
 Thì như ta thấy attacker đã login thành công. 
@@ -34,7 +34,7 @@ Và attacker đã chiếm quyền hệ thống bây giờ attacker có thể là
 
 **Detect brute force**
 
-```spl
+```
 index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
 | rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 | rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
@@ -44,7 +44,7 @@ index=* host="ubuntu" source="/var/log/auth.log" "Failed password"
 
 **Xác định attacker đã đăng nhập thành công**
 
-```spl
+```
 index=* host="ubuntu" source="/var/log/auth.log" "Accepted"
 | rex field=_raw "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 | rex field=_raw "for (?<user>[a-zA-Z0-9._-]+)"
@@ -67,6 +67,5 @@ Thì như ta thấy Attacker đã đăng nhập thành công.
 ## 4. Dashboard
 
 <img width="1902" height="831" alt="image" src="https://github.com/user-attachments/assets/da2a79a1-002a-47d7-ac17-ce103dedc20c" />
-
 
 

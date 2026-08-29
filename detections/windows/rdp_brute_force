@@ -1,0 +1,6 @@
+index=* host="DESKTOP-GDHTT5E" source="WinEventLog:Security" "<EventID>4625</EventID>" 
+| rex field=_raw "<Data Name='IpAddress'>(?<src_ip>\d+\.\d+\.\d+\.\d+)</Data>"
+| rex field=_raw "<Data Name='TargetUserName'>(?<user>[a-zA-Z0-9._-]+)</Data>"
+| rex field=_raw "<Data Name='LogonType'>(?<logontype>\d+)</Data>"
+| where logontype=10
+| stats count by src_ip, user, host

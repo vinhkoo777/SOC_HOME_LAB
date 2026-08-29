@@ -1,0 +1,2 @@
+index=main sourcetype="XmlWinEventLog:Sysmon" "<EventID>1</EventID>"
+("EncodedCommand" OR "-enc" OR "FromBase64String" OR "Invoke-WebRequest" OR "Invoke-Expression" OR "ExecutionPolicy Bypass" OR "WindowStyle Hidden")

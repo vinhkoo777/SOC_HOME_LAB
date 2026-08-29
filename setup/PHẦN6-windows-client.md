@@ -8,6 +8,7 @@
 - [Phase 2: Cài đặt windows 10](#phase-2-cài-đặt-windows-10)
 - [Phase 3: cấu hình IP tĩnh](#phase-3-cấu-hình-IP-tĩnh)
 - [Phase 4: Cài đặt Splunk Universal Forwarder](#phase-4-Cài-đặt-Splunk-Universal-Forwarder)
+- [Một số lỗi có thể xảy ra](#một-số-lỗi-có-thể-xảy-ra)
 
 ## Phase 1: Chuẩn bị 
 
@@ -166,18 +167,14 @@ Cuối cùng là nhấn **install** để tải.
 Đầu tiên ta vào `C:\Program Files\SplunkUniversalForwarder\etc\apps\SplunkUniversalForwarder\local` khi này ta tạo một file mới đặt tên là `inputs.conf`. Với nội dung.
 
 ```
-# ==============================
-#     WINDOWS EVENT LOGS
-# ==============================
-
 [WinEventLog://Security]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Security
 renderXml = 1
 checkpointInterval = 5
-evt_resolve_ad_obj = 1
-start_from = oldest
+current_only = 0
+evt_resolve_ad_obj = 0
 
 [WinEventLog://System]
 disabled = 0
@@ -185,93 +182,15 @@ index = main
 sourcetype = WinEventLog:System
 renderXml = 1
 checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Application]
 disabled = 0
 index = main
 sourcetype = WinEventLog:Application
 renderXml = 1
-
-# ==============================
-# POWERSHELL AND EXECUTION
-# ==============================
-
-[WinEventLog://Microsoft-Windows-PowerShell/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:PowerShell
-renderXml = 1
-
-[WinEventLog://Microsoft-Windows-TaskScheduler/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:TaskScheduler
-
-[WinEventLog://Microsoft-Windows-WMI-Activity/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:WMI-Activity
-
-# ==============================
-# SECURITY CONTROLS
-# ==============================
-
-[WinEventLog://Microsoft-Windows-AppLocker/EXE and DLL]
-disabled = 0
-index = main
-sourcetype = WinEventLog:AppLocker
-
-[WinEventLog://Microsoft-Windows-Windows Defender/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:Defender
-
-# ==============================
-# NETWORK AND ACCESS
-# ==============================
-
-[WinEventLog://Microsoft-Windows-Windows Firewall With Advanced Security/Firewall]
-disabled = 0
-index = main
-sourcetype = WinEventLog:Firewall
-
-[WinEventLog://Microsoft-Windows-TerminalServices-LocalSessionManager/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:RDP
-
-[WinEventLog://Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:RDP
-
-[WinEventLog://Microsoft-Windows-DNS-Client/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:DNS
-
-# ==============================
-# ACTIVE DIRECTORY 
-# ==============================
-
-[WinEventLog://Directory Service]
-disabled = 0
-index = main
-sourcetype = WinEventLog:DirectoryService
-
-[WinEventLog://Microsoft-Windows-Kerberos/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:Kerberos
-
-[WinEventLog://Microsoft-Windows-Kerberos-Key-Distribution-Center/Operational]
-disabled = 0
-index = main
-sourcetype = WinEventLog:KDC
-
-# ==============================
-# SYSMON 
-# ==============================
+checkpointInterval = 5
+current_only = 0
 
 [WinEventLog://Microsoft-Windows-Sysmon/Operational]
 disabled = 0
@@ -279,12 +198,63 @@ index = main
 sourcetype = XmlWinEventLog:Sysmon
 renderXml = 1
 checkpointInterval = 5
-start_from = newest
 current_only = 0
 
-# ==============================
-# FILE MONITOR 
-# ==============================
+[WinEventLog://Microsoft-Windows-Windows Defender/Operational]
+disabled = 0
+index = main
+sourcetype = WinEventLog:Defender
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
+
+[WinEventLog://Microsoft-Windows-Windows Firewall With Advanced Security/Firewall]
+disabled = 0
+index = main
+sourcetype = WinEventLog:Firewall
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
+
+[WinEventLog://Microsoft-Windows-TerminalServices-LocalSessionManager/Operational]
+disabled = 0
+index = main
+sourcetype = WinEventLog:RDP
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
+
+[WinEventLog://Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational]
+disabled = 0
+index = main
+sourcetype = WinEventLog:RDP
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
+
+[WinEventLog://Microsoft-Windows-DNS-Client/Operational]
+disabled = 0
+index = main
+sourcetype = WinEventLog:DNS
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
+
+[WinEventLog://Microsoft-Windows-TaskScheduler/Operational]
+disabled = 0
+index = main
+sourcetype = WinEventLog:TaskScheduler
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
+
+[WinEventLog://Microsoft-Windows-WMI-Activity/Operational]
+disabled = 0
+index = main
+sourcetype = WinEventLog:WMI-Activity
+renderXml = 1
+checkpointInterval = 5
+current_only = 0
 
 [monitor://C:\Windows\System32\drivers\etc\hosts]
 disabled = 0
@@ -292,21 +262,8 @@ index = main
 sourcetype = WinFile:hosts
 followTail = 1
 
-# ==============================
-# SPLUNK INTERNAL 
-# ==============================
-
-[monitor://$SPLUNK_HOME\var\log\splunk\splunkd.log]
-index = _internal
-
-[monitor://$SPLUNK_HOME\var\log\splunk\metrics.log]
-index = _internal
-
-# ==============================
-# PERFORMANCE METRICS
-# ==============================
-
 [perfmon://CPU]
+disabled = 0
 object = Processor
 counters = % Processor Time
 instances = _Total
@@ -314,17 +271,20 @@ interval = 60
 index = main
 
 [perfmon://Memory]
+disabled = 0
 object = Memory
 counters = Available MBytes
 interval = 60
 index = main
 
 [perfmon://LogicalDisk]
+disabled = 0
 object = LogicalDisk
 counters = % Free Space
 instances = *
 interval = 60
 index = main
+
 ```
 Khi này sẽ cần phải restart lại Splunk Universal Forwarder. Ta sẽ mở **Powershell** với quyền admin. Rồi ta thực hiện các lệnh.
 
@@ -340,3 +300,28 @@ Tui sẽ SPL thử. Và như ta đã thấy ta đã thành công.
 
 <img width="1917" height="882" alt="image" src="https://github.com/user-attachments/assets/c2328a1e-3107-402d-818c-71126a548dfe" />
 
+# Một số lỗi có thể xảy ra
+
+## Universal Forwarder không đọc được Sysmon log
+
+Trong quá trình cập nhật Splunk Universal Forwarder bằng cách gỡ phiên bản cũ và cài lại phiên bản mới, tôi gặp lỗi Universal Forwarder không thể đọc được Sysmon Event Log.
+
+Splunk báo lỗi:
+
+`Could not subscribe to Windows Event Log channel 'Microsoft-Windows-Sysmon/Operational': errorCode=5`
+
+Nguyên nhân là tài khoản service `NT SERVICE\SplunkForwarder` không có đủ quyền đọc Windows Event Log sau khi cài lại Universal Forwarder.
+
+<img width="1461" height="129" alt="Screenshot 2026-08-26 230657" src="https://github.com/user-attachments/assets/65d60b08-2518-4c9b-8924-16c0ec5cebf5" />
+
+Cách xử lý là thêm tài khoản Splunk Forwarder vào nhóm `Event Log Readers`:
+
+```
+net localgroup "Event Log Readers" "NT SERVICE\SplunkForwarder" /add
+```
+
+Và sau cùng thực hiện lệnh dưới để restart lại dịch vụ.
+
+```
+Restart-Service SplunkForwarder
+```
