@@ -24,7 +24,7 @@ Và như hình dưới cho ta thấy Hydra đã thành công trong việc tìm t
 <img width="845" height="118" alt="image" src="https://github.com/user-attachments/assets/fdd9861b-ada5-49a7-ba01-2c429489f628" />
 ## 2. Detection Rule (SPL)
  
-> **Lưu ý về Logon Type:** Logon Type **10** (`RemoteInteractive`) là type dành riêng cho RDP. Logon Type **3** (`Network`) là type dùng chung cho rất nhiều giao thức khác (SMB, WinRM, service account...), nên không nên OR chung hai type này lại — sẽ gây false positive từ các kết nối không liên quan đến RDP. Chỉ cần lọc `logontype=10` là đủ.
+> **Lưu ý về Logon Type:** Logon Type **10** (`RemoteInteractive`) là type dành riêng cho RDP. Logon Type **3** (`Network`) là type dùng chung cho rất nhiều giao thức khác (SMB, WinRM, service account...), nên không nên OR chung hai type này lại sẽ gây false positive từ các kết nối không liên quan đến RDP. Chỉ cần lọc `logontype=10` là đủ.
  
 **Xác định Brute Force (Failed Login)**
  
